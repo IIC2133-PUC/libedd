@@ -1,0 +1,102 @@
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_insert[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+Failed to append value 1 at index 1
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+Appended value 1 at index 0
+
+Dll
+> size        : 1
+> head        : 1
+> tail        : 1
+> is_circular : true
+> log forward : (1)<-[1]->(1)
+> log backward: (1)<-[1]->(1)
+
+Appended value 2 at index 0
+
+Dll
+> size        : 2
+> head        : 2
+> tail        : 1
+> is_circular : true
+> log forward : (1)<-[2]-[1]->(2)
+> log backward: (2)<-[1]-[2]->(1)
+
+Appended value 3 at index 0
+
+Dll
+> size        : 3
+> head        : 3
+> tail        : 1
+> is_circular : true
+> log forward : (1)<-[3]-[2]-[1]->(3)
+> log backward: (3)<-[1]-[2]-[3]->(1)
+
+Appended value 4 at index 1
+
+Dll
+> size        : 4
+> head        : 3
+> tail        : 1
+> is_circular : true
+> log forward : (1)<-[3]-[4]-[2]-[1]->(3)
+> log backward: (3)<-[1]-[2]-[4]-[3]->(1)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_insert[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+Failed to append value 5 at index 5
+
+Dll
+> size        : 4
+> head        : 3
+> tail        : 1
+> is_circular : true
+> log forward : (1)<-[3]-[4]-[2]-[1]->(3)
+> log backward: (3)<-[1]-[2]-[4]-[3]->(1)
+
+Appended value 5 at index 4
+
+Dll
+> size        : 5
+> head        : 3
+> tail        : 5
+> is_circular : true
+> log forward : (5)<-[3]-[4]-[2]-[1]-[5]->(3)
+> log backward: (3)<-[5]-[1]-[2]-[4]-[3]->(5)
+
+Appended value 6 at index 4
+
+Dll
+> size        : 6
+> head        : 3
+> tail        : 5
+> is_circular : true
+> log forward : (5)<-[3]-[4]-[2]-[1]-[6]-[5]->(3)
+> log backward: (3)<-[5]-[6]-[1]-[2]-[4]-[3]->(5)
+
+Appended value 7 at index 3
+
+Dll
+> size        : 7
+> head        : 3
+> tail        : 5
+> is_circular : true
+> log forward : (5)<-[3]-[4]-[2]-[7]-[1]-[6]-[5]->(3)
+> log backward: (3)<-[5]-[6]-[1]-[7]-[2]-[4]-[3]->(5)
+

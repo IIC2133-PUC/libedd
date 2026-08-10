@@ -1,0 +1,4 @@
+Arr log: [5, -29, -127]
+Sorted array by mergesort
+Arr log: [-127, -29, 5]
+

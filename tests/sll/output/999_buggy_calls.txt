@@ -1,0 +1,35 @@
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_node_destroy[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_node_destroy[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_destroy[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_destroy[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_print[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_print[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_at[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_at[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_push[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_push[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_pushleft[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_pushleft[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_enq[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_enq[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_enqleft[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_enqleft[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_insert[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_insert[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_pop[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_pop[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_deq[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_deq[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_remove[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_remove[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_remove_by_ptr[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_remove_by_ptr[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_remove_by_ptr[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msll_remove_by_val[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msll_remove_by_val[0m: Unexpected NULL pointer passed as function argument
+Sll
+> size: 1
+> head: 0
+> tail: 0
+> log : [0]->
+

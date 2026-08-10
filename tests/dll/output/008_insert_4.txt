@@ -1,0 +1,88 @@
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : false
+> log forward : (nil)
+> log backward: (nil)
+
+Appended value 1 at index 0
+
+Dll
+> size        : 1
+> head        : 1
+> tail        : 1
+> is_circular : false
+> log forward : <-[1]->
+> log backward: <-[1]->
+
+Appended value 2 at index 0
+
+Dll
+> size        : 2
+> head        : 2
+> tail        : 1
+> is_circular : false
+> log forward : <-[2]-[1]->
+> log backward: <-[1]-[2]->
+
+Appended value 3 at index 2
+
+Dll
+> size        : 3
+> head        : 2
+> tail        : 3
+> is_circular : false
+> log forward : <-[2]-[1]-[3]->
+> log backward: <-[3]-[1]-[2]->
+
+Appended value 4 at index 0
+
+Dll
+> size        : 4
+> head        : 4
+> tail        : 3
+> is_circular : false
+> log forward : <-[4]-[2]-[1]-[3]->
+> log backward: <-[3]-[1]-[2]-[4]->
+
+Appended value 5 at index 4
+
+Dll
+> size        : 5
+> head        : 4
+> tail        : 5
+> is_circular : false
+> log forward : <-[4]-[2]-[1]-[3]-[5]->
+> log backward: <-[5]-[3]-[1]-[2]-[4]->
+
+Appended value 6 at index 0
+
+Dll
+> size        : 6
+> head        : 6
+> tail        : 5
+> is_circular : false
+> log forward : <-[6]-[4]-[2]-[1]-[3]-[5]->
+> log backward: <-[5]-[3]-[1]-[2]-[4]-[6]->
+
+Appended value 7 at index 6
+
+Dll
+> size        : 7
+> head        : 6
+> tail        : 7
+> is_circular : false
+> log forward : <-[6]-[4]-[2]-[1]-[3]-[5]-[7]->
+> log backward: <-[7]-[5]-[3]-[1]-[2]-[4]-[6]->
+
+Appended value 8 at index 0
+
+Dll
+> size        : 8
+> head        : 8
+> tail        : 7
+> is_circular : false
+> log forward : <-[8]-[6]-[4]-[2]-[1]-[3]-[5]-[7]->
+> log backward: <-[7]-[5]-[3]-[1]-[2]-[4]-[6]-[8]->
+

@@ -1,0 +1,198 @@
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : false
+> log forward : (nil)
+> log backward: (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_at[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove_by_ptr[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll or no match found)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_at[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove_by_ptr[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll or no match found)
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : false
+> log forward : (nil)
+> log backward: (nil)
+
+Pushed value 1
+
+Dll
+> size        : 1
+> head        : 1
+> tail        : 1
+> is_circular : false
+> log forward : <-[1]->
+> log backward: <-[1]->
+
+Removed node 1 by ptr
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : false
+> log forward : (nil)
+> log backward: (nil)
+
+Pushed value 2
+
+Pushed value 3
+
+Dll
+> size        : 2
+> head        : 2
+> tail        : 3
+> is_circular : false
+> log forward : <-[2]-[3]->
+> log backward: <-[3]-[2]->
+
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_at[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove_by_ptr[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll or no match found)
+
+Dll
+> size        : 2
+> head        : 2
+> tail        : 3
+> is_circular : false
+> log forward : <-[2]-[3]->
+> log backward: <-[3]-[2]->
+
+Removed node 2 by ptr
+
+Dll
+> size        : 1
+> head        : 3
+> tail        : 3
+> is_circular : false
+> log forward : <-[3]->
+> log backward: <-[3]->
+
+Pushed value 4
+
+Pushed value 5
+
+Dll
+> size        : 3
+> head        : 3
+> tail        : 5
+> is_circular : false
+> log forward : <-[3]-[4]-[5]->
+> log backward: <-[5]-[4]-[3]->
+
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_at[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove_by_ptr[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll or no match found)
+
+Dll
+> size        : 3
+> head        : 3
+> tail        : 5
+> is_circular : false
+> log forward : <-[3]-[4]-[5]->
+> log backward: <-[5]-[4]-[3]->
+
+Removed node 5 by ptr
+
+Dll
+> size        : 2
+> head        : 3
+> tail        : 4
+> is_circular : false
+> log forward : <-[3]-[4]->
+> log backward: <-[4]-[3]->
+
+Removed node 4 by ptr
+
+Dll
+> size        : 1
+> head        : 3
+> tail        : 3
+> is_circular : false
+> log forward : <-[3]->
+> log backward: <-[3]->
+
+Pushed value 6
+
+Pushed value 7
+
+Pushed value 8
+
+Dll
+> size        : 4
+> head        : 3
+> tail        : 8
+> is_circular : false
+> log forward : <-[3]-[6]-[7]-[8]->
+> log backward: <-[8]-[7]-[6]-[3]->
+
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_at[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove_by_ptr[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll or no match found)
+
+Dll
+> size        : 4
+> head        : 3
+> tail        : 8
+> is_circular : false
+> log forward : <-[3]-[6]-[7]-[8]->
+> log backward: <-[8]-[7]-[6]-[3]->
+
+Removed node 8 by ptr
+
+Dll
+> size        : 3
+> head        : 3
+> tail        : 7
+> is_circular : false
+> log forward : <-[3]-[6]-[7]->
+> log backward: <-[7]-[6]-[3]->
+
+Removed node 7 by ptr
+
+Dll
+> size        : 2
+> head        : 3
+> tail        : 6
+> is_circular : false
+> log forward : <-[3]-[6]->
+> log backward: <-[6]-[3]->
+
+Removed node 6 by ptr
+
+Dll
+> size        : 1
+> head        : 3
+> tail        : 3
+> is_circular : false
+> log forward : <-[3]->
+> log backward: <-[3]->
+
+Removed node 3 by ptr
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : false
+> log forward : (nil)
+> log backward: (nil)
+

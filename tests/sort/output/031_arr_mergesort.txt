@@ -1,0 +1,4 @@
+Arr log: [78, 5, 120, 5]
+Sorted array by mergesort
+Arr log: [5, 5, 78, 120]
+

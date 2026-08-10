@@ -1,0 +1,38 @@
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : false
+> log forward : (nil)
+> log backward: (nil)
+
+Left-enqueued value 1
+
+Dll
+> size        : 1
+> head        : 1
+> tail        : 1
+> is_circular : false
+> log forward : <-[1]->
+> log backward: <-[1]->
+
+Left-enqueued value 2
+
+Dll
+> size        : 2
+> head        : 2
+> tail        : 1
+> is_circular : false
+> log forward : <-[2]-[1]->
+> log backward: <-[1]-[2]->
+
+Left-enqueued value 3
+
+Dll
+> size        : 3
+> head        : 3
+> tail        : 1
+> is_circular : false
+> log forward : <-[3]-[2]-[1]->
+> log backward: <-[1]-[2]-[3]->
+

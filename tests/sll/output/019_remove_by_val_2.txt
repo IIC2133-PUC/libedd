@@ -1,0 +1,154 @@
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll or no match found)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll or no match found)
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+Pushed value 1
+
+Sll
+> size: 1
+> head: 1
+> tail: 1
+> log : [1]->
+
+Removed (first) node 1 by val
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+Pushed value 2
+
+Pushed value 3
+
+Sll
+> size: 2
+> head: 2
+> tail: 3
+> log : [2]->[3]->
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll or no match found)
+
+Sll
+> size: 2
+> head: 2
+> tail: 3
+> log : [2]->[3]->
+
+Removed (first) node 2 by val
+
+Sll
+> size: 1
+> head: 3
+> tail: 3
+> log : [3]->
+
+Pushed value 4
+
+Pushed value 5
+
+Sll
+> size: 3
+> head: 3
+> tail: 5
+> log : [3]->[4]->[5]->
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll or no match found)
+
+Sll
+> size: 3
+> head: 3
+> tail: 5
+> log : [3]->[4]->[5]->
+
+Removed (first) node 5 by val
+
+Sll
+> size: 2
+> head: 3
+> tail: 4
+> log : [3]->[4]->
+
+Removed (first) node 4 by val
+
+Sll
+> size: 1
+> head: 3
+> tail: 3
+> log : [3]->
+
+Pushed value 6
+
+Pushed value 7
+
+Pushed value 8
+
+Sll
+> size: 4
+> head: 3
+> tail: 8
+> log : [3]->[6]->[7]->[8]->
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll or no match found)
+
+Sll
+> size: 4
+> head: 3
+> tail: 8
+> log : [3]->[6]->[7]->[8]->
+
+Removed (first) node 8 by val
+
+Sll
+> size: 3
+> head: 3
+> tail: 7
+> log : [3]->[6]->[7]->
+
+Removed (first) node 7 by val
+
+Sll
+> size: 2
+> head: 3
+> tail: 6
+> log : [3]->[6]->
+
+Removed (first) node 6 by val
+
+Sll
+> size: 1
+> head: 3
+> tail: 3
+> log : [3]->
+
+Removed (first) node 3 by val
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+

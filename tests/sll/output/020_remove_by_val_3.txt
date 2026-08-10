@@ -1,0 +1,234 @@
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+Pushed value 1
+
+Pushed value 2
+
+Pushed value 3
+
+Pushed value 4
+
+Pushed value 5
+
+Pushed value 6
+
+Pushed value 7
+
+Sll
+> size: 7
+> head: 1
+> tail: 7
+> log : [1]->[2]->[3]->[4]->[5]->[6]->[7]->
+
+Removed (first) node 2 by val
+
+Sll
+> size: 6
+> head: 1
+> tail: 7
+> log : [1]->[3]->[4]->[5]->[6]->[7]->
+
+Removed (first) node 3 by val
+
+Sll
+> size: 5
+> head: 1
+> tail: 7
+> log : [1]->[4]->[5]->[6]->[7]->
+
+Removed (first) node 4 by val
+
+Sll
+> size: 4
+> head: 1
+> tail: 7
+> log : [1]->[5]->[6]->[7]->
+
+Removed (first) node 5 by val
+
+Sll
+> size: 3
+> head: 1
+> tail: 7
+> log : [1]->[6]->[7]->
+
+Removed (first) node 6 by val
+
+Sll
+> size: 2
+> head: 1
+> tail: 7
+> log : [1]->[7]->
+
+Removed (first) node 7 by val
+
+Sll
+> size: 1
+> head: 1
+> tail: 1
+> log : [1]->
+
+Removed (first) node 1 by val
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+Pushed value 8
+
+Pushed value 9
+
+Pushed value 10
+
+Pushed value 11
+
+Pushed value 12
+
+Pushed value 13
+
+Pushed value 14
+
+Sll
+> size: 7
+> head: 8
+> tail: 14
+> log : [8]->[9]->[10]->[11]->[12]->[13]->[14]->
+
+Removed (first) node 13 by val
+
+Sll
+> size: 6
+> head: 8
+> tail: 14
+> log : [8]->[9]->[10]->[11]->[12]->[14]->
+
+Removed (first) node 12 by val
+
+Sll
+> size: 5
+> head: 8
+> tail: 14
+> log : [8]->[9]->[10]->[11]->[14]->
+
+Removed (first) node 11 by val
+
+Sll
+> size: 4
+> head: 8
+> tail: 14
+> log : [8]->[9]->[10]->[14]->
+
+Removed (first) node 10 by val
+
+Sll
+> size: 3
+> head: 8
+> tail: 14
+> log : [8]->[9]->[14]->
+
+Removed (first) node 9 by val
+
+Sll
+> size: 2
+> head: 8
+> tail: 14
+> log : [8]->[14]->
+
+Removed (first) node 8 by val
+
+Sll
+> size: 1
+> head: 14
+> tail: 14
+> log : [14]->
+
+Removed (first) node 14 by val
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+Pushed value 15
+
+Pushed value 16
+
+Pushed value 17
+
+Pushed value 18
+
+Pushed value 19
+
+Pushed value 20
+
+Pushed value 21
+
+Sll
+> size: 7
+> head: 15
+> tail: 21
+> log : [15]->[16]->[17]->[18]->[19]->[20]->[21]->
+
+Removed (first) node 18 by val
+
+Sll
+> size: 6
+> head: 15
+> tail: 21
+> log : [15]->[16]->[17]->[19]->[20]->[21]->
+
+Removed (first) node 17 by val
+
+Sll
+> size: 5
+> head: 15
+> tail: 21
+> log : [15]->[16]->[19]->[20]->[21]->
+
+Removed (first) node 19 by val
+
+Sll
+> size: 4
+> head: 15
+> tail: 21
+> log : [15]->[16]->[20]->[21]->
+
+Removed (first) node 16 by val
+
+Sll
+> size: 3
+> head: 15
+> tail: 21
+> log : [15]->[20]->[21]->
+
+Removed (first) node 20 by val
+
+Sll
+> size: 2
+> head: 15
+> tail: 21
+> log : [15]->[21]->
+
+Removed (first) node 15 by val
+
+Sll
+> size: 1
+> head: 21
+> tail: 21
+> log : [21]->
+
+Removed (first) node 21 by val
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+

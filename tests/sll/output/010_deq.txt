@@ -1,0 +1,126 @@
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_deq[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to dequeue (empty sll)
+
+Pushed value 1
+
+Sll
+> size: 1
+> head: 1
+> tail: 1
+> log : [1]->
+
+Dequeued node 1
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_deq[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to dequeue (empty sll)
+
+Pushed value 2
+
+Pushed value 3
+
+Sll
+> size: 2
+> head: 2
+> tail: 3
+> log : [2]->[3]->
+
+Dequeued node 2
+
+Sll
+> size: 1
+> head: 3
+> tail: 3
+> log : [3]->
+
+Dequeued node 3
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_deq[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to dequeue (empty sll)
+
+Pushed value 4
+
+Pushed value 5
+
+Pushed value 6
+
+Pushed value 7
+
+Pushed value 8
+
+Sll
+> size: 5
+> head: 4
+> tail: 8
+> log : [4]->[5]->[6]->[7]->[8]->
+
+Dequeued node 4
+
+Sll
+> size: 4
+> head: 5
+> tail: 8
+> log : [5]->[6]->[7]->[8]->
+
+Dequeued node 5
+
+Sll
+> size: 3
+> head: 6
+> tail: 8
+> log : [6]->[7]->[8]->
+
+Dequeued node 6
+
+Sll
+> size: 2
+> head: 7
+> tail: 8
+> log : [7]->[8]->
+
+Dequeued node 7
+
+Sll
+> size: 1
+> head: 8
+> tail: 8
+> log : [8]->
+
+Dequeued node 8
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_deq[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to dequeue (empty sll)
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+

@@ -1,0 +1,6 @@
+3
+10
+true
+PRINT
+PEEK
+PRINT

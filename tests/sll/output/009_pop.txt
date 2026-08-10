@@ -1,0 +1,126 @@
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_pop[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll)
+
+Pushed value 1
+
+Sll
+> size: 1
+> head: 1
+> tail: 1
+> log : [1]->
+
+Removed node 1
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_pop[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll)
+
+Pushed value 2
+
+Pushed value 3
+
+Sll
+> size: 2
+> head: 2
+> tail: 3
+> log : [2]->[3]->
+
+Removed node 3
+
+Sll
+> size: 1
+> head: 2
+> tail: 2
+> log : [2]->
+
+Removed node 2
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_pop[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll)
+
+Pushed value 4
+
+Pushed value 5
+
+Pushed value 6
+
+Pushed value 7
+
+Pushed value 8
+
+Sll
+> size: 5
+> head: 4
+> tail: 8
+> log : [4]->[5]->[6]->[7]->[8]->
+
+Removed node 8
+
+Sll
+> size: 4
+> head: 4
+> tail: 7
+> log : [4]->[5]->[6]->[7]->
+
+Removed node 7
+
+Sll
+> size: 3
+> head: 4
+> tail: 6
+> log : [4]->[5]->[6]->
+
+Removed node 6
+
+Sll
+> size: 2
+> head: 4
+> tail: 5
+> log : [4]->[5]->
+
+Removed node 5
+
+Sll
+> size: 1
+> head: 4
+> tail: 4
+> log : [4]->
+
+Removed node 4
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_pop[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty sll)
+
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+

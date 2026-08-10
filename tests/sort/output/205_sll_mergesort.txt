@@ -1,0 +1,12 @@
+Sll
+> size: 5
+> head: 14
+> tail: -183
+> log : [14]->[-79]->[145]->[-114]->[-183]->
+Sorted sll by mergesort
+Sll
+> size: 5
+> head: -183
+> tail: 145
+> log : [-183]->[-114]->[-79]->[14]->[145]->
+

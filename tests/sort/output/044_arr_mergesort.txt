@@ -1,0 +1,4 @@
+Arr log: [87, 37, 148, 84, 81]
+Sorted array by mergesort
+Arr log: [37, 81, 84, 87, 148]
+

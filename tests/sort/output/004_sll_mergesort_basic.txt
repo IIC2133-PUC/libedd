@@ -1,0 +1,12 @@
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+Sorted sll by mergesort
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+

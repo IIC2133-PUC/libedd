@@ -1,0 +1,30 @@
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+Pushed value 1
+
+Sll
+> size: 1
+> head: 1
+> tail: 1
+> log : [1]->
+
+Pushed value 2
+
+Sll
+> size: 2
+> head: 1
+> tail: 2
+> log : [1]->[2]->
+
+Pushed value 3
+
+Sll
+> size: 3
+> head: 1
+> tail: 3
+> log : [1]->[2]->[3]->
+

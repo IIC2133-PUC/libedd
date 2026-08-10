@@ -1,0 +1,188 @@
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll or index out of range)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll or index out of range)
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+Pushed value 1
+
+Dll
+> size        : 1
+> head        : 1
+> tail        : 1
+> is_circular : true
+> log forward : (1)<-[1]->(1)
+> log backward: (1)<-[1]->(1)
+
+Removed node 1 at index 0
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+Pushed value 2
+
+Pushed value 3
+
+Dll
+> size        : 2
+> head        : 2
+> tail        : 3
+> is_circular : true
+> log forward : (3)<-[2]-[3]->(2)
+> log backward: (2)<-[3]-[2]->(3)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_remove[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+Nothing to remove (empty dll or index out of range)
+
+Dll
+> size        : 2
+> head        : 2
+> tail        : 3
+> is_circular : true
+> log forward : (3)<-[2]-[3]->(2)
+> log backward: (2)<-[3]-[2]->(3)
+
+Removed node 2 at index 0
+
+Dll
+> size        : 1
+> head        : 3
+> tail        : 3
+> is_circular : true
+> log forward : (3)<-[3]->(3)
+> log backward: (3)<-[3]->(3)
+
+Pushed value 4
+
+Pushed value 5
+
+Dll
+> size        : 3
+> head        : 3
+> tail        : 5
+> is_circular : true
+> log forward : (5)<-[3]-[4]-[5]->(3)
+> log backward: (3)<-[5]-[4]-[3]->(5)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_remove[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+Nothing to remove (empty dll or index out of range)
+
+Dll
+> size        : 3
+> head        : 3
+> tail        : 5
+> is_circular : true
+> log forward : (5)<-[3]-[4]-[5]->(3)
+> log backward: (3)<-[5]-[4]-[3]->(5)
+
+Removed node 5 at index 2
+
+Dll
+> size        : 2
+> head        : 3
+> tail        : 4
+> is_circular : true
+> log forward : (4)<-[3]-[4]->(3)
+> log backward: (3)<-[4]-[3]->(4)
+
+Removed node 4 at index 1
+
+Dll
+> size        : 1
+> head        : 3
+> tail        : 3
+> is_circular : true
+> log forward : (3)<-[3]->(3)
+> log backward: (3)<-[3]->(3)
+
+Pushed value 6
+
+Pushed value 7
+
+Pushed value 8
+
+Dll
+> size        : 4
+> head        : 3
+> tail        : 8
+> is_circular : true
+> log forward : (8)<-[3]-[6]-[7]-[8]->(3)
+> log backward: (3)<-[8]-[7]-[6]-[3]->(8)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_remove[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+Nothing to remove (empty dll or index out of range)
+
+Dll
+> size        : 4
+> head        : 3
+> tail        : 8
+> is_circular : true
+> log forward : (8)<-[3]-[6]-[7]-[8]->(3)
+> log backward: (3)<-[8]-[7]-[6]-[3]->(8)
+
+Removed node 8 at index 3
+
+Dll
+> size        : 3
+> head        : 3
+> tail        : 7
+> is_circular : true
+> log forward : (7)<-[3]-[6]-[7]->(3)
+> log backward: (3)<-[7]-[6]-[3]->(7)
+
+Removed node 7 at index 2
+
+Dll
+> size        : 2
+> head        : 3
+> tail        : 6
+> is_circular : true
+> log forward : (6)<-[3]-[6]->(3)
+> log backward: (3)<-[6]-[3]->(6)
+
+Removed node 6 at index 1
+
+Dll
+> size        : 1
+> head        : 3
+> tail        : 3
+> is_circular : true
+> log forward : (3)<-[3]->(3)
+> log backward: (3)<-[3]->(3)
+
+Removed node 3 at index 0
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+

@@ -1,0 +1,152 @@
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_pop[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll)
+
+Pushed value 1
+
+Dll
+> size        : 1
+> head        : 1
+> tail        : 1
+> is_circular : true
+> log forward : (1)<-[1]->(1)
+> log backward: (1)<-[1]->(1)
+
+Removed node 1
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_pop[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll)
+
+Pushed value 2
+
+Pushed value 3
+
+Dll
+> size        : 2
+> head        : 2
+> tail        : 3
+> is_circular : true
+> log forward : (3)<-[2]-[3]->(2)
+> log backward: (2)<-[3]-[2]->(3)
+
+Removed node 3
+
+Dll
+> size        : 1
+> head        : 2
+> tail        : 2
+> is_circular : true
+> log forward : (2)<-[2]->(2)
+> log backward: (2)<-[2]->(2)
+
+Removed node 2
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_pop[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll)
+
+Pushed value 4
+
+Pushed value 5
+
+Pushed value 6
+
+Pushed value 7
+
+Pushed value 8
+
+Dll
+> size        : 5
+> head        : 4
+> tail        : 8
+> is_circular : true
+> log forward : (8)<-[4]-[5]-[6]-[7]-[8]->(4)
+> log backward: (4)<-[8]-[7]-[6]-[5]-[4]->(8)
+
+Removed node 8
+
+Dll
+> size        : 4
+> head        : 4
+> tail        : 7
+> is_circular : true
+> log forward : (7)<-[4]-[5]-[6]-[7]->(4)
+> log backward: (4)<-[7]-[6]-[5]-[4]->(7)
+
+Removed node 7
+
+Dll
+> size        : 3
+> head        : 4
+> tail        : 6
+> is_circular : true
+> log forward : (6)<-[4]-[5]-[6]->(4)
+> log backward: (4)<-[6]-[5]-[4]->(6)
+
+Removed node 6
+
+Dll
+> size        : 2
+> head        : 4
+> tail        : 5
+> is_circular : true
+> log forward : (5)<-[4]-[5]->(4)
+> log backward: (4)<-[5]-[4]->(5)
+
+Removed node 5
+
+Dll
+> size        : 1
+> head        : 4
+> tail        : 4
+> is_circular : true
+> log forward : (4)<-[4]->(4)
+> log backward: (4)<-[4]->(4)
+
+Removed node 4
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_pop[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+Nothing to remove (empty dll)
+
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : true
+> log forward : (nil)
+> log backward: (nil)
+

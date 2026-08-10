@@ -1,0 +1,16 @@
+Dll
+> size        : 8
+> head        : -167
+> tail        : -35
+> is_circular : false
+> log forward : <-[-167]-[117]-[29]-[-4]-[103]-[87]-[-174]-[-35]->
+> log backward: <-[-35]-[-174]-[87]-[103]-[-4]-[29]-[117]-[-167]->
+Sorted dll by mergesort
+Dll
+> size        : 8
+> head        : -174
+> tail        : 117
+> is_circular : false
+> log forward : <-[-174]-[-167]-[-35]-[-4]-[29]-[87]-[103]-[117]->
+> log backward: <-[117]-[103]-[87]-[29]-[-4]-[-35]-[-167]-[-174]->
+

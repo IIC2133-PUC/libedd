@@ -1,0 +1,4 @@
+Arr log: [-18, 168, -48, 82, -8, -57, -110]
+Sorted array by mergesort
+Arr log: [-110, -57, -48, -18, -8, 82, 168]
+

@@ -1,0 +1,30 @@
+Sll
+> size: 0
+> head: (nil)
+> tail: (nil)
+> log : (nil)
+
+Left-enqueued value 1
+
+Sll
+> size: 1
+> head: 1
+> tail: 1
+> log : [1]->
+
+Left-enqueued value 2
+
+Sll
+> size: 2
+> head: 2
+> tail: 1
+> log : [2]->[1]->
+
+Left-enqueued value 3
+
+Sll
+> size: 3
+> head: 3
+> tail: 1
+> log : [3]->[2]->[1]->
+

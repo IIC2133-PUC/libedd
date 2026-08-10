@@ -1,0 +1,16 @@
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : false
+> log forward : (nil)
+> log backward: (nil)
+Sorted dll by mergesort
+Dll
+> size        : 0
+> head        : (nil)
+> tail        : (nil)
+> is_circular : false
+> log forward : (nil)
+> log backward: (nil)
+

@@ -1,0 +1,9 @@
+# Make outputs
+obj/
+libedd/
+
+# Main program
+tester
+
+# Test outputs
+outputs/

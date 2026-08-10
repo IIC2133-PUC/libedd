@@ -1,0 +1,83 @@
+Heap
+> is_min  : true
+> size    : 0
+> capacity: 20
+> log     : (nil)
+
+Pushed key 1
+
+Heap
+> is_min  : true
+> size    : 1
+> capacity: 20
+> log     : [1]
+
+Pushed key 2
+
+Heap
+> is_min  : true
+> size    : 2
+> capacity: 20
+> log     : [1]
+            └─[2]
+
+Pushed key 3
+
+Heap
+> is_min  : true
+> size    : 3
+> capacity: 20
+> log     : [1]
+            ├─[3]
+            └─[2]
+
+Pushed key -1
+
+Heap
+> is_min  : true
+> size    : 4
+> capacity: 20
+> log     : [-1]
+            ├─[3]
+            └─[1]
+               └─[2]
+
+Pushed key -2
+
+Heap
+> is_min  : true
+> size    : 5
+> capacity: 20
+> log     : [-2]
+            ├─[3]
+            └─[-1]
+               ├─[1]
+               └─[2]
+
+Pushed key 0
+
+Heap
+> is_min  : true
+> size    : 6
+> capacity: 20
+> log     : [-2]
+            ├─[0]
+            │  └─[3]
+            └─[-1]
+               ├─[1]
+               └─[2]
+
+Pushed key 4
+
+Heap
+> is_min  : true
+> size    : 7
+> capacity: 20
+> log     : [-2]
+            ├─[0]
+            │  ├─[4]
+            │  └─[3]
+            └─[-1]
+               ├─[1]
+               └─[2]
+
