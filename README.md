@@ -6,18 +6,18 @@ Full documentation comming soon...
 
 ### Completion progress
 
--[x] Error handling module
--[x] Singly Linked List
--[x] Doubly Linked List
--[x] Sorting Algorithms (Array, SLL, DLL)
--[x] Heap (Min, Max)
--[ ] BST
--[ ] AVL Tree
--[ ] 2-3 Tree
--[ ] Red-Black Tree
--[ ] B+ Tree
--[ ] Hash Tables
--[ ] Graph
+- [x] Error handling module
+- [x] Singly Linked List
+- [x] Doubly Linked List
+- [x] Sorting Algorithms (Array, SLL, DLL)
+- [x] Heap (Min, Max)
+- [ ] BST
+- [ ] AVL Tree
+- [ ] 2-3 Tree
+- [ ] Red-Black Tree
+- [ ] B+ Tree
+- [ ] Hash Tables
+- [ ] Graph
 
 ## Commands
 
