@@ -20,14 +20,14 @@ for i in range(len(SLUGS)):
         output_arr = []
         match SLUGS[i]:
             case "arr":
-                output_arr = output_lines[-2][10:-2].split(", ")
+                output_arr = output_lines[-1][10:-2].split(", ")
 
             case "sll":
-                output_arr = output_lines[-2][9:-4].split("]->[")
+                output_arr = output_lines[-1][9:-4].split("]->[")
 
             case "dll":
-                output_arr = output_lines[-3][19:-4].split("]-[")
-                reverse_output_arr = output_lines[-2][19:-4].split("]-[")
+                output_arr = output_lines[-2][19:-4].split("]-[")
+                reverse_output_arr = output_lines[-1][19:-4].split("]-[")
 
         for c in range(len(output_arr)):
             output_arr[c] = int(output_arr[c])

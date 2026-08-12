@@ -7,6 +7,7 @@
 #include <string.h>
 
 #include "libedd_err.h"
+#include "libedd_cmd.h"
 
 /* === General Definitions (structs, typedefs, etc) === */
 
@@ -30,7 +31,7 @@ int sll_node_destroy(EddError *err, SllNode *node);
 
 Sll *sll_create();
 void sll_destroy(EddError *err, Sll *sll);
-void sll_print(EddError *err, Sll *sll);
+void sll_print(EddError *err, Sll *sll, FILE *output_file);
 SllNode *sll_at(EddError *err, Sll *sll, size_t index);
 
 void sll_push(EddError *err, Sll *sll, int data);
@@ -45,7 +46,7 @@ int sll_remove(EddError *err, Sll *sll, size_t index);
 int sll_remove_by_ptr(EddError *err, Sll *sll, SllNode *target_node);
 int sll_remove_by_val(EddError *err, Sll *sll, int target);
 
-void sll_cmd(EddError *err, Sll *sll, FILE *input_file, const char *cmd);
+void sll_cmd(EddError *err, Sll *sll, FILE *input_file, FILE *output_file, const char *cmd);
 
 /* ============= */
 

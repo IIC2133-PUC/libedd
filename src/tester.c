@@ -9,21 +9,20 @@
 
 bool EDD_DEBUG = true;
 
-void sll_tester(FILE *input_file, size_t n_events) {
+void sll_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     EddError err = EDD_NOERR;
     Sll *sll = sll_create();
 
     char cmd[32];
     for (size_t i = 0; i < n_events; i++) {
         fscanf(input_file, "%s", cmd);
-        sll_cmd(&err, sll, input_file, cmd);
-        printf("\n");
+        sll_cmd(&err, sll, input_file, output_file, cmd);
     }
 
     sll_destroy(&err, sll);
 }
 
-void dll_tester(FILE *input_file, size_t n_events) {
+void dll_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     EddError err = EDD_NOERR;
     char cmd[32];
 
@@ -37,14 +36,13 @@ void dll_tester(FILE *input_file, size_t n_events) {
 
     for (size_t i = 0; i < n_events; i++) {
         fscanf(input_file, "%s", cmd);
-        dll_cmd(&err, dll, input_file, cmd);
-        printf("\n");
+        dll_cmd(&err, dll, input_file, output_file, cmd);
     }
 
     dll_destroy(&err, dll);
 }
 
-void sort_tester(FILE *input_file, size_t n_events) {
+void sort_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     EddError err = EDD_NOERR;
     char cmd[32];
     void *list;
@@ -79,32 +77,31 @@ void sort_tester(FILE *input_file, size_t n_events) {
     }
 
     if (!strcmp(list_type, "sll")) {
-        sll_print(&err, (Sll*)list);
+        sll_print(&err, (Sll*)list, output_file);
     } else if (!strcmp(list_type, "dll")) {
-        dll_print(&err, (Dll*)list);
+        dll_print(&err, (Dll*)list, output_file);
     } else {
-        printf("Arr log: [");
+        fprintf(output_file, "Arr log: [");
         for (size_t i = 0; i < (list_size - 1); i++) {
-            printf("%d, ", ((int*)list)[i]);
+            fprintf(output_file, "%d, ", ((int*)list)[i]);
         }
-        printf("%d]\n", ((int*)list)[list_size - 1]);
+        fprintf(output_file, "%d]\n", ((int*)list)[list_size - 1]);
     }
 
     fscanf(input_file, "%s", cmd);
-    sort_cmd(&err, list, list_size, input_file, cmd);
+    sort_cmd(&err, list, list_size, input_file, output_file, cmd);
 
     if (!strcmp(list_type, "sll")) {
-        sll_print(&err, (Sll*)list);
+        sll_print(&err, (Sll*)list, output_file);
     } else if (!strcmp(list_type, "dll")) {
-        dll_print(&err, (Dll*)list);
+        dll_print(&err, (Dll*)list, output_file);
     } else {
-        printf("Arr log: [");
+        fprintf(output_file, "Arr log: [");
         for (size_t i = 0; i < (list_size - 1); i++) {
-            printf("%d, ", ((int*)list)[i]);
+            fprintf(output_file, "%d, ", ((int*)list)[i]);
         }
-        printf("%d]\n", ((int*)list)[list_size - 1]);
+        fprintf(output_file, "%d]\n", ((int*)list)[list_size - 1]);
     }
-    printf("\n");
 
     if (!strcmp(list_type, "sll")) {
         sll_destroy(&err, (Sll*)list);
@@ -113,7 +110,7 @@ void sort_tester(FILE *input_file, size_t n_events) {
     }
 }
 
-void heap_tester(FILE *input_file, size_t n_events) {
+void heap_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     EddError err = EDD_NOERR;
     char cmd[32];
 
@@ -130,19 +127,19 @@ void heap_tester(FILE *input_file, size_t n_events) {
 
     for (size_t i = 0; i < n_events; i++) {
         fscanf(input_file, "%s", cmd);
-        heap_cmd(&err, heap, input_file, cmd);
-        printf("\n");
+        heap_cmd(&err, heap, input_file, output_file, cmd);
     }
 
     heap_destroy(&err, heap);
 }
 
 static bool check_arguments(int argc, char **argv) {
-    if (argc != 3) {
-        printf("Usage: %s TEST_FILE EDD\n", argv[0]);
+    if (argc != 4) {
+        printf("Usage: %s EDD INPUT_FILE OUTPUT_FILE\n", argv[0]);
         printf("Where:\n");
-        printf("\tTEST_FILE is the path to the test file\n");
         printf("\tEDD is the data structure to test\n");
+        printf("\tINPUT_FILE is the path to the test file\n");
+        printf("\tOUTPUT_FILE is the path to the program output file\n");
         exit(1);
     }
     return true;
@@ -150,8 +147,9 @@ static bool check_arguments(int argc, char **argv) {
 
 int main(int argc, char **argv) {
     check_arguments(argc, argv);
-    FILE *input_file = fopen(argv[1], "r");
-    char *edd_to_test = argv[2];
+    char *edd_to_test = argv[1];
+    FILE *input_file = fopen(argv[2], "r");
+    FILE *output_file = fopen(argv[3], "w");
 
     size_t N;
     int buffer = fscanf(input_file, "%zu", &N);
@@ -161,19 +159,19 @@ int main(int argc, char **argv) {
     }
 
     if (!strcmp(edd_to_test, "sll")) {
-        sll_tester(input_file, N);
+        sll_tester(input_file, output_file, N);
     }
 
     if (!strcmp(edd_to_test, "dll")) {
-        dll_tester(input_file, N);
+        dll_tester(input_file, output_file, N);
     }
 
     if (!strcmp(edd_to_test, "sort")) {
-        sort_tester(input_file, N);
+        sort_tester(input_file, output_file, N);
     }
 
     if (!strcmp(edd_to_test, "heap")) {
-        heap_tester(input_file, N);
+        heap_tester(input_file, output_file, N);
     }
 
     if (!strcmp(edd_to_test, "bst")) {
@@ -189,6 +187,7 @@ int main(int argc, char **argv) {
     }
 
     fclose(input_file);
+    fclose(output_file);
 
     return 0;
 }

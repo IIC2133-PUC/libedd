@@ -3,26 +3,20 @@ Heap
 > size    : 0
 > capacity: 20
 > log     : (nil)
-
 Pushed key 1
-
 Heap
 > is_min  : false
 > size    : 1
 > capacity: 20
 > log     : [1]
-
 Pushed key 2
-
 Heap
 > is_min  : false
 > size    : 2
 > capacity: 20
 > log     : [2]
             └─[1]
-
 Pushed key 3
-
 Heap
 > is_min  : false
 > size    : 3
@@ -30,9 +24,7 @@ Heap
 > log     : [3]
             ├─[2]
             └─[1]
-
 Pushed key -1
-
 Heap
 > is_min  : false
 > size    : 4
@@ -41,9 +33,7 @@ Heap
             ├─[2]
             └─[1]
                └─[-1]
-
 Pushed key -2
-
 Heap
 > is_min  : false
 > size    : 5
@@ -53,9 +43,7 @@ Heap
             └─[1]
                ├─[-2]
                └─[-1]
-
 Pushed key 0
-
 Heap
 > is_min  : false
 > size    : 6
@@ -66,9 +54,7 @@ Heap
             └─[1]
                ├─[-2]
                └─[-1]
-
 Pushed key 4
-
 Heap
 > is_min  : false
 > size    : 7
@@ -80,4 +66,3 @@ Heap
             └─[1]
                ├─[-2]
                └─[-1]
-

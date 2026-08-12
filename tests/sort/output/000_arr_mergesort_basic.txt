@@ -1,4 +1,3 @@
 Arr log: [0]
 Sorted array by mergesort
 Arr log: [0]
-

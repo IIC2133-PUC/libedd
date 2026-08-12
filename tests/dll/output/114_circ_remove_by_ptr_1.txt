@@ -5,19 +5,8 @@ Dll
 > is_circular : true
 > log forward : (nil)
 > log backward: (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_at[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove_by_ptr[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty dll or no match found)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_at[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove_by_ptr[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty dll or no match found)
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -25,9 +14,7 @@ Dll
 > is_circular : true
 > log forward : (nil)
 > log backward: (nil)
-
 Pushed value 1
-
 Dll
 > size        : 1
 > head        : 1
@@ -35,9 +22,7 @@ Dll
 > is_circular : true
 > log forward : (1)<-[1]->(1)
 > log backward: (1)<-[1]->(1)
-
 Removed node 1 by ptr
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -45,11 +30,8 @@ Dll
 > is_circular : true
 > log forward : (nil)
 > log backward: (nil)
-
 Pushed value 2
-
 Pushed value 3
-
 Dll
 > size        : 2
 > head        : 2
@@ -57,9 +39,7 @@ Dll
 > is_circular : true
 > log forward : (3)<-[2]-[3]->(2)
 > log backward: (2)<-[3]-[2]->(3)
-
 Removed node 2 by ptr
-
 Dll
 > size        : 1
 > head        : 3
@@ -67,9 +47,7 @@ Dll
 > is_circular : true
 > log forward : (3)<-[3]->(3)
 > log backward: (3)<-[3]->(3)
-
 Removed node 3 by ptr
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -77,11 +55,8 @@ Dll
 > is_circular : true
 > log forward : (nil)
 > log backward: (nil)
-
 Pushed value 4
-
 Pushed value 5
-
 Dll
 > size        : 2
 > head        : 4
@@ -89,9 +64,7 @@ Dll
 > is_circular : true
 > log forward : (5)<-[4]-[5]->(4)
 > log backward: (4)<-[5]-[4]->(5)
-
 Removed node 5 by ptr
-
 Dll
 > size        : 1
 > head        : 4
@@ -99,13 +72,9 @@ Dll
 > is_circular : true
 > log forward : (4)<-[4]->(4)
 > log backward: (4)<-[4]->(4)
-
 Pushed value 6
-
 Pushed value 7
-
 Pushed value 8
-
 Dll
 > size        : 4
 > head        : 4
@@ -113,9 +82,7 @@ Dll
 > is_circular : true
 > log forward : (8)<-[4]-[6]-[7]-[8]->(4)
 > log backward: (4)<-[8]-[7]-[6]-[4]->(8)
-
 Removed node 4 by ptr
-
 Dll
 > size        : 3
 > head        : 6
@@ -123,9 +90,7 @@ Dll
 > is_circular : true
 > log forward : (8)<-[6]-[7]-[8]->(6)
 > log backward: (6)<-[8]-[7]-[6]->(8)
-
 Removed node 6 by ptr
-
 Dll
 > size        : 2
 > head        : 7
@@ -133,9 +98,7 @@ Dll
 > is_circular : true
 > log forward : (8)<-[7]-[8]->(7)
 > log backward: (7)<-[8]-[7]->(8)
-
 Removed node 7 by ptr
-
 Dll
 > size        : 1
 > head        : 8
@@ -143,9 +106,7 @@ Dll
 > is_circular : true
 > log forward : (8)<-[8]->(8)
 > log backward: (8)<-[8]->(8)
-
 Removed node 8 by ptr
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -153,13 +114,7 @@ Dll
 > is_circular : true
 > log forward : (nil)
 > log backward: (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_at[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove_by_ptr[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty dll or no match found)
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -167,4 +122,3 @@ Dll
 > is_circular : true
 > log forward : (nil)
 > log backward: (nil)
-

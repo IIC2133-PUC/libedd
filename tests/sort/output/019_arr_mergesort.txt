@@ -1,4 +1,3 @@
-Arr log: [28, -171, 50]
+Arr log: [-199, 140, 16]
 Sorted array by mergesort
-Arr log: [-171, 28, 50]
-
+Arr log: [-199, 16, 140]

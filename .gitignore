@@ -1,5 +1,6 @@
 # Make outputs
-obj/
+.obj/
+.hdeps/
 libedd/
 libedd_apple/
 

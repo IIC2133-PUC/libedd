@@ -1,4 +1,3 @@
 Arr log: [-1, 1]
 Sorted array by mergesort
 Arr log: [-1, 1]
-

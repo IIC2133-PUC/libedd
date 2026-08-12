@@ -226,29 +226,44 @@ void sort_dll_mergesort(EddError *err, Dll *dll) {
     dll_connect_ends(err, dll);
 }
 
-void sort_cmd(EddError *err, void *list, size_t list_size, FILE *input_file, const char *cmd) {
+void sort_cmd(EddError *err, void *list, size_t list_size, FILE *input_file, FILE *output_file, const char *cmd) {
     const char *self = "sort_cmd";
     if (errhandle_nullptr(err, self, list)) return;
     if (errhandle_nullptr(err, self, input_file)) return;
     if (errhandle_nullptr(err, self, (void*)cmd)) return;
+    if (output_file == NULL) {
+        output_file = stdout;
+    }
 
 
-    if (!strcmp(cmd, "ARR_MERGESORT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SORT_ARR_MERGESORT)) {
         sort_arr_mergesort(err, (int*)list, list_size);
-        printf("Sorted array by mergesort\n");
+        if (has_error(err)) {
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SORT_ARR_MERGESORT);
+        } else {
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SORT_ARR_MERGESORT);
+        }
     }
 
-    if (!strcmp(cmd, "SLL_MERGESORT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SORT_SLL_MERGESORT)) {
         sort_sll_mergesort(err, (Sll*)list);
-        printf("Sorted sll by mergesort\n");
+        if (has_error(err)) {
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SORT_SLL_MERGESORT);
+        } else {
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SORT_SLL_MERGESORT);
+        }
     }
 
-    if (!strcmp(cmd, "DLL_MERGESORT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SORT_DLL_MERGESORT)) {
         sort_dll_mergesort(err, (Dll*)list);
-        printf("Sorted dll by mergesort\n");
+        if (has_error(err)) {
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SORT_DLL_MERGESORT);
+        } else {
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SORT_DLL_MERGESORT);
+        }
     }
 
-    if (!strcmp(cmd, "BUGGY_CALLS")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_BUGGY_CALLS)) {
         EDD_DEBUG = true;
 
         size_t temp_size = 3;
@@ -268,13 +283,13 @@ void sort_cmd(EddError *err, void *list, size_t list_size, FILE *input_file, con
         sort_dll_mergesort(NULL, temp_dll);
         sort_dll_mergesort(err, NULL);
 
-        printf("[");
+        fprintf(output_file, "[");
         for (size_t i = 0; i < (temp_size - 1); i++) {
-            printf("%d, ", temp_arr[i]);
+            fprintf(output_file, "%d, ", temp_arr[i]);
         }
-        printf("%d]\n", temp_arr[temp_size - 1]);
-        sll_print(err, temp_sll);
-        dll_print(err, temp_dll);
+        fprintf(output_file, "%d]\n", temp_arr[temp_size - 1]);
+        sll_print(err, temp_sll, output_file);
+        dll_print(err, temp_dll, output_file);
 
         free(temp_arr);
         sll_destroy(err, temp_sll);

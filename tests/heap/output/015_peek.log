@@ -1,0 +1,4 @@
+[[0;33mDEBUG[0m] ([0;35mEDD_HEAP_EFULL[0m) Error reported by [0;36mheap_push[0m: The heap is full (size == capacity), any push/insertion attempt will be ignored
+[[0;33mDEBUG[0m] ([0;35mEDD_HEAP_EFULL[0m) Error reported by [0;36mhas_error[0m: The heap is full (size == capacity), any push/insertion attempt will be ignored
+[[0;33mDEBUG[0m] ([0;35mEDD_HEAP_EFULL[0m) Error reported by [0;36mheap_push[0m: The heap is full (size == capacity), any push/insertion attempt will be ignored
+[[0;33mDEBUG[0m] ([0;35mEDD_HEAP_EFULL[0m) Error reported by [0;36mhas_error[0m: The heap is full (size == capacity), any push/insertion attempt will be ignored

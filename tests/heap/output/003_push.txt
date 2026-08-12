@@ -3,26 +3,20 @@ Heap
 > size    : 0
 > capacity: 4
 > log     : (nil)
-
 Pushed key 1
-
 Heap
 > is_min  : true
 > size    : 1
 > capacity: 4
 > log     : [1]
-
 Pushed key 2
-
 Heap
 > is_min  : true
 > size    : 2
 > capacity: 4
 > log     : [1]
             └─[2]
-
 Pushed key 3
-
 Heap
 > is_min  : true
 > size    : 3
@@ -30,9 +24,7 @@ Heap
 > log     : [1]
             ├─[3]
             └─[2]
-
 Pushed key 4
-
 Heap
 > is_min  : true
 > size    : 4
@@ -41,11 +33,7 @@ Heap
             ├─[3]
             └─[2]
                └─[4]
-
-[[0;33mDEBUG[0m] ([0;35mEDD_HEAP_EFULL[0m) Error reported by [0;36mheap_push[0m: The heap is full (size == capacity), any push/insertion attempt will be ignored
-[[0;33mDEBUG[0m] ([0;35mEDD_HEAP_EFULL[0m) Error reported by [0;36mhas_error[0m: The heap is full (size == capacity), any push/insertion attempt will be ignored
 Pushing key 5 failed
-
 Heap
 > is_min  : true
 > size    : 4
@@ -54,11 +42,7 @@ Heap
             ├─[3]
             └─[2]
                └─[4]
-
-[[0;33mDEBUG[0m] ([0;35mEDD_HEAP_EFULL[0m) Error reported by [0;36mheap_push[0m: The heap is full (size == capacity), any push/insertion attempt will be ignored
-[[0;33mDEBUG[0m] ([0;35mEDD_HEAP_EFULL[0m) Error reported by [0;36mhas_error[0m: The heap is full (size == capacity), any push/insertion attempt will be ignored
 Pushing key 6 failed
-
 Heap
 > is_min  : true
 > size    : 4
@@ -67,4 +51,3 @@ Heap
             ├─[3]
             └─[2]
                └─[4]
-

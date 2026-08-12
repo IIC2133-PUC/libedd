@@ -5,15 +5,8 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty dll or index out of range)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty dll or index out of range)
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -21,9 +14,7 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-
 Pushed value 1
-
 Dll
 > size        : 1
 > head        : 1
@@ -31,9 +22,7 @@ Dll
 > is_circular : false
 > log forward : <-[1]->
 > log backward: <-[1]->
-
 Removed node 1 at index 0
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -41,11 +30,8 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-
 Pushed value 2
-
 Pushed value 3
-
 Dll
 > size        : 2
 > head        : 2
@@ -53,9 +39,7 @@ Dll
 > is_circular : false
 > log forward : <-[2]-[3]->
 > log backward: <-[3]-[2]->
-
 Removed node 2 at index 0
-
 Dll
 > size        : 1
 > head        : 3
@@ -63,9 +47,7 @@ Dll
 > is_circular : false
 > log forward : <-[3]->
 > log backward: <-[3]->
-
 Removed node 3 at index 0
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -73,11 +55,8 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-
 Pushed value 4
-
 Pushed value 5
-
 Dll
 > size        : 2
 > head        : 4
@@ -85,9 +64,7 @@ Dll
 > is_circular : false
 > log forward : <-[4]-[5]->
 > log backward: <-[5]-[4]->
-
 Removed node 5 at index 1
-
 Dll
 > size        : 1
 > head        : 4
@@ -95,13 +72,9 @@ Dll
 > is_circular : false
 > log forward : <-[4]->
 > log backward: <-[4]->
-
 Pushed value 6
-
 Pushed value 7
-
 Pushed value 8
-
 Dll
 > size        : 4
 > head        : 4
@@ -109,9 +82,7 @@ Dll
 > is_circular : false
 > log forward : <-[4]-[6]-[7]-[8]->
 > log backward: <-[8]-[7]-[6]-[4]->
-
 Removed node 4 at index 0
-
 Dll
 > size        : 3
 > head        : 6
@@ -119,9 +90,7 @@ Dll
 > is_circular : false
 > log forward : <-[6]-[7]-[8]->
 > log backward: <-[8]-[7]-[6]->
-
 Removed node 6 at index 0
-
 Dll
 > size        : 2
 > head        : 7
@@ -129,9 +98,7 @@ Dll
 > is_circular : false
 > log forward : <-[7]-[8]->
 > log backward: <-[8]-[7]->
-
 Removed node 7 at index 0
-
 Dll
 > size        : 1
 > head        : 8
@@ -139,9 +106,7 @@ Dll
 > is_circular : false
 > log forward : <-[8]->
 > log backward: <-[8]->
-
 Removed node 8 at index 0
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -149,11 +114,7 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_remove[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty dll or index out of range)
-
 Dll
 > size        : 0
 > head        : (nil)
@@ -161,4 +122,3 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-

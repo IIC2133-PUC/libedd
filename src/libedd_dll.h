@@ -7,6 +7,7 @@
 #include <string.h>
 
 #include "libedd_err.h"
+#include "libedd_cmd.h"
 
 /* === General Definitions (structs, typedefs, etc) === */
 
@@ -33,7 +34,7 @@ int dll_node_destroy(EddError *err, DllNode *node);
 
 Dll *dll_create(bool is_circular);
 void dll_destroy(EddError *err, Dll *dll);
-void dll_print(EddError *err, Dll *dll);
+void dll_print(EddError *err, Dll *dll, FILE *output_file);
 void dll_connect_ends(EddError *err, Dll *dll);
 DllNode *dll_at(EddError *err, Dll *dll, size_t index);
 
@@ -51,7 +52,7 @@ int dll_remove_by_val(EddError *err, Dll *dll, int target);
 
 void dll_reverse(EddError *err, Dll *dll);
 
-void dll_cmd(EddError *err, Dll *dll, FILE *input_file, const char *cmd);
+void dll_cmd(EddError *err, Dll *dll, FILE *input_file, FILE *output_file, const char *cmd);
 
 /* ============= */
 

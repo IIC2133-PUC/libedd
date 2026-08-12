@@ -13,4 +13,3 @@ Dll
 > is_circular : false
 > log forward : <-[1]->
 > log backward: <-[1]->
-

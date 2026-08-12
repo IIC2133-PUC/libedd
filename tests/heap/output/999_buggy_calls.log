@@ -1,0 +1,16 @@
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mheap_destroy[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mheap_destroy[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mheap_print[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mheap_print[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mheap_compare[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mheap_compare[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mheap_sift_down[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mheap_sift_down[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mheap_sift_up[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mheap_sift_up[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mheap_peek[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mheap_peek[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mheap_push[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mheap_push[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mheap_pop[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mheap_pop[0m: Unexpected NULL pointer passed as function argument

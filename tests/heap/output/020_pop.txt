@@ -3,70 +3,49 @@ Heap
 > size    : 0
 > capacity: 7
 > log     : (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mheap_pop[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty heap)
-
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
 > log     : (nil)
-
 Pushed key 1
-
 Heap
 > is_min  : false
 > size    : 1
 > capacity: 7
 > log     : [1]
-
 Removed key 1
-
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
 > log     : (nil)
-
 Pushed key 2
-
 Pushed key 3
-
 Heap
 > is_min  : false
 > size    : 2
 > capacity: 7
 > log     : [3]
             └─[2]
-
 Removed key 3
-
 Heap
 > is_min  : false
 > size    : 1
 > capacity: 7
 > log     : [2]
-
 Removed key 2
-
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
 > log     : (nil)
-
 Pushed key 4
-
 Pushed key 5
-
 Pushed key 6
-
 Pushed key 7
-
 Pushed key 8
-
 Heap
 > is_min  : false
 > size    : 5
@@ -76,9 +55,7 @@ Heap
             └─[7]
                ├─[6]
                └─[4]
-
 Removed key 8
-
 Heap
 > is_min  : false
 > size    : 4
@@ -87,9 +64,7 @@ Heap
             ├─[5]
             └─[6]
                └─[4]
-
 Removed key 7
-
 Heap
 > is_min  : false
 > size    : 3
@@ -97,56 +72,38 @@ Heap
 > log     : [6]
             ├─[5]
             └─[4]
-
 Removed key 6
-
 Heap
 > is_min  : false
 > size    : 2
 > capacity: 7
 > log     : [5]
             └─[4]
-
 Removed key 5
-
 Heap
 > is_min  : false
 > size    : 1
 > capacity: 7
 > log     : [4]
-
 Removed key 4
-
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
 > log     : (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mheap_pop[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty heap)
-
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
 > log     : (nil)
-
 Pushed key 9
-
 Pushed key 10
-
 Pushed key 11
-
 Pushed key 12
-
 Pushed key 13
-
 Pushed key 14
-
 Pushed key 15
-
 Heap
 > is_min  : false
 > size    : 7
@@ -158,9 +115,7 @@ Heap
             └─[12]
                ├─[11]
                └─[9]
-
 Removed key 15
-
 Heap
 > is_min  : false
 > size    : 6
@@ -171,9 +126,7 @@ Heap
             └─[12]
                ├─[11]
                └─[9]
-
 Removed key 14
-
 Heap
 > is_min  : false
 > size    : 5
@@ -183,11 +136,8 @@ Heap
             └─[12]
                ├─[11]
                └─[9]
-
 Pushed key 16
-
 Pushed key 17
-
 Heap
 > is_min  : false
 > size    : 7
@@ -199,9 +149,7 @@ Heap
             └─[12]
                ├─[11]
                └─[9]
-
 Removed key 17
-
 Heap
 > is_min  : false
 > size    : 6
@@ -212,4 +160,3 @@ Heap
             └─[12]
                ├─[11]
                └─[9]
-

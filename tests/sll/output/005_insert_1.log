@@ -1,0 +1,4 @@
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36msll_insert[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36msll_insert[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)

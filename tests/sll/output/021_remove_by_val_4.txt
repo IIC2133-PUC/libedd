@@ -3,68 +3,45 @@ Sll
 > head: (nil)
 > tail: (nil)
 > log : (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty sll or no match found)
-
 Sll
 > size: 0
 > head: (nil)
 > tail: (nil)
 > log : (nil)
-
 Pushed value 1
-
 Sll
 > size: 1
 > head: 1
 > tail: 1
 > log : [1]->
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty sll or no match found)
-
 Sll
 > size: 1
 > head: 1
 > tail: 1
 > log : [1]->
-
 Pushed value 2
-
 Sll
 > size: 2
 > head: 1
 > tail: 2
 > log : [1]->[2]->
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty sll or no match found)
-
 Sll
 > size: 2
 > head: 1
 > tail: 2
 > log : [1]->[2]->
-
 Pushed value 3
-
 Sll
 > size: 3
 > head: 1
 > tail: 3
 > log : [1]->[2]->[3]->
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36msll_remove_by_val[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Nothing to remove (empty sll or no match found)
-
 Sll
 > size: 3
 > head: 1
 > tail: 3
 > log : [1]->[2]->[3]->
-

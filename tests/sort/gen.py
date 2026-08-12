@@ -19,6 +19,6 @@ for slug in SLUGS:
                 file.write(f"{slug}\n")
                 for elem in arr:
                     file.write(f"{elem}\n")
-                file.write(f"{slug.upper()}_MERGESORT\n")
+                file.write(f"SORT-{slug.upper()}-MERGESORT\n")
 
             curr += 1

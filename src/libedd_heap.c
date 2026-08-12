@@ -1,4 +1,5 @@
 #include "libedd_heap.h"
+#include "libedd_cmd.h"
 
 static int heap_default_priority(int key) {
     return key;
@@ -39,7 +40,8 @@ static void heap_rec_tree_print(
     size_t stack_idx,
     char parent,
     const char *left_sep,
-    const char *right_sep
+    const char *right_sep,
+    FILE *output_file
 ) {
     if (has_error(err)) return;
     const char *self = "heap_rec_tree_print";
@@ -49,52 +51,55 @@ static void heap_rec_tree_print(
     if (errhandle_oob(err, self, 64, stack_idx)) return;
 
     if (heap_idx != 0) {
-        printf("            ");
+        fprintf(output_file, "            ");
     }
 
     for (size_t i = 0; i < stack_idx; i++) {
         if (stack[i] == 'l') {
-            printf("%s", left_sep);
+            fprintf(output_file, "%s", left_sep);
         } else if (stack[i] == 'r') {
-            printf("%s", right_sep);
+            fprintf(output_file, "%s", right_sep);
         }
     }
 
     if (parent == 'l') {
         stack[stack_idx] = 'l';
-        printf("└─");
+        fprintf(output_file, "└─");
     } else if (parent == 'r') {
         stack[stack_idx] = 'r';
-        printf("├─");
+        fprintf(output_file, "├─");
     }
 
-    printf("[%d]\n", heap->array[heap_idx]);
+    fprintf(output_file, "[%d]\n", heap->array[heap_idx]);
 
     size_t left = 2 * heap_idx + 1;
     size_t right = left + 1;
 
     if (right < heap->size) {
-        heap_rec_tree_print(err, heap, right, stack, stack_idx + 1, 'r', left_sep, right_sep);
+        heap_rec_tree_print(err, heap, right, stack, stack_idx + 1, 'r', left_sep, right_sep, output_file);
     }
 
     if (left < heap->size) {
-        heap_rec_tree_print(err, heap, left, stack, stack_idx + 1, 'l', left_sep, right_sep);
+        heap_rec_tree_print(err, heap, left, stack, stack_idx + 1, 'l', left_sep, right_sep, output_file);
     }
 }
 
-void heap_print(EddError *err, Heap *heap) {
+void heap_print(EddError *err, Heap *heap, FILE *output_file) {
     const char *self = "heap_print";
     if (errhandle_nullptr(err, self, heap)) return;
     if (errhandle_nullptr(err, self, heap->array)) return;
+    if (output_file == NULL) {
+        output_file = stdout;
+    }
 
-    printf("Heap\n");
-    printf("> is_min  : %s\n", (heap->is_min) ? "true" : "false");
-    printf("> size    : %zu\n", heap->size);
-    printf("> capacity: %zu\n", heap->capacity);
-    printf("> log     : ");
+    fprintf(output_file, "Heap\n");
+    fprintf(output_file, "> is_min  : %s\n", (heap->is_min) ? "true" : "false");
+    fprintf(output_file, "> size    : %zu\n", heap->size);
+    fprintf(output_file, "> capacity: %zu\n", heap->capacity);
+    fprintf(output_file, "> log     : ");
 
     if (heap->size == 0) {
-        printf("(nil)\n");
+        fprintf(output_file, "(nil)\n");
         return;
     }
 
@@ -104,7 +109,7 @@ void heap_print(EddError *err, Heap *heap) {
     }
     const char *left_sep = "   ";
     const char *right_sep = "│  ";
-    heap_rec_tree_print(err, heap, 0, stack, 0, 't', left_sep, right_sep);
+    heap_rec_tree_print(err, heap, 0, stack, 0, 't', left_sep, right_sep, output_file);
 
     return;
 }
@@ -232,55 +237,58 @@ int heap_pop(EddError *err, Heap* heap) {
     return extracted_key;
 }
 
-void heap_cmd(EddError *err, Heap *heap, FILE *input_file, const char *cmd) {
+void heap_cmd(EddError *err, Heap *heap, FILE *input_file, FILE *output_file, const char *cmd) {
     const char *self = "heap_cmd";
     if (errhandle_nullptr(err, self, heap)) return;
     if (errhandle_nullptr(err, self, input_file)) return;
     if (errhandle_nullptr(err, self, (void*)cmd)) return;
+    if (output_file == NULL) {
+        output_file = stdout;
+    }
 
     int key;
 
-    if (!strcmp(cmd, "PRINT")) {
-        heap_print(err, heap);
+    if (!strcmp(cmd, LIBEDD_CMDNAME_HEAP_PRINT)) {
+        heap_print(err, heap, output_file);
     }
 
-    if (!strcmp(cmd, "PEEK")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_HEAP_PEEK)) {
         int top_key = heap_peek(err, heap);
         if (has_error(err)) {
-            printf("Nothing to peek at (empty heap)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_HEAP_PEEK);
         } else {
-            printf("Top key is %d\n", top_key);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_HEAP_PEEK, top_key);
         }
     }
 
-    if (!strcmp(cmd, "PUSH")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_HEAP_PUSH)) {
         fscanf(input_file, " %d", &key);
         heap_push(err, heap, key);
         if (has_error(err)) {
-            printf("Pushing key %d failed\n", key);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_HEAP_PUSH, key);
         } else {
-            printf("Pushed key %d\n", key);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_HEAP_PUSH, key);
         }
     }
 
-    if (!strcmp(cmd, "POP")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_HEAP_POP)) {
         int popped_key = heap_pop(err, heap);
         if (has_error(err)) {
-            printf("Nothing to remove (empty heap)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_HEAP_POP);
         } else {
-            printf("Removed key %d\n", popped_key);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_HEAP_POP, popped_key);
         }
     }
 
-    if (!strcmp(cmd, "BUGGY_CALLS")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_BUGGY_CALLS)) {
         EDD_DEBUG = true;
 
         Heap *temp_heap = heap_create(1, false, NULL);
 
         heap_destroy(NULL, temp_heap);
         heap_destroy(err, NULL);
-        heap_print(NULL, temp_heap);
-        heap_print(err, NULL);
+        heap_print(NULL, temp_heap, output_file);
+        heap_print(err, NULL, output_file);
         heap_compare(NULL, temp_heap, 0, 0);
         heap_compare(err, NULL, 0, 0);
         heap_sift_down(NULL, temp_heap, 0);
@@ -294,7 +302,7 @@ void heap_cmd(EddError *err, Heap *heap, FILE *input_file, const char *cmd) {
         heap_pop(NULL, temp_heap);
         heap_pop(err, NULL);
 
-        heap_print(err, temp_heap);
+        heap_print(err, temp_heap, output_file);
         heap_destroy(err, temp_heap);
     }
 }

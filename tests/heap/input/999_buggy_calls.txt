@@ -1,4 +1,4 @@
 1
 1
 false
-BUGGY_CALLS
+BUGGY-CALLS

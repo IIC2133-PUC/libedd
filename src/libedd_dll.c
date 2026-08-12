@@ -1,4 +1,5 @@
 #include "libedd_dll.h"
+#include "libedd_cmd.h"
 
 #define bool_as_str(b) ((b) ? "true" : "false")
 
@@ -56,62 +57,65 @@ void dll_destroy(EddError *err, Dll *dll) {
     return;
 }
 
-void dll_print(EddError *err, Dll *dll) {
+void dll_print(EddError *err, Dll *dll, FILE *output_file) {
     if (errhandle_nullptr(err, "dll_print", dll)) return;
+    if (output_file == NULL) {
+        output_file = stdout;
+    }
 
     if (dll->size == 0) {
-        printf("Dll\n> size        : %zu\n> head        : %p\n> tail        : %p\n",
+        fprintf(output_file, "Dll\n> size        : %zu\n> head        : %p\n> tail        : %p\n",
                dll->size, dll->head, dll->tail);
-        printf("> is_circular : %s\n> log forward : (nil)\n> log backward: (nil)\n",
+        fprintf(output_file, "> is_circular : %s\n> log forward : (nil)\n> log backward: (nil)\n",
                bool_as_str(dll->is_circular));
         return;
     }
 
-    printf("Dll\n> size        : %zu\n> head        : %d\n> tail        : %d\n",
+    fprintf(output_file, "Dll\n> size        : %zu\n> head        : %d\n> tail        : %d\n",
            dll->size, dll->head->data, dll->tail->data);
-    printf("> is_circular : %s\n> log forward : ",
+    fprintf(output_file, "> is_circular : %s\n> log forward : ",
            bool_as_str(dll->is_circular));
 
     DllNode *current_node = dll->head;
     if (dll->is_circular) {
-        printf("(%d)", current_node->prev->data);
+        fprintf(output_file, "(%d)", current_node->prev->data);
     }
-    printf("<-[%d]", current_node->data);
+    fprintf(output_file, "<-[%d]", current_node->data);
     current_node = current_node->next;
     for (size_t i = 1; i < (dll->size - 1); i++) {
-        printf("-[%d]", current_node->data);
+        fprintf(output_file, "-[%d]", current_node->data);
         current_node = current_node->next;
     }
     if (dll->size == 1) {
-        printf("->");
+        fprintf(output_file, "->");
     } else {
-        printf("-[%d]->", current_node->data);
+        fprintf(output_file, "-[%d]->", current_node->data);
     }
     if (dll->is_circular) {
-        printf("(%d)", current_node->next->data);
+        fprintf(output_file, "(%d)", current_node->next->data);
     }
 
-    printf("\n> log backward: ");
+    fprintf(output_file, "\n> log backward: ");
 
     current_node = dll->tail;
     if (dll->is_circular) {
-        printf("(%d)", current_node->next->data);
+        fprintf(output_file, "(%d)", current_node->next->data);
     }
-    printf("<-[%d]", current_node->data);
+    fprintf(output_file, "<-[%d]", current_node->data);
     current_node = current_node->prev;
     for (size_t i = 1; i < (dll->size - 1); i++) {
-        printf("-[%d]", current_node->data);
+        fprintf(output_file, "-[%d]", current_node->data);
         current_node = current_node->prev;
     }
     if (dll->size == 1) {
-        printf("->");
+        fprintf(output_file, "->");
     } else {
-        printf("-[%d]->", current_node->data);
+        fprintf(output_file, "-[%d]->", current_node->data);
     }
     if (dll->is_circular) {
-        printf("(%d)", current_node->prev->data);
+        fprintf(output_file, "(%d)", current_node->prev->data);
     }
-    printf("\n");
+    fprintf(output_file, "\n");
 
     return;
 }
@@ -405,108 +409,111 @@ void dll_reverse(EddError *err, Dll *dll) {
     return;
 }
 
-void dll_cmd(EddError *err, Dll *dll, FILE *input_file, const char *cmd) {
+void dll_cmd(EddError *err, Dll *dll, FILE *input_file, FILE *output_file, const char *cmd) {
     const char *self = "dll_cmd";
     if (errhandle_nullptr(err, self, dll)) return;
     if (errhandle_nullptr(err, self, input_file)) return;
     if (errhandle_nullptr(err, self, (void*)cmd)) return;
+    if (output_file == NULL) {
+        output_file = stdout;
+    }
 
     size_t index;
     int number;
 
-    if (!strcmp(cmd, "PRINT")) {
-        dll_print(err, dll);
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_PRINT)) {
+        dll_print(err, dll, output_file);
     }
 
-    if (!strcmp(cmd, "AT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_AT)) {
         fscanf(input_file, " %zu", &index);
         DllNode *result = dll_at(err, dll, index);
         if (has_error(err)) {
-            printf("Node at index %zu is: (nil)\n", index);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_AT, index);
         } else {
-            printf("Node at index %zu is: %d\n", index, result->data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_AT, index, result->data);
         }
     }
 
-    if (!strcmp(cmd, "PUSH")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_PUSH)) {
         fscanf(input_file, " %d", &number);
         dll_push(err, dll, number);
         if (has_error(err)) {
-            printf("Pushing value %d failed\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_PUSH, number);
         } else {
-            printf("Pushed value %d\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_PUSH, number);
         }
     }
 
-    if (!strcmp(cmd, "PUSHLEFT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_PUSHLEFT)) {
         fscanf(input_file, " %d", &number);
         dll_pushleft(err, dll, number);
         if (has_error(err)) {
-            printf("Left-pushing value %d failed\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_PUSHLEFT, number);
         } else {
-            printf("Left-pushed value %d\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_PUSHLEFT, number);
         }
     }
 
-    if (!strcmp(cmd, "ENQ")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_ENQ)) {
         fscanf(input_file, " %d", &number);
         dll_enq(err, dll, number);
         if (has_error(err)) {
-            printf("Enqueueing value %d failed\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_ENQ, number);
         } else {
-            printf("Enqueued value %d\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_ENQ, number);
         }
     }
 
-    if (!strcmp(cmd, "ENQLEFT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_ENQLEFT)) {
         fscanf(input_file, " %d", &number);
         dll_enqleft(err, dll, number);
         if (has_error(err)) {
-            printf("Left-enqueueing value %d failed\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_ENQLEFT, number);
         } else {
-            printf("Left-enqueued value %d\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_ENQLEFT, number);
         }
     }
 
-    if (!strcmp(cmd, "INSERT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_INSERT)) {
         fscanf(input_file, " %d %zu", &number, &index);
         dll_insert(err, dll, number, index);
         if (has_error(err)) {
-            printf("Failed to append value %d at index %zu\n", number, index);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_INSERT, number, index);
         } else {
-            printf("Appended value %d at index %zu\n", number, index);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_INSERT, number, index);
         }
     }
 
-    if (!strcmp(cmd, "POP")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_POP)) {
         int popped_data = dll_pop(err, dll);
         if (has_error(err)) {
-            printf("Nothing to remove (empty dll)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_POP);
         } else {
-            printf("Removed node %d\n", popped_data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_POP, popped_data);
         }
     }
 
-    if (!strcmp(cmd, "DEQ")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_DEQ)) {
         int deq_data = dll_deq(err, dll);
         if (has_error(err)) {
-            printf("Nothing to dequeue (empty dll)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_DEQ);
         } else {
-            printf("Dequeued node %d\n", deq_data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_DEQ, deq_data);
         }
     }
 
-    if (!strcmp(cmd, "REMOVE")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_REMOVE)) {
         fscanf(input_file, " %zu", &index);
         int popped_data = dll_remove(err, dll, index);
         if (has_error(err)) {
-            printf("Nothing to remove (empty dll or index out of range)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_REMOVE);
         } else {
-            printf("Removed node %d at index %zu\n", popped_data, index);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_REMOVE, popped_data, index);
         }
     }
 
-    if (!strcmp(cmd, "REMOVE_BY_PTR")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_REMOVE_BY_PTR)) {
         fscanf(input_file, " %zu", &index);
         DllNode *target_node = dll_at(err, dll, index);
         if (has_error(err)) {
@@ -515,28 +522,32 @@ void dll_cmd(EddError *err, Dll *dll, FILE *input_file, const char *cmd) {
 
         int popped_data = dll_remove_by_ptr(err, dll, target_node);
         if (has_error(err)) {
-            printf("Nothing to remove (empty dll or no match found)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_REMOVE_BY_PTR);
         } else {
-            printf("Removed node %d by ptr\n", popped_data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_REMOVE_BY_PTR, popped_data);
         }
     }
 
-    if (!strcmp(cmd, "REMOVE_BY_VAL")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_REMOVE_BY_VAL)) {
         fscanf(input_file, " %d", &number);
         int popped_data = dll_remove_by_val(err, dll, number);
         if (has_error(err)) {
-            printf("Nothing to remove (empty dll or no match found)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_REMOVE_BY_VAL);
         } else {
-            printf("Removed (first) node %d by val\n", popped_data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_REMOVE_BY_VAL, popped_data);
         }
     }
 
-    if (!strcmp(cmd, "REVERSE")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_DLL_REVERSE)) {
         dll_reverse(err, dll);
-        printf("Reversed dll\n");
+        if (has_error(err)) {
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_DLL_REVERSE);
+        } else {
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_DLL_REVERSE);
+        }
     }
 
-    if (!strcmp(cmd, "BUGGY_CALLS")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_BUGGY_CALLS)) {
         EDD_DEBUG = true;
 
         Dll *temp_dll = dll_create(false);
@@ -547,8 +558,8 @@ void dll_cmd(EddError *err, Dll *dll, FILE *input_file, const char *cmd) {
         dll_node_destroy(err, NULL);
         dll_destroy(NULL, temp_dll);
         dll_destroy(err, NULL);
-        dll_print(NULL, temp_dll);
-        dll_print(err, NULL);
+        dll_print(NULL, temp_dll, output_file);
+        dll_print(err, NULL, output_file);
         dll_connect_ends(NULL, temp_dll);
         dll_connect_ends(err, NULL);
         dll_at(NULL, temp_dll, 0);
@@ -577,7 +588,7 @@ void dll_cmd(EddError *err, Dll *dll, FILE *input_file, const char *cmd) {
         dll_reverse(NULL, temp_dll);
         dll_reverse(err, NULL);
 
-        dll_print(err, temp_dll);
+        dll_print(err, temp_dll, output_file);
         dll_destroy(err, temp_dll);
     }
 }

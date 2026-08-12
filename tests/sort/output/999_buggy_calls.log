@@ -1,0 +1,6 @@
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msort_arr_mergesort[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msort_arr_mergesort[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msort_sll_mergesort[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msort_sll_mergesort[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36msort_dll_mergesort[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36msort_dll_mergesort[0m: Unexpected NULL pointer passed as function argument

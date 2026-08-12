@@ -13,4 +13,3 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-

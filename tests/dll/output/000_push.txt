@@ -5,9 +5,7 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-
 Pushed value 1
-
 Dll
 > size        : 1
 > head        : 1
@@ -15,9 +13,7 @@ Dll
 > is_circular : false
 > log forward : <-[1]->
 > log backward: <-[1]->
-
 Pushed value 2
-
 Dll
 > size        : 2
 > head        : 1
@@ -25,9 +21,7 @@ Dll
 > is_circular : false
 > log forward : <-[1]-[2]->
 > log backward: <-[2]-[1]->
-
 Pushed value 3
-
 Dll
 > size        : 3
 > head        : 1
@@ -35,4 +29,3 @@ Dll
 > is_circular : false
 > log forward : <-[1]-[2]-[3]->
 > log backward: <-[3]-[2]-[1]->
-

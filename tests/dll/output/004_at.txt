@@ -5,17 +5,9 @@ Dll
 > is_circular : false
 > log forward : (nil)
 > log backward: (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_at[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Node at index 0 is: (nil)
-
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mdll_at[0m: Member/Entity not found or doesn't exist
-[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
 Node at index 1 is: (nil)
-
 Pushed value 1
-
 Dll
 > size        : 1
 > head        : 1
@@ -23,15 +15,9 @@ Dll
 > is_circular : false
 > log forward : <-[1]->
 > log backward: <-[1]->
-
 Node at index 0 is: 1
-
-[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_at[0m: Search is out of bounds (for example: index is bigger or equal to size)
-[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
 Node at index 1 is: (nil)
-
 Pushed value 2
-
 Dll
 > size        : 2
 > head        : 1
@@ -39,17 +25,10 @@ Dll
 > is_circular : false
 > log forward : <-[1]-[2]->
 > log backward: <-[2]-[1]->
-
 Node at index 0 is: 1
-
 Node at index 1 is: 2
-
-[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_at[0m: Search is out of bounds (for example: index is bigger or equal to size)
-[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
 Node at index 2 is: (nil)
-
 Pushed value 3
-
 Dll
 > size        : 3
 > head        : 1
@@ -57,17 +36,10 @@ Dll
 > is_circular : false
 > log forward : <-[1]-[2]-[3]->
 > log backward: <-[3]-[2]-[1]->
-
 Node at index 0 is: 1
-
 Node at index 1 is: 2
-
 Node at index 2 is: 3
-
-[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mdll_at[0m: Search is out of bounds (for example: index is bigger or equal to size)
-[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
 Node at index 3 is: (nil)
-
 Dll
 > size        : 3
 > head        : 1
@@ -75,4 +47,3 @@ Dll
 > is_circular : false
 > log forward : <-[1]-[2]-[3]->
 > log backward: <-[3]-[2]-[1]->
-

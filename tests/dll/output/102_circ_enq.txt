@@ -5,9 +5,7 @@ Dll
 > is_circular : true
 > log forward : (nil)
 > log backward: (nil)
-
 Enqueued value 1
-
 Dll
 > size        : 1
 > head        : 1
@@ -15,9 +13,7 @@ Dll
 > is_circular : true
 > log forward : (1)<-[1]->(1)
 > log backward: (1)<-[1]->(1)
-
 Enqueued value 2
-
 Dll
 > size        : 2
 > head        : 1
@@ -25,9 +21,7 @@ Dll
 > is_circular : true
 > log forward : (2)<-[1]-[2]->(1)
 > log backward: (1)<-[2]-[1]->(2)
-
 Enqueued value 3
-
 Dll
 > size        : 3
 > head        : 1
@@ -35,4 +29,3 @@ Dll
 > is_circular : true
 > log forward : (3)<-[1]-[2]-[3]->(1)
 > log backward: (1)<-[3]-[2]-[1]->(3)
-

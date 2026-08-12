@@ -1,4 +1,5 @@
 #include "libedd_sll.h"
+#include "libedd_cmd.h"
 
 SllNode *sll_node_create(int data) {
     SllNode *new_node = malloc(sizeof(SllNode));
@@ -47,21 +48,24 @@ void sll_destroy(EddError *err, Sll *sll) {
     return;
 }
 
-void sll_print(EddError *err, Sll *sll) {
+void sll_print(EddError *err, Sll *sll, FILE *output_file) {
     if (errhandle_nullptr(err, "sll_print", sll)) return;
+    if (output_file == NULL) {
+        output_file = stdout;
+    }
 
     if (sll->size == 0) {
-        printf("Sll\n> size: %zu\n> head: %p\n> tail: %p\n> log : (nil)\n", sll->size, sll->head, sll->tail);
+        fprintf(output_file, "Sll\n> size: %zu\n> head: %p\n> tail: %p\n> log : (nil)\n", sll->size, sll->head, sll->tail);
         return;
     }
 
-    printf("Sll\n> size: %zu\n> head: %d\n> tail: %d\n> log : ", sll->size, sll->head->data, sll->tail->data);
+    fprintf(output_file, "Sll\n> size: %zu\n> head: %d\n> tail: %d\n> log : ", sll->size, sll->head->data, sll->tail->data);
     SllNode *current_node = sll->head;
     for (size_t i = 0; i < sll->size; i++) {
-        printf("[%d]->", current_node->data);
+        fprintf(output_file, "[%d]->", current_node->data);
         current_node = current_node->next;
     }
-    printf("\n");
+    fprintf(output_file, "\n");
 
     return;
 }
@@ -304,108 +308,111 @@ int sll_remove_by_val(EddError *err, Sll *sll, int target) {
     return removed_data;
 }
 
-void sll_cmd(EddError *err, Sll *sll, FILE *input_file, const char *cmd) {
+void sll_cmd(EddError *err, Sll *sll, FILE *input_file, FILE *output_file, const char *cmd) {
     const char *self = "sll_cmd";
     if (errhandle_nullptr(err, self, sll)) return;
     if (errhandle_nullptr(err, self, input_file)) return;
     if (errhandle_nullptr(err, self, (void*)cmd)) return;
+    if (output_file == NULL) {
+        output_file = stdout;
+    }
 
     size_t index;
     int number;
 
-    if (!strcmp(cmd, "PRINT")) {
-        sll_print(err, sll);
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_PRINT)) {
+        sll_print(err, sll, output_file);
     }
 
-    if (!strcmp(cmd, "AT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_AT)) {
         fscanf(input_file, " %zu", &index);
         SllNode *result = sll_at(err, sll, index);
         if (has_error(err)) {
-            printf("Node at index %zu is: (nil)\n", index);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_AT, index);
         } else {
-            printf("Node at index %zu is: %d\n", index, result->data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_AT, index, result->data);
         }
     }
 
-    if (!strcmp(cmd, "PUSH")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_PUSH)) {
         fscanf(input_file, " %d", &number);
         sll_push(err, sll, number);
         if (has_error(err)) {
-            printf("Pushing value %d failed\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_PUSH, number);
         } else {
-            printf("Pushed value %d\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_PUSH, number);
         }
     }
 
-    if (!strcmp(cmd, "PUSHLEFT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_PUSHLEFT)) {
         fscanf(input_file, " %d", &number);
         sll_pushleft(err, sll, number);
         if (has_error(err)) {
-            printf("Left-pushing value %d failed\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_PUSHLEFT, number);
         } else {
-            printf("Left-pushed value %d\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_PUSHLEFT, number);
         }
     }
 
-    if (!strcmp(cmd, "ENQ")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_ENQ)) {
         fscanf(input_file, " %d", &number);
         sll_enq(err, sll, number);
         if (has_error(err)) {
-            printf("Enqueueing value %d failed\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_ENQ, number);
         } else {
-            printf("Enqueued value %d\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_ENQ, number);
         }
     }
 
-    if (!strcmp(cmd, "ENQLEFT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_ENQLEFT)) {
         fscanf(input_file, " %d", &number);
         sll_enqleft(err, sll, number);
         if (has_error(err)) {
-            printf("Left-enqueueing value %d failed\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_ENQLEFT, number);
         } else {
-            printf("Left-enqueued value %d\n", number);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_ENQLEFT, number);
         }
     }
 
-    if (!strcmp(cmd, "INSERT")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_INSERT)) {
         fscanf(input_file, " %d %zu", &number, &index);
         sll_insert(err, sll, number, index);
         if (has_error(err)) {
-            printf("Failed to append value %d at index %zu\n", number, index);
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_INSERT, number, index);
         } else {
-            printf("Appended value %d at index %zu\n", number, index);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_INSERT, number, index);
         }
     }
 
-    if (!strcmp(cmd, "POP")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_POP)) {
         int popped_data = sll_pop(err, sll);
         if (has_error(err)) {
-            printf("Nothing to remove (empty sll)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_POP);
         } else {
-            printf("Removed node %d\n", popped_data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_POP, popped_data);
         }
     }
 
-    if (!strcmp(cmd, "DEQ")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_DEQ)) {
         int deq_data = sll_deq(err, sll);
         if (has_error(err)) {
-            printf("Nothing to dequeue (empty sll)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_DEQ);
         } else {
-            printf("Dequeued node %d\n", deq_data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_DEQ, deq_data);
         }
     }
 
-    if (!strcmp(cmd, "REMOVE")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_REMOVE)) {
         fscanf(input_file, " %zu", &index);
         int popped_data = sll_remove(err, sll, index);
         if (has_error(err)) {
-            printf("Nothing to remove (empty sll or index out of range)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_REMOVE);
         } else {
-            printf("Removed node %d at index %zu\n", popped_data, index);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_REMOVE, popped_data, index);
         }
     }
 
-    if (!strcmp(cmd, "REMOVE_BY_PTR")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_REMOVE_BY_PTR)) {
         fscanf(input_file, " %zu", &index);
         SllNode *target_node = sll_at(err, sll, index);
         if (has_error(err)) {
@@ -414,23 +421,23 @@ void sll_cmd(EddError *err, Sll *sll, FILE *input_file, const char *cmd) {
 
         int popped_data = sll_remove_by_ptr(err, sll, target_node);
         if (has_error(err)) {
-            printf("Nothing to remove (empty sll or no match found)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_REMOVE_BY_PTR);
         } else {
-            printf("Removed node %d by ptr\n", popped_data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_REMOVE_BY_PTR, popped_data);
         }
     }
 
-    if (!strcmp(cmd, "REMOVE_BY_VAL")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_SLL_REMOVE_BY_VAL)) {
         fscanf(input_file, " %d", &number);
         int popped_data = sll_remove_by_val(err, sll, number);
         if (has_error(err)) {
-            printf("Nothing to remove (empty sll or no match found)\n");
+            fprintf(output_file, LIBEDD_CMDMSG_ERR_SLL_REMOVE_BY_VAL);
         } else {
-            printf("Removed (first) node %d by val\n", popped_data);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_SLL_REMOVE_BY_VAL, popped_data);
         }
     }
 
-    if (!strcmp(cmd, "BUGGY_CALLS")) {
+    if (!strcmp(cmd, LIBEDD_CMDNAME_BUGGY_CALLS)) {
         EDD_DEBUG = true;
 
         Sll *temp_sll = sll_create();
@@ -441,8 +448,8 @@ void sll_cmd(EddError *err, Sll *sll, FILE *input_file, const char *cmd) {
         sll_node_destroy(err, NULL);
         sll_destroy(NULL, temp_sll);
         sll_destroy(err, NULL);
-        sll_print(NULL, temp_sll);
-        sll_print(err, NULL);
+        sll_print(NULL, temp_sll, output_file);
+        sll_print(err, NULL, output_file);
         sll_at(NULL, temp_sll, 0);
         sll_at(err, NULL, 0);
         sll_push(NULL, temp_sll, 1);
@@ -467,7 +474,7 @@ void sll_cmd(EddError *err, Sll *sll, FILE *input_file, const char *cmd) {
         sll_remove_by_val(NULL, temp_sll, 1);
         sll_remove_by_val(err, NULL, 1);
 
-        sll_print(err, temp_sll);
+        sll_print(err, temp_sll, output_file);
         sll_destroy(err, temp_sll);
     }
 }
