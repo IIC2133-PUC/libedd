@@ -1,6 +1,7 @@
 # Make outputs
 obj/
 libedd/
+libedd_apple/
 
 # Main program
 tester
