@@ -2,6 +2,7 @@ Heap
 > is_min  : true
 > size    : 0
 > capacity: 20
+> seq     : 0
 > log     : (nil)
 Pushed key 1
 Top key is 1
@@ -9,6 +10,7 @@ Heap
 > is_min  : true
 > size    : 1
 > capacity: 20
+> seq     : 1
 > log     : [1]
 Pushed key 2
 Top key is 1
@@ -16,6 +18,7 @@ Heap
 > is_min  : true
 > size    : 2
 > capacity: 20
+> seq     : 2
 > log     : [1]
             └─[2]
 Pushed key 3
@@ -24,6 +27,7 @@ Heap
 > is_min  : true
 > size    : 3
 > capacity: 20
+> seq     : 3
 > log     : [1]
             ├─[3]
             └─[2]
@@ -33,6 +37,7 @@ Heap
 > is_min  : true
 > size    : 4
 > capacity: 20
+> seq     : 4
 > log     : [-1]
             ├─[3]
             └─[1]
@@ -43,6 +48,7 @@ Heap
 > is_min  : true
 > size    : 5
 > capacity: 20
+> seq     : 5
 > log     : [-2]
             ├─[3]
             └─[-1]
@@ -54,6 +60,7 @@ Heap
 > is_min  : true
 > size    : 6
 > capacity: 20
+> seq     : 6
 > log     : [-2]
             ├─[0]
             │  └─[3]
@@ -66,6 +73,7 @@ Heap
 > is_min  : true
 > size    : 7
 > capacity: 20
+> seq     : 7
 > log     : [-2]
             ├─[0]
             │  ├─[4]

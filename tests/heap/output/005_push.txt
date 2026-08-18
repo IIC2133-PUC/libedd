@@ -2,22 +2,26 @@ Heap
 > is_min  : true
 > size    : 0
 > capacity: 1
+> seq     : 0
 > log     : (nil)
 Pushed key 1
 Heap
 > is_min  : true
 > size    : 1
 > capacity: 1
+> seq     : 1
 > log     : [1]
 Pushing key 2 failed
 Heap
 > is_min  : true
 > size    : 1
 > capacity: 1
+> seq     : 1
 > log     : [1]
 Pushing key 3 failed
 Heap
 > is_min  : true
 > size    : 1
 > capacity: 1
+> seq     : 1
 > log     : [1]

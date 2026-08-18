@@ -2,24 +2,28 @@ Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
+> seq     : 0
 > log     : (nil)
 Nothing to remove (empty heap)
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
+> seq     : 0
 > log     : (nil)
 Pushed key 1
 Heap
 > is_min  : false
 > size    : 1
 > capacity: 7
+> seq     : 1
 > log     : [1]
 Removed key 1
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
+> seq     : 1
 > log     : (nil)
 Pushed key 2
 Pushed key 3
@@ -27,6 +31,7 @@ Heap
 > is_min  : false
 > size    : 2
 > capacity: 7
+> seq     : 3
 > log     : [3]
             └─[2]
 Removed key 3
@@ -34,12 +39,14 @@ Heap
 > is_min  : false
 > size    : 1
 > capacity: 7
+> seq     : 3
 > log     : [2]
 Removed key 2
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
+> seq     : 3
 > log     : (nil)
 Pushed key 4
 Pushed key 5
@@ -50,6 +57,7 @@ Heap
 > is_min  : false
 > size    : 5
 > capacity: 7
+> seq     : 8
 > log     : [8]
             ├─[5]
             └─[7]
@@ -60,6 +68,7 @@ Heap
 > is_min  : false
 > size    : 4
 > capacity: 7
+> seq     : 8
 > log     : [7]
             ├─[5]
             └─[6]
@@ -69,6 +78,7 @@ Heap
 > is_min  : false
 > size    : 3
 > capacity: 7
+> seq     : 8
 > log     : [6]
             ├─[5]
             └─[4]
@@ -77,6 +87,7 @@ Heap
 > is_min  : false
 > size    : 2
 > capacity: 7
+> seq     : 8
 > log     : [5]
             └─[4]
 Removed key 5
@@ -84,18 +95,21 @@ Heap
 > is_min  : false
 > size    : 1
 > capacity: 7
+> seq     : 8
 > log     : [4]
 Removed key 4
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
+> seq     : 8
 > log     : (nil)
 Nothing to remove (empty heap)
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 7
+> seq     : 8
 > log     : (nil)
 Pushed key 9
 Pushed key 10
@@ -108,6 +122,7 @@ Heap
 > is_min  : false
 > size    : 7
 > capacity: 7
+> seq     : 15
 > log     : [15]
             ├─[14]
             │  ├─[13]
@@ -120,6 +135,7 @@ Heap
 > is_min  : false
 > size    : 6
 > capacity: 7
+> seq     : 15
 > log     : [14]
             ├─[13]
             │  └─[10]
@@ -131,6 +147,7 @@ Heap
 > is_min  : false
 > size    : 5
 > capacity: 7
+> seq     : 15
 > log     : [13]
             ├─[10]
             └─[12]
@@ -142,6 +159,7 @@ Heap
 > is_min  : false
 > size    : 7
 > capacity: 7
+> seq     : 17
 > log     : [17]
             ├─[16]
             │  ├─[13]
@@ -154,6 +172,7 @@ Heap
 > is_min  : false
 > size    : 6
 > capacity: 7
+> seq     : 17
 > log     : [16]
             ├─[13]
             │  └─[10]

@@ -10,8 +10,14 @@
 
 typedef int (*PriorityFunction)(int);
 
+typedef struct heap_data {
+    size_t seq;
+    int data;
+} HeapData;
+
 typedef struct heap {
-    int *array;
+    size_t seq;
+    HeapData *array;
     size_t capacity;
     size_t size;
     bool is_min;

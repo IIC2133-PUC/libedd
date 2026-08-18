@@ -2,10 +2,12 @@ Heap
 > is_min  : false
 > size    : 0
 > capacity: 10
+> seq     : 0
 > log     : (nil)
 Nothing to peek at (empty heap)
 Heap
 > is_min  : false
 > size    : 0
 > capacity: 10
+> seq     : 0
 > log     : (nil)

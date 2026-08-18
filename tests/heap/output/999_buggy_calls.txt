@@ -2,4 +2,5 @@ Heap
 > is_min  : false
 > size    : 0
 > capacity: 1
+> seq     : 0
 > log     : (nil)

@@ -9,8 +9,10 @@ Heap *heap_create(size_t capacity, bool is_min, PriorityFunction priority) {
     Heap *new_heap = malloc(sizeof(Heap));
     check_allocation(new_heap);
 
+    new_heap->seq = 0;
     size_t heap_capacity = (capacity > 0) ? capacity : 1;
-    new_heap->array = calloc(heap_capacity, sizeof(int));
+
+    new_heap->array = calloc(heap_capacity, sizeof(HeapData));
     check_allocation(new_heap->array);
 
     new_heap->capacity = heap_capacity;
@@ -70,7 +72,7 @@ static void heap_rec_tree_print(
         fprintf(output_file, "├─");
     }
 
-    fprintf(output_file, "[%d]\n", heap->array[heap_idx]);
+    fprintf(output_file, "[%d]\n", heap->array[heap_idx].data);
 
     size_t left = 2 * heap_idx + 1;
     size_t right = left + 1;
@@ -96,6 +98,7 @@ void heap_print(EddError *err, Heap *heap, FILE *output_file) {
     fprintf(output_file, "> is_min  : %s\n", (heap->is_min) ? "true" : "false");
     fprintf(output_file, "> size    : %zu\n", heap->size);
     fprintf(output_file, "> capacity: %zu\n", heap->capacity);
+    fprintf(output_file, "> seq     : %zu\n", heap->seq);
     fprintf(output_file, "> log     : ");
 
     if (heap->size == 0) {
@@ -120,15 +123,18 @@ size_t heap_compare(EddError *err, Heap* heap, size_t index_a, size_t index_b) {
     if (errhandle_oob(err, self, heap->size, index_a)) return 0;
     if (errhandle_oob(err, self, heap->size, index_b)) return 0;
 
-    int priority_a = heap->priority(heap->array[index_a]);
-    int priority_b = heap->priority(heap->array[index_b]);
+    size_t seq_a = heap->array[index_a].seq;
+    size_t seq_b = heap->array[index_b].seq;
+
+    int priority_a = heap->priority(heap->array[index_a].data);
+    int priority_b = heap->priority(heap->array[index_b].data);
 
     if (heap->is_min) {
         priority_a *= -1;
         priority_b *= -1;
     }
 
-    if (priority_a < priority_b) {
+    if (priority_a < priority_b || (priority_a == priority_b && seq_b < seq_a)) {
         return index_b;
     }
 
@@ -146,12 +152,12 @@ void heap_sift_down(EddError *err, Heap* heap, size_t index) {
     while (!in_position && !has_error(err)) {
         child_index = 2 * index + 1;
         if (child_index < heap->size) {
-            max_priority_index = heap_compare(err, heap, max_priority_index, child_index);
+            max_priority_index = heap_compare(err, heap, child_index, max_priority_index);
         }
 
         child_index++;
         if (child_index < heap->size) {
-            max_priority_index = heap_compare(err, heap, max_priority_index, child_index);
+            max_priority_index = heap_compare(err, heap, child_index, max_priority_index);
         }
 
         if (max_priority_index == index) {
@@ -159,7 +165,7 @@ void heap_sift_down(EddError *err, Heap* heap, size_t index) {
             continue;
         }
 
-        int temp = heap->array[index];
+        HeapData temp = heap->array[index];
         heap->array[index] = heap->array[max_priority_index];
         heap->array[max_priority_index] = temp;
 
@@ -182,8 +188,8 @@ void heap_sift_up(EddError *err, Heap* heap, size_t index) {
         }
 
         size_t parent_index = (index - 1) / 2;
-        if (index == heap_compare(err, heap, index, parent_index)) {
-            int temp = heap->array[index];
+        if (index == heap_compare(err, heap, parent_index, index)) {
+            HeapData temp = heap->array[index];
             heap->array[index] = heap->array[parent_index];
             heap->array[parent_index] = temp;
 
@@ -201,7 +207,7 @@ int heap_peek(EddError *err, Heap *heap) {
     if (errhandle_nullptr(err, self, heap)) return 0;
     if (errhandle_noent(err, self, heap->size)) return 0;
 
-    return heap->array[0];
+    return heap->array[0].data;
 }
 
 void heap_push(EddError *err, Heap* heap, int key) {
@@ -213,7 +219,9 @@ void heap_push(EddError *err, Heap* heap, int key) {
         return;
     }
 
-    heap->array[heap->size] = key;
+    heap->array[heap->size].seq = heap->seq;
+    heap->array[heap->size].data = key;
+    heap->seq++;
     heap->size++;
     size_t new_index = heap->size - 1;
 
@@ -225,10 +233,10 @@ int heap_pop(EddError *err, Heap* heap) {
     if (errhandle_nullptr(err, self, heap)) return 0;
     if (errhandle_noent(err, self, heap->size)) return 0;
 
-    int extracted_key = heap->array[0];
+    int extracted_key = heap->array[0].data;
     heap->size--;
     heap->array[0] = heap->array[heap->size];
-    heap->array[heap->size] = 0;
+    heap->array[heap->size].data = 0;
 
     if (heap->size > 1) {
         heap_sift_down(err, heap, 0);
