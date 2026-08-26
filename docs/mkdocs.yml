@@ -1,0 +1,28 @@
+site_name: LibEDD Docs
+
+nav:
+  - Inicio: 'index.md'
+  - Sobre el Proyecto: 'about.md'
+  - Módulos:
+    - Index: 'modules/index.md'
+    - err: 'modules/00-err.md'
+    - sll: 'modules/01-sll.md'
+    - dll: 'modules/02-dll.md'
+    - sort: 'modules/03-sort.md'
+    - heap: 'modules/04-heap.md'
+    - cmd: 'modules/90-cmd.md'
+  - Contribuidores: 'contributors.md'
+
+theme:
+  name: terminal
+  palette: dark
+  features:
+    - navigation.side.indexes
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_style: one-dark
+      noclasses: true
+  - pymdownx.inlinehilite
