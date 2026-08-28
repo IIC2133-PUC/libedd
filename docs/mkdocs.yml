@@ -23,6 +23,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       use_pygments: true
-      pygments_style: one-dark
+      pygments_style: dracula
       noclasses: true
   - pymdownx.inlinehilite
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde

@@ -2,12 +2,12 @@
 
 Actualmente se encuentran implementados los siguientes módulos:
 
-- `err`: Para manejo de errores dentro de toda la librería
-- `cmd`: Para _parsing_ de comandos comunes con mensajes configurables
-- `sll`: Implementación de listas ligadas simples
-- `dll`: Implementación de listas ligadas dobles
-- `sort`: Implementación de MergeSort para arreglos, SLLs, y DLLs
-- `heap`: Implementación de heaps binarios (min y max)
+- [`err`](./modules/00-err.md): Arquitectura de errores para toda la librería
+- [`cmd`](./modules/90-cmd.md): Configuración de nombres de comandos y mensajes para funciones `*_cmd`
+- [`sll`](./modules/01-sll.md): Implementación de listas ligadas simples
+- [`dll`](./modules/02-dll.md): Implementación de listas ligadas dobles
+- [`sort`](./modules/03-sort.md): Implementación de MergeSort para arreglos, SLLs, y DLLs
+- [`heap`](./modules/04-heap.md): Implementación de heaps binarios (min y max)
 
 Módulos que están planeados para el futuro cercano:
 
@@ -19,7 +19,7 @@ Módulos que están planeados para el futuro cercano:
 - `hash_table`: Implementación de tablas de hash
 - `graph`: Implementación de grafos (matriz de adyacencia y listas de adyacencia)
 
-La librería se considerará **_feature complete_** cuando todos los módulos listados anteriormente estén correcta y completamente implementados. De todas formas, este proyecto está diseñado para ser extensible y adaptado a otras funcionalidades, con lo que se mantiene la posibilidad de añadir más módulos. Podríamos decir que la lista anterior simplemente constituye la versión 1.0 de _LibEDD_, pero que versiones posteriores con nuevos módulos son bienvenidas.
+La librería se considerará ^^**_feature complete_**^^ cuando todos los módulos listados anteriormente estén correcta y completamente implementados. De todas formas, este proyecto está diseñado para ser extensible y adaptado a otras funcionalidades, con lo que se mantiene la posibilidad de añadir más módulos. Podríamos decir que la lista anterior simplemente constituye la versión 1.0 de _LibEDD_, pero que versiones posteriores con nuevos módulos son bienvenidas.
 
 # ¿Por qué existe LibEDD?
 
