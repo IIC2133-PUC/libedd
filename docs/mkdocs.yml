@@ -1,16 +1,20 @@
 site_name: LibEDD Docs
 
+site_url: ""
+use_directory_urls: false
+plugins: []
+
 nav:
   - Inicio: 'index.md'
   - Sobre el Proyecto: 'about.md'
   - Módulos:
     - Index: 'modules/index.md'
-    - err: 'modules/00-err.md'
-    - sll: 'modules/01-sll.md'
-    - dll: 'modules/02-dll.md'
-    - sort: 'modules/03-sort.md'
-    - heap: 'modules/04-heap.md'
-    - cmd: 'modules/90-cmd.md'
+    - err: 'modules/err/index.md'
+    - sll: 'modules/sll/index.md'
+    - dll: 'modules/dll/index.md'
+    - sort: 'modules/sort/index.md'
+    - heap: 'modules/heap/index.md'
+    - cmd: 'modules/cmd/index.md'
   - Contribuidores: 'contributors.md'
 
 theme:

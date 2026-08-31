@@ -117,7 +117,7 @@ void heap_print(EddError *err, Heap *heap, FILE *output_file) {
     return;
 }
 
-size_t heap_compare(EddError *err, Heap* heap, size_t index_a, size_t index_b) {
+static size_t heap_compare(EddError *err, Heap* heap, size_t index_a, size_t index_b) {
     const char *self = "heap_compare";
     if (errhandle_nullptr(err, self, heap)) return 0;
     if (errhandle_oob(err, self, heap->size, index_a)) return 0;
@@ -141,7 +141,7 @@ size_t heap_compare(EddError *err, Heap* heap, size_t index_a, size_t index_b) {
     return index_a;
 }
 
-void heap_sift_down(EddError *err, Heap* heap, size_t index) {
+static void heap_sift_down(EddError *err, Heap* heap, size_t index) {
     const char *self = "heap_sift_down";
     if (errhandle_nullptr(err, self, heap)) return;
     if (errhandle_oob(err, self, heap->size, index)) return;
@@ -175,7 +175,7 @@ void heap_sift_down(EddError *err, Heap* heap, size_t index) {
     return;
 }
 
-void heap_sift_up(EddError *err, Heap* heap, size_t index) {
+static void heap_sift_up(EddError *err, Heap* heap, size_t index) {
     const char *self = "heap_sift_up";
     if (errhandle_nullptr(err, self, heap)) return;
     if (errhandle_oob(err, self, heap->size, index)) return;

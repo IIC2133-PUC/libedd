@@ -32,10 +32,6 @@ Heap *heap_create(size_t capacity, bool is_min, PriorityFunction priority);
 void heap_destroy(EddError *err, Heap *heap);
 void heap_print(EddError *err, Heap *heap, FILE *output_file);
 
-size_t heap_compare(EddError *err, Heap* heap, size_t index_a, size_t index_b);
-void heap_sift_down(EddError *err, Heap* heap, size_t index);
-void heap_sift_up(EddError *err, Heap* heap, size_t index);
-
 int heap_peek(EddError *err, Heap *heap);
 void heap_push(EddError *err, Heap* heap, int key);
 int heap_pop(EddError *err, Heap* heap);

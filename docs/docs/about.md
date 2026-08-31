@@ -2,12 +2,12 @@
 
 Actualmente se encuentran implementados los siguientes módulos:
 
-- [`err`](./modules/00-err.md): Arquitectura de errores para toda la librería
-- [`cmd`](./modules/90-cmd.md): Configuración de nombres de comandos y mensajes para funciones `*_cmd`
-- [`sll`](./modules/01-sll.md): Implementación de listas ligadas simples
-- [`dll`](./modules/02-dll.md): Implementación de listas ligadas dobles
-- [`sort`](./modules/03-sort.md): Implementación de MergeSort para arreglos, SLLs, y DLLs
-- [`heap`](./modules/04-heap.md): Implementación de heaps binarios (min y max)
+- [`err`](modules/err/index.md): Arquitectura de errores para toda la librería
+- [`cmd`](modules/cmd/index.md): Configuración de nombres de comandos y mensajes para funciones `*_cmd`
+- [`sll`](modules/sll/index.md): Implementación de listas ligadas simples
+- [`dll`](modules/dll/index.md): Implementación de listas ligadas dobles
+- [`sort`](modules/sort/index.md): Implementación de MergeSort para arreglos, SLLs, y DLLs
+- [`heap`](modules/heap/index.md): Implementación de heaps binarios (min y max)
 
 Módulos que están planeados para el futuro cercano:
 
