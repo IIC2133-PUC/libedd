@@ -2,7 +2,12 @@
 
 ## > Descripción
 
+El módulo `sll` define una implementación de listas ligadas simples (SLLs), es decir, listas ligadas donde cada nodo tiene una
+referencia hacia el siguiente. Para ello, define los `struct`s `SllNode` y `Sll`, y contiene funciones para operaciones básicas, como leer el valor en cierto índice, insertar, y eliminar.
+
 ## > Definiciones
+
+En `libedd_sll.h` se encuentran:
 
 ```c
 #include "libedd_err.h"
@@ -19,6 +24,8 @@ typedef struct sll {
     size_t size;
 } Sll;
 ```
+
+Primeramente `SllNode` representa 3
 
 ## > Funciones
 
