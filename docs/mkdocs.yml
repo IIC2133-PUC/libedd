@@ -14,6 +14,7 @@ nav:
     - dll: 'modules/dll/index.md'
     - sort: 'modules/sort/index.md'
     - heap: 'modules/heap/index.md'
+    - bst: 'modules/bst/index.md'
     - cmd: 'modules/cmd/index.md'
   - Contribuidores: 'contributors.md'
 

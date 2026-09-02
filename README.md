@@ -22,7 +22,7 @@ Full documentation comming soon...
 - [x] Doubly Linked List
 - [x] Sorting Algorithms (Array, SLL, DLL)
 - [x] Heap (Min, Max)
-- [ ] BST
+- [x] BST
 - [ ] AVL Tree
 - [ ] 2-3 Tree
 - [ ] Red-Black Tree
@@ -50,7 +50,15 @@ For a single test:
 $ make test EDD=*edd* TEST_NUM=*number*
 ```
 
-For memory errors/leaks use valgrind (no script/make target yet)
+For memory errors/leaks in all tests:
+```bash
+$ make memcheck EDD=*edd*
+```
+
+For memory errors/leaks in a single test:
+```bash
+$ make memcheck EDD=*edd* TEST_NUM=*number*
+```
 
 ### Build Library - Shared objects (.so) + Header files (.h)
 

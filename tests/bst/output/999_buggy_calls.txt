@@ -1,0 +1,4 @@
+Bst
+> root : (nil)
+> size : 0
+> log  : 

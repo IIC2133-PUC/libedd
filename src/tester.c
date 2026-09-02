@@ -6,6 +6,7 @@
 #include "libedd_dll.h"
 #include "libedd_sort.h"
 #include "libedd_heap.h"
+#include "libedd_bst.h"
 
 bool EDD_DEBUG = true;
 
@@ -133,6 +134,20 @@ void heap_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     heap_destroy(&err, heap);
 }
 
+void bst_tester(FILE *input_file, FILE *output_file, size_t n_events) {
+    EddError err = EDD_NOERR;
+    char cmd[32];
+
+    Bst *bst = bst_create(NULL);
+
+    for (size_t i = 0; i < n_events; i++) {
+        fscanf(input_file, "%s", cmd);
+        bst_cmd(&err, bst, input_file, output_file, cmd);
+    }
+
+    bst_destroy(&err, bst);
+}
+
 static bool check_arguments(int argc, char **argv) {
     if (argc != 4) {
         printf("Usage: %s EDD INPUT_FILE OUTPUT_FILE\n", argv[0]);
@@ -175,7 +190,7 @@ int main(int argc, char **argv) {
     }
 
     if (!strcmp(edd_to_test, "bst")) {
-        //
+        bst_tester(input_file, output_file, N);
     }
 
     if (!strcmp(edd_to_test, "avl")) {

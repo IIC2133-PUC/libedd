@@ -8,10 +8,10 @@ Actualmente se encuentran implementados los siguientes módulos:
 - [`dll`](modules/dll/index.md): Implementación de listas ligadas dobles
 - [`sort`](modules/sort/index.md): Implementación de MergeSort para arreglos, SLLs, y DLLs
 - [`heap`](modules/heap/index.md): Implementación de heaps binarios (min y max)
+- [`bst`](modules/bst/index.md): Implementación de árboles de búsqueda binarios
 
 Módulos que están planeados para el futuro cercano:
 
-- `bst`: Implementación de árboles de búsqueda binarios
 - `avl`: Implementación de árboles AVL
 - `ttt`: Implementación de árboles 2-3
 - `rbt`: Implementación de árboles rojo-negro

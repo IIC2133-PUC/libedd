@@ -1,0 +1,60 @@
+Bst
+> root : (nil)
+> size : 0
+> log  : 
+Pushed key 1
+Bst
+> root : 1
+> size : 1
+> log  : [1]
+Pushed key 2
+Bst
+> root : 1
+> size : 2
+> log  : [1]
+         ├─[2]
+Pushed key 3
+Bst
+> root : 1
+> size : 3
+> log  : [1]
+         ├─[2]
+         │  ├─[3]
+Pushed key -1
+Bst
+> root : 1
+> size : 4
+> log  : [1]
+         ├─[2]
+         │  ├─[3]
+         └─[-1]
+Pushed key -2
+Bst
+> root : 1
+> size : 5
+> log  : [1]
+         ├─[2]
+         │  ├─[3]
+         └─[-1]
+            └─[-2]
+Pushed key 0
+Bst
+> root : 1
+> size : 6
+> log  : [1]
+         ├─[2]
+         │  ├─[3]
+         └─[-1]
+            ├─[0]
+            └─[-2]
+Pushed key 4
+Bst
+> root : 1
+> size : 7
+> log  : [1]
+         ├─[2]
+         │  ├─[3]
+         │  │  ├─[4]
+         └─[-1]
+            ├─[0]
+            └─[-2]

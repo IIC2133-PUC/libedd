@@ -22,6 +22,9 @@ typedef enum libedd_err {
 
     // Heap specific errors
     EDD_HEAP_EFULL   , // The heap is full (size == capacity), any push/insertion attempt will be ignored
+
+    // BST specific errors
+    EDD_BST_EMOVSTOP , // Movement function instructed to stop BST traversal
 } EddError;
 
 /* ============= */
@@ -36,6 +39,7 @@ bool has_error(EddError *err);
 bool errhandle_nullptr(EddError *err, const char *caller, void *ptr);
 bool errhandle_oob(EddError *err, const char *caller, size_t size, size_t index);
 bool errhandle_noent(EddError *err, const char *caller, size_t size);
+bool errhandle_movstop(EddError *err, const char *caller, char move);
 
 /* ============= */
 

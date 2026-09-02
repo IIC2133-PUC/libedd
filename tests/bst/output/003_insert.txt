@@ -1,0 +1,29 @@
+Bst
+> root : (nil)
+> size : 0
+> log  : 
+Pushed key 2
+Bst
+> root : 2
+> size : 1
+> log  : [2]
+Pushed key 3
+Bst
+> root : 2
+> size : 2
+> log  : [2]
+         ├─[3]
+Pushed key 1
+Bst
+> root : 2
+> size : 3
+> log  : [2]
+         ├─[3]
+         └─[1]
+Pushing key 3 failed (possibly due to it being a duplicate)
+Bst
+> root : 2
+> size : 3
+> log  : [2]
+         ├─[3]
+         └─[1]

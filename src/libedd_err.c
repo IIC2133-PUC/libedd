@@ -66,6 +66,12 @@ void edd_debug(EddError *err, const char *caller) {
             printf("The heap is full (size == capacity), any push/insertion attempt will be ignored\n");
             break;
 
+        case EDD_BST_EMOVSTOP:
+            printf("(\033[0;35mEDD_BST_EMOVSTOP\033[0m) ");
+            printf("Error reported by \033[0;36m%s\033[0m: ", caller);
+            printf("Movement function instructed to stop BST traversal\n");
+            break;
+
         default:
             printf("(\033[0;35mEDD_???\033[0m) ");
             printf("Error reported by \033[0;36m%s\033[0m: ", caller);
@@ -127,3 +133,15 @@ bool errhandle_noent(EddError *err, const char *caller, size_t size) {
     return false;
 }
 
+bool errhandle_movstop(EddError *err, const char *caller, char move) {
+    if (is_edderr_null(err, caller)) return true;
+
+    if (move == 's') {
+        *err = EDD_BST_EMOVSTOP;
+        edd_debug(err, caller);
+        return true;
+    }
+
+    *err = EDD_NOERR;
+    return false;
+}

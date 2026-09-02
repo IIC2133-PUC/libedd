@@ -49,6 +49,13 @@
 #define LIBEDD_CMDNAME_HEAP_PUSH          "HEAP-PUSH"
 #define LIBEDD_CMDNAME_HEAP_POP           "HEAP-POP"
 
+// -- BST -- //
+//
+#define LIBEDD_CMDNAME_BST_PRINT          "BST-PRINT"
+#define LIBEDD_CMDNAME_BST_SEARCH         "BST-SEARCH"
+#define LIBEDD_CMDNAME_BST_INSERT         "BST-INSERT"
+#define LIBEDD_CMDNAME_BST_REMOVE         "BST-REMOVE"
+
 /* ============= */
 
 /* === Messages for CMD functions === */
@@ -147,6 +154,17 @@
 
 #define LIBEDD_CMDMSG_GOOD_HEAP_POP           "Removed key %d\n"
 #define LIBEDD_CMDMSG_ERR_HEAP_POP            "Nothing to remove (empty heap)\n"
+
+// -- BST -- //
+
+#define LIBEDD_CMDMSG_GOOD_BST_SEARCH         "Found key %d inside the tree\n"
+#define LIBEDD_CMDMSG_ERR_BST_SEARCH          "Key %d was not found inside the tree\n"
+
+#define LIBEDD_CMDMSG_GOOD_BST_INSERT         "Pushed key %d\n"
+#define LIBEDD_CMDMSG_ERR_BST_INSERT          "Pushing key %d failed (possibly due to it being a duplicate)\n"
+
+#define LIBEDD_CMDMSG_GOOD_BST_REMOVE         "Removed key %d\n"
+#define LIBEDD_CMDMSG_ERR_BST_REMOVE          "Failed to remove key %d (empty tree or no match found)\n"
 
 /* ============= */
 

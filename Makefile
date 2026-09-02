@@ -66,7 +66,10 @@ init_test_outputs:
 	@if [ ! -d ./$(TEST_OUTPUTS) ]; then mkdir ./$(TEST_OUTPUTS); fi
 
 test: init_test_outputs $(BIN)
-	./$(SCRIPTS)/run-tests.sh ./$(BIN) ./$(TESTS) ./$(TEST_OUTPUTS) $(EDD) $(TEST_NUM)
+	./$(SCRIPTS)/run-tests.sh ./$(BIN) $(EDD) ./$(TESTS) ./$(TEST_OUTPUTS) $(TEST_NUM)
+
+memcheck: $(BIN)
+	./$(SCRIPTS)/run-memcheck.sh ./$(BIN) $(EDD) ./$(TESTS) $(TEST_NUM)
 
 $(BIN): init_objs $(OBJS)
 	$(CC) $(CFLAGS) $(LIB) $(OBJS) -o $@
