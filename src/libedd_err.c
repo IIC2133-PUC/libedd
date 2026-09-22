@@ -75,7 +75,7 @@ void edd_debug(EddError *err, const char *caller) {
         case EDD_BST_EILLROT:
             printf("(\033[0;35mEDD_BST_EILLROT\033[0m) ");
             printf("Error reported by \033[0;36m%s\033[0m: ", caller);
-            printf("Nodes are invalid for rotation operation in AVL Mode\n");
+            printf("Nodes are invalid for rotation operation in BST\n");
             break;
 
         default:

@@ -138,13 +138,15 @@ void bst_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     EddError err = EDD_NOERR;
     char cmd[32];
 
-    bool avl_mode = false;
+    BstVariant bst_variant = EDD_BST_MODE;
     fscanf(input_file, "%s", cmd);
-    if (!strcmp(cmd, "true")) {
-        avl_mode = true;
+    if (!strcmp(cmd, "avl")) {
+        bst_variant = EDD_AVL_MODE;
+    } else if (!strcmp(cmd, "rbt")) {
+        bst_variant = EDD_RBT_MODE;
     }
 
-    Bst *bst = bst_create(NULL, avl_mode);
+    Bst *bst = bst_create(bst_variant, 0, NULL, NULL);
 
     for (size_t i = 0; i < n_events; i++) {
         fscanf(input_file, "%s", cmd);

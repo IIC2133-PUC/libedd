@@ -20,7 +20,7 @@ Pushed key -2
 Bst
 > root    : 5
 > size    : 15
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]

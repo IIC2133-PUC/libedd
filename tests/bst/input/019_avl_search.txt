@@ -1,5 +1,5 @@
 36
-true
+avl
 BST-SEARCH 2
 BST-INSERT 5
 BST-SEARCH 2

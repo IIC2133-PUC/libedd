@@ -1,25 +1,25 @@
 Bst
 > root    : (nil)
 > size    : 0
-> avl_mode: true
+> variant : avl
 > log     : 
 Failed to remove key 0 (empty tree or no match found)
 Bst
 > root    : (nil)
 > size    : 0
-> avl_mode: true
+> variant : avl
 > log     : 
 Pushed key 0
 Bst
 > root    : 0
 > size    : 1
-> avl_mode: true
+> variant : avl
 > log     : [0]
 Removed key 0
 Bst
 > root    : (nil)
 > size    : 0
-> avl_mode: true
+> variant : avl
 > log     : 
 Pushed key 3
 Pushed key 1
@@ -27,7 +27,7 @@ Pushed key 5
 Bst
 > root    : 3
 > size    : 3
-> avl_mode: true
+> variant : avl
 > log     : [3]
             ├─[5]
             └─[1]
@@ -35,7 +35,7 @@ Failed to remove key 4 (empty tree or no match found)
 Bst
 > root    : 3
 > size    : 3
-> avl_mode: true
+> variant : avl
 > log     : [3]
             ├─[5]
             └─[1]
@@ -43,7 +43,7 @@ Removed key 1
 Bst
 > root    : 3
 > size    : 2
-> avl_mode: true
+> variant : avl
 > log     : [3]
             ├─[5]
 Pushed key 1
@@ -51,7 +51,7 @@ Removed key 5
 Bst
 > root    : 3
 > size    : 2
-> avl_mode: true
+> variant : avl
 > log     : [3]
             └─[1]
 Pushed key 5
@@ -59,7 +59,7 @@ Removed key 3
 Bst
 > root    : 5
 > size    : 2
-> avl_mode: true
+> variant : avl
 > log     : [5]
             └─[1]
 Pushed key 7
@@ -67,20 +67,20 @@ Removed key 1
 Bst
 > root    : 5
 > size    : 2
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[7]
 Removed key 5
 Bst
 > root    : 7
 > size    : 1
-> avl_mode: true
+> variant : avl
 > log     : [7]
 Removed key 7
 Bst
 > root    : (nil)
 > size    : 0
-> avl_mode: true
+> variant : avl
 > log     : 
 Pushed key 5
 Pushed key 10
@@ -100,7 +100,7 @@ Pushed key -2
 Bst
 > root    : 5
 > size    : 15
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -120,7 +120,7 @@ Removed key -2
 Bst
 > root    : 5
 > size    : 14
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -139,7 +139,7 @@ Removed key 0
 Bst
 > root    : 5
 > size    : 13
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -157,7 +157,7 @@ Removed key 2
 Bst
 > root    : 5
 > size    : 12
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -174,7 +174,7 @@ Removed key 4
 Bst
 > root    : 5
 > size    : 11
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -190,7 +190,7 @@ Removed key 7
 Bst
 > root    : 5
 > size    : 10
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -205,7 +205,7 @@ Removed key 9
 Bst
 > root    : 5
 > size    : 9
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -219,7 +219,7 @@ Removed key 11
 Bst
 > root    : 5
 > size    : 8
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -232,7 +232,7 @@ Removed key 13
 Bst
 > root    : 5
 > size    : 7
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -244,7 +244,7 @@ Removed key -1
 Bst
 > root    : 5
 > size    : 6
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -255,7 +255,7 @@ Removed key 3
 Bst
 > root    : 5
 > size    : 5
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -265,7 +265,7 @@ Removed key 8
 Bst
 > root    : 5
 > size    : 4
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -274,7 +274,7 @@ Removed key 12
 Bst
 > root    : 5
 > size    : 3
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             └─[1]
@@ -282,18 +282,18 @@ Removed key 1
 Bst
 > root    : 5
 > size    : 2
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
 Removed key 10
 Bst
 > root    : 5
 > size    : 1
-> avl_mode: true
+> variant : avl
 > log     : [5]
 Removed key 5
 Bst
 > root    : (nil)
 > size    : 0
-> avl_mode: true
+> variant : avl
 > log     : 

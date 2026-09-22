@@ -7,7 +7,7 @@ Pushed key 2
 Bst
 > root    : 50
 > size    : 6
-> avl_mode: true
+> variant : avl
 > log     : [50]
             ├─[100]
             │  ├─[150]
@@ -18,7 +18,7 @@ Removed key 2
 Bst
 > root    : 50
 > size    : 5
-> avl_mode: true
+> variant : avl
 > log     : [50]
             ├─[100]
             │  ├─[150]
@@ -30,7 +30,7 @@ Pushed key 5
 Bst
 > root    : 50
 > size    : 8
-> avl_mode: true
+> variant : avl
 > log     : [50]
             ├─[100]
             │  ├─[150]
@@ -43,7 +43,7 @@ Removed key 0
 Bst
 > root    : 50
 > size    : 7
-> avl_mode: true
+> variant : avl
 > log     : [50]
             ├─[100]
             │  ├─[150]
@@ -57,7 +57,7 @@ Pushed key 0
 Bst
 > root    : 50
 > size    : 8
-> avl_mode: true
+> variant : avl
 > log     : [50]
             ├─[100]
             │  ├─[150]
@@ -70,7 +70,7 @@ Removed key 3
 Bst
 > root    : 50
 > size    : 7
-> avl_mode: true
+> variant : avl
 > log     : [50]
             ├─[100]
             │  ├─[150]
@@ -92,7 +92,7 @@ Pushed key 27
 Bst
 > root    : 13
 > size    : 12
-> avl_mode: true
+> variant : avl
 > log     : [13]
             ├─[50]
             │  ├─[100]
@@ -109,7 +109,7 @@ Removed key 10
 Bst
 > root    : 13
 > size    : 11
-> avl_mode: true
+> variant : avl
 > log     : [13]
             ├─[50]
             │  ├─[100]
@@ -127,7 +127,7 @@ Pushed key 19
 Bst
 > root    : 13
 > size    : 14
-> avl_mode: true
+> variant : avl
 > log     : [13]
             ├─[50]
             │  ├─[100]
@@ -146,7 +146,7 @@ Removed key 11
 Bst
 > root    : 20
 > size    : 13
-> avl_mode: true
+> variant : avl
 > log     : [20]
             ├─[50]
             │  ├─[100]

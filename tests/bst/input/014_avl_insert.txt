@@ -1,5 +1,5 @@
 15
-true
+avl
 BST-PRINT
 BST-INSERT 7
 BST-PRINT

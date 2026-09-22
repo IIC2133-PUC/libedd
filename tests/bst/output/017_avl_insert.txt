@@ -1,26 +1,26 @@
 Bst
 > root    : (nil)
 > size    : 0
-> avl_mode: true
+> variant : avl
 > log     : 
 Pushed key 5
 Bst
 > root    : 5
 > size    : 1
-> avl_mode: true
+> variant : avl
 > log     : [5]
 Pushed key 1
 Bst
 > root    : 5
 > size    : 2
-> avl_mode: true
+> variant : avl
 > log     : [5]
             └─[1]
 Pushed key 10
 Bst
 > root    : 5
 > size    : 3
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             └─[1]
@@ -28,7 +28,7 @@ Pushed key -1
 Bst
 > root    : 5
 > size    : 4
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             └─[1]
@@ -37,7 +37,7 @@ Pushed key 3
 Bst
 > root    : 5
 > size    : 5
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             └─[1]
@@ -47,7 +47,7 @@ Pushed key 8
 Bst
 > root    : 5
 > size    : 6
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  └─[8]
@@ -58,7 +58,7 @@ Pushed key 12
 Bst
 > root    : 5
 > size    : 7
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -70,7 +70,7 @@ Pushed key -2
 Bst
 > root    : 5
 > size    : 8
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -83,7 +83,7 @@ Pushed key 0
 Bst
 > root    : 5
 > size    : 9
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -97,7 +97,7 @@ Pushed key 2
 Bst
 > root    : 5
 > size    : 10
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -112,7 +112,7 @@ Pushed key 4
 Bst
 > root    : 5
 > size    : 11
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -128,7 +128,7 @@ Pushed key 7
 Bst
 > root    : 5
 > size    : 12
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -145,7 +145,7 @@ Pushed key 9
 Bst
 > root    : 5
 > size    : 13
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -163,7 +163,7 @@ Pushed key 11
 Bst
 > root    : 5
 > size    : 14
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]
@@ -182,7 +182,7 @@ Pushed key 13
 Bst
 > root    : 5
 > size    : 15
-> avl_mode: true
+> variant : avl
 > log     : [5]
             ├─[10]
             │  ├─[12]

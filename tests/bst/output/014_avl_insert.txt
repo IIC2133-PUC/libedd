@@ -1,26 +1,26 @@
 Bst
 > root    : (nil)
 > size    : 0
-> avl_mode: true
+> variant : avl
 > log     : 
 Pushed key 7
 Bst
 > root    : 7
 > size    : 1
-> avl_mode: true
+> variant : avl
 > log     : [7]
 Pushed key 6
 Bst
 > root    : 7
 > size    : 2
-> avl_mode: true
+> variant : avl
 > log     : [7]
             └─[6]
 Pushed key 5
 Bst
 > root    : 6
 > size    : 3
-> avl_mode: true
+> variant : avl
 > log     : [6]
             ├─[7]
             └─[5]
@@ -28,7 +28,7 @@ Pushed key 4
 Bst
 > root    : 6
 > size    : 4
-> avl_mode: true
+> variant : avl
 > log     : [6]
             ├─[7]
             └─[5]
@@ -37,7 +37,7 @@ Pushed key 3
 Bst
 > root    : 6
 > size    : 5
-> avl_mode: true
+> variant : avl
 > log     : [6]
             ├─[7]
             └─[4]
@@ -47,7 +47,7 @@ Pushed key 2
 Bst
 > root    : 4
 > size    : 6
-> avl_mode: true
+> variant : avl
 > log     : [4]
             ├─[6]
             │  ├─[7]
@@ -58,7 +58,7 @@ Pushed key 1
 Bst
 > root    : 4
 > size    : 7
-> avl_mode: true
+> variant : avl
 > log     : [4]
             ├─[6]
             │  ├─[7]
