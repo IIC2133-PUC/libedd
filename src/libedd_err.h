@@ -25,6 +25,9 @@ typedef enum libedd_err {
 
     // BST specific errors
     EDD_BST_EMOVSTOP , // Movement function instructed to stop BST traversal
+
+    // AVL specific errors
+    EDD_BST_EILLROT  , // Nodes are invalid for rotation operation in AVL Mode
 } EddError;
 
 /* ============= */

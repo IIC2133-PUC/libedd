@@ -1,4 +1,5 @@
 Bst
-> root : (nil)
-> size : 0
-> log  : 
+> root    : (nil)
+> size    : 0
+> avl_mode: false
+> log     : 

@@ -1,4 +1,5 @@
 9
+false
 BST-PRINT
 BST-INSERT 2
 BST-PRINT

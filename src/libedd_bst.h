@@ -10,6 +10,7 @@
 
 typedef struct bst_node {
     int key;
+    size_t height;
     struct bst_node *parent;
     struct bst_node *left;
     struct bst_node *right;
@@ -21,6 +22,7 @@ typedef struct bst {
     BstNode *root;
     size_t size;
     MovementFunction move_to;
+    bool avl_mode;
 } Bst;
 
 /* ============= */
@@ -30,7 +32,7 @@ typedef struct bst {
 BstNode *bst_node_create(int key);
 int bst_node_destroy(EddError *err, BstNode *node);
 
-Bst *bst_create(MovementFunction move_to);
+Bst *bst_create(MovementFunction move_to, bool avl_mode);
 void bst_destroy(EddError *err, Bst *bst);
 void bst_print(EddError *err, Bst *bst, FILE *output_file);
 

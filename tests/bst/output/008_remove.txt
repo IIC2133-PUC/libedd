@@ -1,49 +1,55 @@
 Pushed key 0
 Pushed key 2
 Bst
-> root : 0
-> size : 2
-> log  : [0]
-         ├─[2]
+> root    : 0
+> size    : 2
+> avl_mode: false
+> log     : [0]
+            ├─[2]
 Removed key 2
 Bst
-> root : 0
-> size : 1
-> log  : [0]
+> root    : 0
+> size    : 1
+> avl_mode: false
+> log     : [0]
 Pushed key 3
 Pushed key 1
 Pushed key 5
 Bst
-> root : 0
-> size : 4
-> log  : [0]
-         ├─[3]
-         │  ├─[5]
-         │  └─[1]
+> root    : 0
+> size    : 4
+> avl_mode: false
+> log     : [0]
+            ├─[3]
+            │  ├─[5]
+            │  └─[1]
 Removed key 0
 Bst
-> root : 3
-> size : 3
-> log  : [3]
-         ├─[5]
-         └─[1]
+> root    : 3
+> size    : 3
+> avl_mode: false
+> log     : [3]
+            ├─[5]
+            └─[1]
 Removed key 5
 Pushed key 2
 Pushed key 0
 Bst
-> root : 3
-> size : 4
-> log  : [3]
-         └─[1]
-            ├─[2]
-            └─[0]
+> root    : 3
+> size    : 4
+> avl_mode: false
+> log     : [3]
+            └─[1]
+               ├─[2]
+               └─[0]
 Removed key 3
 Bst
-> root : 1
-> size : 3
-> log  : [1]
-         ├─[2]
-         └─[0]
+> root    : 1
+> size    : 3
+> avl_mode: false
+> log     : [1]
+            ├─[2]
+            └─[0]
 Removed key 0
 Removed key 1
 Removed key 2
@@ -56,53 +62,57 @@ Pushed key 20
 Pushed key 13
 Pushed key 27
 Bst
-> root : 10
-> size : 8
-> log  : [10]
-         ├─[11]
-         │  ├─[20]
-         │  │  ├─[27]
-         │  │  └─[13]
-         └─[3]
-            ├─[5]
-            └─[1]
+> root    : 10
+> size    : 8
+> avl_mode: false
+> log     : [10]
+            ├─[11]
+            │  ├─[20]
+            │  │  ├─[27]
+            │  │  └─[13]
+            └─[3]
+               ├─[5]
+               └─[1]
 Removed key 10
 Bst
-> root : 11
-> size : 7
-> log  : [11]
-         ├─[20]
-         │  ├─[27]
-         │  └─[13]
-         └─[3]
-            ├─[5]
-            └─[1]
+> root    : 11
+> size    : 7
+> avl_mode: false
+> log     : [11]
+            ├─[20]
+            │  ├─[27]
+            │  └─[13]
+            └─[3]
+               ├─[5]
+               └─[1]
 Pushed key 17
 Pushed key 15
 Pushed key 19
 Bst
-> root : 11
-> size : 10
-> log  : [11]
-         ├─[20]
-         │  ├─[27]
-         │  └─[13]
-         │     ├─[17]
-         │     │  ├─[19]
-         │     │  └─[15]
-         └─[3]
-            ├─[5]
-            └─[1]
+> root    : 11
+> size    : 10
+> avl_mode: false
+> log     : [11]
+            ├─[20]
+            │  ├─[27]
+            │  └─[13]
+            │     ├─[17]
+            │     │  ├─[19]
+            │     │  └─[15]
+            └─[3]
+               ├─[5]
+               └─[1]
 Removed key 11
 Bst
-> root : 13
-> size : 9
-> log  : [13]
-         ├─[20]
-         │  ├─[27]
-         │  └─[17]
-         │     ├─[19]
-         │     └─[15]
-         └─[3]
-            ├─[5]
-            └─[1]
+> root    : 13
+> size    : 9
+> avl_mode: false
+> log     : [13]
+            ├─[20]
+            │  ├─[27]
+            │  └─[17]
+            │     ├─[19]
+            │     └─[15]
+            └─[3]
+               ├─[5]
+               └─[1]
