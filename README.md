@@ -23,7 +23,7 @@ Full documentation comming soon...
 - [x] Sorting Algorithms (Array, SLL, DLL)
 - [x] Heap (Min, Max)
 - [x] BST
-- [ ] AVL Tree
+- [x] AVL Tree
 - [ ] 2-3 Tree
 - [ ] Red-Black Tree
 - [ ] B+ Tree

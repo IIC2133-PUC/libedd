@@ -10,6 +10,7 @@
 
 typedef struct bst_node {
     int key;
+    size_t height;
     struct bst_node *parent;
     struct bst_node *left;
     struct bst_node *right;
@@ -21,6 +22,7 @@ typedef struct bst {
     BstNode *root;
     size_t size;
     MovementFunction move_to;
+    bool avl_mode;
 } Bst;
 ```
 
