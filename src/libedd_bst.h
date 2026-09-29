@@ -66,8 +66,12 @@ int bst_remove(EddError *err, Bst *bst, int key);
 
 void bst_cmd(EddError *err, Bst *bst, FILE *input_file, FILE *output_file, const char *cmd);
 
-// Variant Balancing Functions
+// AVL Variant Functions
+int bst_avl_get_height(BstNode *node);
+void bst_avl_update_height(EddError *err, BstNode *node);
 void bst_avl_rebalance(EddError *err, Bst *bst, BstNode *node, BstOperation operation);
+
+// Red-Black Variant Functions
 void bst_rbt_rebalance(EddError *err, Bst *bst, BstNode *node, BstOperation operation);
 
 /* ============= */

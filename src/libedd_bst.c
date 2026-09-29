@@ -441,17 +441,16 @@ int bst_remove(EddError *err, Bst *bst, int key) {
 
 /* === AVL Variant Helper Functions === */
 
-static int bst_avl_balance_factor(EddError *err, BstNode *node) {
-    if (errhandle_nullptr(err, "bst_node_avl_balance_factor", node)) return 0;
+int bst_avl_get_height(BstNode *node) {
+    if (node == NULL) {
+        return 0;
+    }
 
-    size_t left_height = node->left != NULL ? node->left->variant_property : 0;
-    size_t right_height = node->right != NULL ? node->right->variant_property : 0;
-
-    return right_height - left_height;
+    return node->variant_property;
 }
 
-static void bst_avl_update_height(EddError *err, BstNode *node) {
-    if (errhandle_nullptr(err, "bst_node_update_height", node)) return;
+void bst_avl_update_height(EddError *err, BstNode *node) {
+    if (errhandle_nullptr(err, "bst_avl_update_height", node)) return;
 
     size_t left_height = node->left != NULL ? node->left->variant_property : 0;
     size_t right_height = node->right != NULL ? node->right->variant_property : 0;
@@ -467,7 +466,7 @@ static void bst_avl_update_height(EddError *err, BstNode *node) {
 }
 
 static void bst_avl_update_heights(EddError *err, BstNode *node) {
-    if (errhandle_nullptr(err, "bst_node_update_heights", node)) return;
+    if (errhandle_nullptr(err, "bst_avl_update_heights", node)) return;
 
     BstNode *current_node = node;
     while (current_node != NULL && !has_error(err)) {
@@ -476,6 +475,15 @@ static void bst_avl_update_heights(EddError *err, BstNode *node) {
     }
 
     return;
+}
+
+static int bst_avl_balance_factor(EddError *err, BstNode *node) {
+    if (errhandle_nullptr(err, "bst_avl_balance_factor", node)) return 0;
+
+    size_t left_height = node->left != NULL ? node->left->variant_property : 0;
+    size_t right_height = node->right != NULL ? node->right->variant_property : 0;
+
+    return right_height - left_height;
 }
 
 void bst_avl_rebalance(EddError *err, Bst *bst, BstNode *node, BstOperation operation) {
