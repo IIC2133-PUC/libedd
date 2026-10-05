@@ -16,8 +16,10 @@ typedef enum bst_variant {
 } BstVariant;
 
 typedef enum bst_operation {
-    EDD_BST_INSERT,
-    EDD_BST_REMOVE,
+    EDD_BST_INSERT_LEFT ,
+    EDD_BST_INSERT_RIGHT,
+    EDD_BST_REMOVE_LEFT ,
+    EDD_BST_REMOVE_RIGHT,
 } BstOperation;
 
 typedef enum bst_rbt_color: size_t {
@@ -59,7 +61,7 @@ Bst *bst_create(BstVariant variant, size_t variant_property_default, MovementFun
 void bst_destroy(EddError *err, Bst *bst);
 void bst_print(EddError *err, Bst *bst, FILE *output_file);
 
-void bst_rotate(EddError *err, BstNode *high_node, BstNode *low_node, bool left_rotation);
+void bst_rotate(EddError *err, Bst *bst, BstNode *high_node, BstNode *low_node, bool left_rotation);
 BstNode *bst_search(EddError *err, Bst *bst, int key);
 void bst_insert(EddError *err, Bst *bst, int key);
 int bst_remove(EddError *err, Bst *bst, int key);
@@ -72,6 +74,7 @@ void bst_avl_update_height(EddError *err, BstNode *node);
 void bst_avl_rebalance(EddError *err, Bst *bst, BstNode *node, BstOperation operation);
 
 // Red-Black Variant Functions
+void bst_rbt_remove(EddError *err, Bst *bst, BstNode *node);
 void bst_rbt_rebalance(EddError *err, Bst *bst, BstNode *node, BstOperation operation);
 
 /* ============= */

@@ -7,6 +7,7 @@
 [[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mbst_rotate[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
 [[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mbst_rotate[0m: Unexpected NULL pointer passed as function argument
 [[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mbst_rotate[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mbst_rotate[0m: Unexpected NULL pointer passed as function argument
 [[0;33mDEBUG[0m] ([0;35mEDD_BST_EILLROT[0m) Error reported by [0;36mbst_rotate[0m: Nodes are invalid for rotation operation in BST
 [[0;33mDEBUG[0m] ([0;35mEDD_BST_EILLROT[0m) Error reported by [0;36mbst_rotate[0m: Nodes are invalid for rotation operation in BST
 [[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mbst_search[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m

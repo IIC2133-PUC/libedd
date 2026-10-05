@@ -1,0 +1,2 @@
+[[0;33mDEBUG[0m] ([0;35mEDD_BST_EMOVSTOP[0m) Error reported by [0;36mbst_insert[0m: Movement function instructed to stop BST traversal
+[[0;33mDEBUG[0m] ([0;35mEDD_BST_EMOVSTOP[0m) Error reported by [0;36mhas_error[0m: Movement function instructed to stop BST traversal

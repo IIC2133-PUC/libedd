@@ -1,0 +1,68 @@
+Bst
+> root    : (nil)
+> size    : 0
+> variant : rbt
+> log     : 
+Pushed key 1
+Bst
+> root    : 1
+> size    : 1
+> variant : rbt
+> log     : [1]
+Pushed key 2
+Bst
+> root    : 1
+> size    : 2
+> variant : rbt
+> log     : [1]
+            ├─[0;31m[2][0m
+Pushed key 3
+Bst
+> root    : 2
+> size    : 3
+> variant : rbt
+> log     : [2]
+            ├─[0;31m[3][0m
+            └─[0;31m[1][0m
+Pushed key 4
+Bst
+> root    : 2
+> size    : 4
+> variant : rbt
+> log     : [2]
+            ├─[3]
+            │  ├─[0;31m[4][0m
+            └─[1]
+Pushed key 5
+Bst
+> root    : 2
+> size    : 5
+> variant : rbt
+> log     : [2]
+            ├─[4]
+            │  ├─[0;31m[5][0m
+            │  └─[0;31m[3][0m
+            └─[1]
+Pushed key 6
+Bst
+> root    : 2
+> size    : 6
+> variant : rbt
+> log     : [2]
+            ├─[0;31m[4][0m
+            │  ├─[5]
+            │  │  ├─[0;31m[6][0m
+            │  └─[3]
+            └─[1]
+Pushed key 7
+Bst
+> root    : 2
+> size    : 7
+> variant : rbt
+> log     : [2]
+            ├─[0;31m[4][0m
+            │  ├─[6]
+            │  │  ├─[0;31m[7][0m
+            │  │  └─[0;31m[5][0m
+            │  └─[3]
+            └─[1]

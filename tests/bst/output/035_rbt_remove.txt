@@ -1,0 +1,169 @@
+Pushed key 100
+Pushed key 150
+Pushed key 0
+Pushed key 2
+Bst
+> root    : 100
+> size    : 4
+> variant : rbt
+> log     : [100]
+            ├─[150]
+            └─[0]
+               ├─[0;31m[2][0m
+Removed key 2
+Bst
+> root    : 100
+> size    : 3
+> variant : rbt
+> log     : [100]
+            ├─[150]
+            └─[0]
+Pushed key 3
+Pushed key 1
+Pushed key 5
+Bst
+> root    : 100
+> size    : 6
+> variant : rbt
+> log     : [100]
+            ├─[150]
+            └─[0;31m[1][0m
+               ├─[3]
+               │  ├─[0;31m[5][0m
+               └─[0]
+Removed key 0
+Bst
+> root    : 100
+> size    : 5
+> variant : rbt
+> log     : [100]
+            ├─[150]
+            └─[0;31m[3][0m
+               ├─[5]
+               └─[1]
+Removed key 5
+Pushed key 2
+Pushed key 0
+Bst
+> root    : 100
+> size    : 6
+> variant : rbt
+> log     : [100]
+            ├─[150]
+            └─[0;31m[2][0m
+               ├─[3]
+               └─[1]
+                  └─[0;31m[0][0m
+Removed key 3
+Bst
+> root    : 100
+> size    : 5
+> variant : rbt
+> log     : [100]
+            ├─[150]
+            └─[0;31m[1][0m
+               ├─[2]
+               └─[0]
+Removed key 0
+Removed key 1
+Removed key 2
+Pushed key 10
+Pushed key 3
+Pushed key 11
+Pushed key 1
+Pushed key 5
+Pushed key 20
+Pushed key 13
+Pushed key 27
+Bst
+> root    : 13
+> size    : 10
+> variant : rbt
+> log     : [13]
+            ├─[0;31m[100][0m
+            │  ├─[150]
+            │  └─[20]
+            │     ├─[0;31m[27][0m
+            └─[0;31m[10][0m
+               ├─[11]
+               └─[3]
+                  ├─[0;31m[5][0m
+                  └─[0;31m[1][0m
+Removed key 10
+Bst
+> root    : 13
+> size    : 9
+> variant : rbt
+> log     : [13]
+            ├─[0;31m[100][0m
+            │  ├─[150]
+            │  └─[20]
+            │     ├─[0;31m[27][0m
+            └─[0;31m[3][0m
+               ├─[11]
+               │  └─[0;31m[5][0m
+               └─[1]
+Pushed key 17
+Bst
+> root    : 13
+> size    : 10
+> variant : rbt
+> log     : [13]
+            ├─[0;31m[100][0m
+            │  ├─[150]
+            │  └─[20]
+            │     ├─[0;31m[27][0m
+            │     └─[0;31m[17][0m
+            └─[0;31m[3][0m
+               ├─[11]
+               │  └─[0;31m[5][0m
+               └─[1]
+Pushed key 15
+Bst
+> root    : 13
+> size    : 11
+> variant : rbt
+> log     : [13]
+            ├─[100]
+            │  ├─[150]
+            │  └─[0;31m[20][0m
+            │     ├─[27]
+            │     └─[17]
+            │        └─[0;31m[15][0m
+            └─[3]
+               ├─[11]
+               │  └─[0;31m[5][0m
+               └─[1]
+Pushed key 19
+Bst
+> root    : 13
+> size    : 12
+> variant : rbt
+> log     : [13]
+            ├─[100]
+            │  ├─[150]
+            │  └─[0;31m[20][0m
+            │     ├─[27]
+            │     └─[17]
+            │        ├─[0;31m[19][0m
+            │        └─[0;31m[15][0m
+            └─[3]
+               ├─[11]
+               │  └─[0;31m[5][0m
+               └─[1]
+Removed key 11
+Bst
+> root    : 13
+> size    : 11
+> variant : rbt
+> log     : [13]
+            ├─[100]
+            │  ├─[150]
+            │  └─[0;31m[20][0m
+            │     ├─[27]
+            │     └─[17]
+            │        ├─[0;31m[19][0m
+            │        └─[0;31m[15][0m
+            └─[3]
+               ├─[5]
+               └─[1]

@@ -278,8 +278,9 @@ void bst_print(EddError *err, Bst *bst, FILE *output_file) {
     return;
 }
 
-void bst_rotate(EddError *err, BstNode *high_node, BstNode *low_node, bool left_rotation) {
+void bst_rotate(EddError *err, Bst *bst, BstNode *high_node, BstNode *low_node, bool left_rotation) {
     const char *self = "bst_rotate";
+    if (errhandle_nullptr(err, self, bst)) return;
     if (errhandle_nullptr(err, self, high_node)) return;
     if (errhandle_nullptr(err, self, low_node)) return;
     if ((left_rotation && high_node->right != low_node) ||
@@ -310,7 +311,10 @@ void bst_rotate(EddError *err, BstNode *high_node, BstNode *low_node, bool left_
         } else if (root->right == high_node) {
             root->right = low_node;
         }
+    } else {
+        bst->root = low_node;
     }
+
     low_node->parent = high_node->parent;
     high_node->parent = low_node;
 
@@ -376,6 +380,9 @@ void bst_insert(EddError *err, Bst *bst, int key) {
 
     if (parent_node == NULL) {
         bst->root = new_node;
+        if (bst->variant == EDD_RBT_MODE) {
+            new_node->variant_property = EDD_RBT_BLACK;
+        }
         return;
     }
 
@@ -387,7 +394,8 @@ void bst_insert(EddError *err, Bst *bst, int key) {
     }
 
     if (bst->rebalance != NULL) {
-        bst->rebalance(err, bst, new_node, EDD_BST_INSERT);
+        BstOperation op = move == 'l' ? EDD_BST_INSERT_LEFT : EDD_BST_INSERT_RIGHT;
+        bst->rebalance(err, bst, new_node, op);
     }
 
     return;
@@ -401,6 +409,17 @@ int bst_remove(EddError *err, Bst *bst, int key) {
     if (*err != EDD_NOERR) {
         edd_debug(err, self);
         return 0;
+    }
+
+    if (bst->variant == EDD_RBT_MODE) {
+        bst_rbt_remove(err, bst, target_node);
+        return key;
+    }
+
+    BstOperation op = EDD_BST_REMOVE_LEFT;
+    if (target_node->parent != NULL &&
+        target_node == target_node->parent->right) {
+        op = EDD_BST_REMOVE_RIGHT;
     }
 
     BstNode *rebalance_target = target_node->parent;
@@ -425,14 +444,14 @@ int bst_remove(EddError *err, Bst *bst, int key) {
         target_successor->left->parent = target_successor;
     }
 
+    if (bst->rebalance != NULL && rebalance_target != NULL) {
+        bst->rebalance(err, bst, rebalance_target, op);
+        if (has_error(err)) return 0;
+    }
+
     bst_node_destroy(err, target_node);
     bst->size--;
     if (has_error(err)) return 0;
-
-    if (bst->rebalance != NULL && rebalance_target != NULL) {
-        bst->rebalance(err, bst, rebalance_target, EDD_BST_REMOVE);
-        if (has_error(err)) return 0;
-    }
 
     return key;
 }
@@ -513,16 +532,16 @@ void bst_avl_rebalance(EddError *err, Bst *bst, BstNode *node, BstOperation oper
 
     balance_factor = bst_avl_balance_factor(err, child_node);
     if (child_node == current_node->left && balance_factor <= 0) {
-        bst_rotate(err, current_node, child_node, false);
+        bst_rotate(err, bst, current_node, child_node, false);
     } else if (child_node == current_node->left && balance_factor > 0) {
-        bst_rotate(err, child_node, child_node->right, true);
-        bst_rotate(err, current_node, child_node->parent, false);
+        bst_rotate(err, bst, child_node, child_node->right, true);
+        bst_rotate(err, bst, current_node, child_node->parent, false);
         bst_avl_update_height(err, child_node);
     } else if (child_node == current_node->right && balance_factor >= 0) {
-        bst_rotate(err, current_node, child_node, true);
+        bst_rotate(err, bst, current_node, child_node, true);
     } else if (child_node == current_node->right && balance_factor < 0) {
-        bst_rotate(err, child_node, child_node->left, false);
-        bst_rotate(err, current_node, child_node->parent, true);
+        bst_rotate(err, bst, child_node, child_node->left, false);
+        bst_rotate(err, bst, current_node, child_node->parent, true);
         bst_avl_update_height(err, child_node);
     }
 
@@ -536,14 +555,195 @@ void bst_avl_rebalance(EddError *err, Bst *bst, BstNode *node, BstOperation oper
 
 /* === RBT Variant Helper Functions === */
 
+void bst_rbt_remove(EddError *err, Bst *bst, BstNode *node) {
+    const char *self = "bst_rbt_remove";
+    if (errhandle_nullptr(err, self, bst)) return;
+    if (errhandle_nullptr(err, self, node)) return;
+    if (bst->variant != EDD_RBT_MODE) return;
+
+    BstNode *target = node;
+    if (target->left != NULL && target->right != NULL) {
+        target = bst_successor(err, node);
+        if (has_error(err)) return;
+        int temp = node->key;
+        node->key = target->key;
+        target->key = temp;
+    }
+
+    BstOperation op = (target->parent && target == target->parent->left) ?
+        EDD_BST_REMOVE_LEFT : EDD_BST_REMOVE_RIGHT;
+
+    if (target->left != NULL && target->right == NULL) {
+        target->left->variant_property = EDD_RBT_BLACK;
+        bst_substitute_nodes(err, bst, target, target->left);
+    } else {
+        if (target->right != NULL) {
+            target->right->variant_property = EDD_RBT_BLACK;
+        }
+        bst_substitute_nodes(err, bst, target, target->right);
+    }
+
+    bool is_leaf = (target->left == NULL && target->right == NULL);
+    bool is_black = target->variant_property == EDD_RBT_BLACK;
+    if (is_leaf && is_black) {
+        bst->rebalance(err, bst, target, op);
+    }
+
+    if (bst->root != NULL) {
+        bst->root->variant_property = EDD_RBT_BLACK;
+    }
+
+    bst_node_destroy(err, target);
+    bst->size--;
+    if (has_error(err)) return;
+}
+
 void bst_rbt_rebalance(EddError *err, Bst *bst, BstNode *node, BstOperation operation) {
     const char *self = "bst_rbt_rebalance";
     if (errhandle_nullptr(err, self, bst)) return;
     if (errhandle_nullptr(err, self, node)) return;
     if (bst->variant != EDD_RBT_MODE) return;
 
-    if (bst->root != NULL && bst->root->variant_property == EDD_RBT_RED) {
+    char operation_type = 'i';
+    if (operation == EDD_BST_REMOVE_LEFT ||
+        operation == EDD_BST_REMOVE_RIGHT) {
+        operation_type = 'r';
+    }
+
+    bool is_left = false;
+    if (operation == EDD_BST_INSERT_LEFT ||
+        operation == EDD_BST_REMOVE_LEFT) {
+        is_left = true;
+    }
+
+    if (operation_type == 'i') {
+        if (node->parent == NULL) {
+            node->variant_property = EDD_RBT_BLACK;
+            return;
+        }
+
+        BstNode *parent = node->parent;
+        BstNode *grandparent;
+        BstNode *uncle;
+        do {
+            if (parent->variant_property == EDD_RBT_BLACK) {
+                break;
+            }
+
+            grandparent = parent->parent;
+            if (grandparent == NULL) {
+                parent->variant_property = EDD_RBT_BLACK;
+                break;
+            }
+
+            if (parent == grandparent->right) {
+                uncle = grandparent->left;
+                is_left = false;
+            } else {
+                uncle = grandparent->right;
+                is_left = true;
+            }
+
+            if (uncle == NULL || uncle->variant_property == EDD_RBT_BLACK) {
+                if ((is_left && node == parent->right) ||
+                    (!is_left && node == parent->left)) {
+                    bst_rotate(err, bst, parent, node, is_left);
+                    node = parent;
+                    parent = is_left ? grandparent->left : grandparent->right;
+                }
+
+                bst_rotate(err, bst, grandparent, parent, !is_left);
+                parent->variant_property = EDD_RBT_BLACK;
+                grandparent->variant_property = EDD_RBT_RED;
+                break;
+            }
+
+            parent->variant_property = EDD_RBT_BLACK;
+            uncle->variant_property = EDD_RBT_BLACK;
+            grandparent->variant_property = EDD_RBT_RED;
+            node = grandparent;
+        } while ((parent = node->parent));
+
         bst->root->variant_property = EDD_RBT_BLACK;
+        return;
+    } else if (operation_type == 'r') {
+        if (node->parent == NULL) {
+            bst->root = NULL;
+            return;
+        }
+
+        BstNode *parent = node->parent;
+        BstNode *sibling;
+        BstNode *close_nephew;
+        BstNode *distant_nephew;
+        bool first_loop = true;
+        bool case_5 = false;
+        bool case_6 = false;
+        do {
+            if (!first_loop) {
+                is_left = node == parent->left ? true : false;
+            }
+            sibling = is_left ? parent->right : parent->left;
+            distant_nephew = is_left ? sibling->right : sibling->left;
+            close_nephew = is_left ? sibling->left : sibling->right;
+            if (sibling->variant_property == EDD_RBT_RED) {
+                bst_rotate(err, bst, parent, sibling, is_left);
+                parent->variant_property = EDD_RBT_RED;
+                sibling->variant_property = EDD_RBT_BLACK;
+                sibling = close_nephew;
+
+                distant_nephew = is_left ? sibling->right : sibling->left;
+                if (distant_nephew != NULL && distant_nephew->variant_property == EDD_RBT_RED) {
+                    case_6 = true;
+                    break;
+                }
+                close_nephew = is_left ? sibling->left : sibling->right;
+                if (close_nephew != NULL && close_nephew->variant_property == EDD_RBT_RED) {
+                    case_5 = true;
+                    break;
+                }
+
+                sibling->variant_property = EDD_RBT_RED;
+                parent->variant_property = EDD_RBT_BLACK;
+                return;
+            }
+
+            if (distant_nephew != NULL && distant_nephew->variant_property == EDD_RBT_RED) {
+                case_6 = true;
+                break;
+            }
+
+            if (close_nephew != NULL && close_nephew->variant_property == EDD_RBT_RED) {
+                case_5 = true;
+                break;
+            }
+
+            if (parent->variant_property == EDD_RBT_RED) {
+                sibling->variant_property = EDD_RBT_RED;
+                parent->variant_property = EDD_RBT_BLACK;
+                return;
+            }
+
+            sibling->variant_property = EDD_RBT_RED;
+            node = parent;
+        } while ((parent = node->parent));
+
+        if (case_5 || case_6) {
+            if (case_5) {
+                bst_rotate(err, bst, sibling, close_nephew, is_left);
+                sibling->variant_property = EDD_RBT_RED;
+                close_nephew->variant_property = EDD_RBT_BLACK;
+                distant_nephew = sibling;
+                sibling = close_nephew;
+            }
+
+            bst_rotate(err, bst, parent, sibling, is_left);
+            sibling->variant_property = parent->variant_property;
+            parent->variant_property = EDD_RBT_BLACK;
+            distant_nephew->variant_property = EDD_RBT_BLACK;
+        }
+
+        return;
     }
 }
 
@@ -606,11 +806,12 @@ void bst_cmd(EddError *err, Bst *bst, FILE *input_file, FILE *output_file, const
         bst_destroy(err, NULL);
         bst_print(NULL, temp_bst, output_file);
         bst_print(err, NULL, output_file);
-        bst_rotate(NULL, temp_node, other_temp_node, false);
-        bst_rotate(err, NULL, other_temp_node, false);
-        bst_rotate(err, temp_node, NULL, false);
-        bst_rotate(err, temp_node, other_temp_node, false);
-        bst_rotate(err, temp_node, other_temp_node, true);
+        bst_rotate(NULL, temp_bst, temp_node, other_temp_node, false);
+        bst_rotate(err, NULL, temp_node, other_temp_node, false);
+        bst_rotate(err, temp_bst, NULL, other_temp_node, false);
+        bst_rotate(err, temp_bst, temp_node, NULL, false);
+        bst_rotate(err, temp_bst, temp_node, other_temp_node, false);
+        bst_rotate(err, temp_bst, temp_node, other_temp_node, true);
         bst_search(NULL, temp_bst, 0);
         bst_search(err, NULL, 0);
         bst_insert(NULL, temp_bst, 0);

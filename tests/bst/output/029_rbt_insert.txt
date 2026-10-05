@@ -1,0 +1,34 @@
+Bst
+> root    : (nil)
+> size    : 0
+> variant : rbt
+> log     : 
+Pushed key 2
+Bst
+> root    : 2
+> size    : 1
+> variant : rbt
+> log     : [2]
+Pushed key 3
+Bst
+> root    : 2
+> size    : 2
+> variant : rbt
+> log     : [2]
+            ├─[0;31m[3][0m
+Pushed key 1
+Bst
+> root    : 2
+> size    : 3
+> variant : rbt
+> log     : [2]
+            ├─[0;31m[3][0m
+            └─[0;31m[1][0m
+Pushing key 3 failed (possibly due to it being a duplicate)
+Bst
+> root    : 2
+> size    : 3
+> variant : rbt
+> log     : [2]
+            ├─[0;31m[3][0m
+            └─[0;31m[1][0m
