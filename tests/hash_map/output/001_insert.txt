@@ -1,11 +1,11 @@
-HashTable
+HashMap
 > capacity: 64
 > size    : 0
 > log     : (empty)
 Inserted value A in the hash map
 Inserted value B in the hash map
 Inserted value C in the hash map
-HashTable
+HashMap
 > capacity: 64
 > size    : 3
 > log     : 
@@ -13,7 +13,7 @@ HashTable
 Inserted value AB in the hash map
 Inserted value AC in the hash map
 Inserted value AD in the hash map
-HashTable
+HashMap
 > capacity: 64
 > size    : 6
 > log     : 
@@ -22,7 +22,7 @@ HashTable
 Inserted value ABC in the hash map
 Inserted value ABD in the hash map
 Inserted value ABE in the hash map
-HashTable
+HashMap
 > capacity: 64
 > size    : 9
 > log     : 
@@ -32,7 +32,7 @@ HashTable
 Inserted value A in the hash map
 Inserted value B in the hash map
 Inserted value C in the hash map
-HashTable
+HashMap
 > capacity: 64
 > size    : 12
 > log     : 
@@ -42,7 +42,7 @@ HashTable
 Inserted value AB in the hash map
 Inserted value AC in the hash map
 Inserted value AD in the hash map
-HashTable
+HashMap
 > capacity: 64
 > size    : 15
 > log     : 
@@ -52,7 +52,7 @@ HashTable
 Inserted value ABC in the hash map
 Inserted value ABD in the hash map
 Inserted value ABE in the hash map
-HashTable
+HashMap
 > capacity: 64
 > size    : 18
 > log     : 

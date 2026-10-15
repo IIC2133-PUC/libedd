@@ -1,4 +1,4 @@
-HashTable
+HashMap
 > capacity: 64
 > size    : 0
 > log     : (empty)
@@ -12,7 +12,7 @@ Inserted value ABCDEF in the hash map
 Inserted value DEF in the hash map
 Inserted value ABCDEFG in the hash map
 Inserted value EF in the hash map
-HashTable
+HashMap
 > capacity: 64
 > size    : 10
 > log     : 
@@ -30,7 +30,7 @@ Got index 4 of the hash map
 Got index 2 of the hash map
 Got index 3 of the hash map
 Index 65 not found in the hash map
-HashTable
+HashMap
 > capacity: 64
 > size    : 10
 > log     : 

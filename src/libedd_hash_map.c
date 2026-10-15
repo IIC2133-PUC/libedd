@@ -75,7 +75,7 @@ void hash_map_print(EddError *err, HashMap *hash_map, FILE *output_file) {
         output_file = stdout;
     }
 
-    fprintf(output_file, "HashTable\n> capacity: %zu\n> size    : %zu\n> log     : ",
+    fprintf(output_file, "HashMap\n> capacity: %zu\n> size    : %zu\n> log     : ",
             hash_map->capacity, hash_map->size);
     if (hash_map->size == 0) {
         fprintf(output_file, "(empty)\n");
