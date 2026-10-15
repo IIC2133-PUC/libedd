@@ -218,7 +218,8 @@ void hash_map_cmd(EddError *err, HashMap *hash_map, FILE *input_file, FILE *outp
 
     if (!strcmp(cmd, LIBEDD_CMDNAME_HASH_MAP_AT)) {
         fscanf(input_file, " %zu", &hash);
-        HashMapNode *node = hash_map_at(err, hash_map, hash);
+
+        hash_map_at(err, hash_map, hash);
         if (has_error(err)) {
             fprintf(output_file, LIBEDD_CMDMSG_ERR_HASH_MAP_AT, hash);
         } else {
