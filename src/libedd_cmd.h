@@ -50,11 +50,19 @@
 #define LIBEDD_CMDNAME_HEAP_POP           "HEAP-POP"
 
 // -- BST -- //
-//
+
 #define LIBEDD_CMDNAME_BST_PRINT          "BST-PRINT"
 #define LIBEDD_CMDNAME_BST_SEARCH         "BST-SEARCH"
 #define LIBEDD_CMDNAME_BST_INSERT         "BST-INSERT"
 #define LIBEDD_CMDNAME_BST_REMOVE         "BST-REMOVE"
+
+// -- HASH MAP -- //
+
+#define LIBEDD_CMDNAME_HASH_MAP_PRINT     "HASH-MAP-PRINT"
+#define LIBEDD_CMDNAME_HASH_MAP_AT        "HASH-MAP-AT"
+#define LIBEDD_CMDNAME_HASH_MAP_SEARCH    "HASH-MAP-SEARCH"
+#define LIBEDD_CMDNAME_HASH_MAP_INSERT    "HASH-MAP-INSERT"
+#define LIBEDD_CMDNAME_HASH_MAP_REMOVE    "HASH-MAP-REMOVE"
 
 /* ============= */
 
@@ -165,6 +173,20 @@
 
 #define LIBEDD_CMDMSG_GOOD_BST_REMOVE         "Removed key %d\n"
 #define LIBEDD_CMDMSG_ERR_BST_REMOVE          "Failed to remove key %d (empty tree or no match found)\n"
+
+// -- HASH MAP -- //
+
+#define LIBEDD_CMDMSG_GOOD_HASH_MAP_AT        "Got index %zu of the hash map\n"
+#define LIBEDD_CMDMSG_ERR_HASH_MAP_AT         "Index %zu not found in the hash map\n"
+
+#define LIBEDD_CMDMSG_GOOD_HASH_MAP_SEARCH    "Value %s is inside the hash map\n"
+#define LIBEDD_CMDMSG_ERR_HASH_MAP_SEARCH     "Value %s not found in the hash map\n"
+
+#define LIBEDD_CMDMSG_GOOD_HASH_MAP_INSERT    "Inserted value %s in the hash map\n"
+#define LIBEDD_CMDMSG_ERR_HASH_MAP_INSERT     "Inserting value %s failed (possibly oob hash value)\n"
+
+#define LIBEDD_CMDMSG_GOOD_HASH_MAP_REMOVE    "Removed value %s from the hash map\n"
+#define LIBEDD_CMDMSG_ERR_HASH_MAP_REMOVE     "Failed to remove value %s (possibly not found)\n"
 
 /* ============= */
 

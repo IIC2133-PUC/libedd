@@ -1,0 +1,4 @@
+HashTable
+> capacity: 64
+> size    : 0
+> log     : (empty)

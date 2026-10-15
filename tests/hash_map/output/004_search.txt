@@ -1,0 +1,46 @@
+HashTable
+> capacity: 64
+> size    : 0
+> log     : (empty)
+Inserted value A in the hash map
+Inserted value AB in the hash map
+Inserted value CD in the hash map
+Inserted value ABC in the hash map
+Inserted value ABCD in the hash map
+Inserted value ABCDE in the hash map
+Inserted value ABCDEF in the hash map
+Inserted value DEF in the hash map
+Inserted value ABCDEFG in the hash map
+Inserted value EF in the hash map
+HashTable
+> capacity: 64
+> size    : 10
+> log     : 
+[1]: A -> 
+[2]: AB -> CD -> EF -> 
+[3]: ABC -> DEF -> 
+[4]: ABCD -> 
+[5]: ABCDE -> 
+[6]: ABCDEF -> 
+[7]: ABCDEFG -> 
+Value Z not found in the hash map
+Value A is inside the hash map
+Value ABCD is inside the hash map
+Value AB is inside the hash map
+Value CD is inside the hash map
+Value EF is inside the hash map
+Value DEF is inside the hash map
+Value ABC is inside the hash map
+Value XZ not found in the hash map
+Value ABCDEFGH not found in the hash map
+HashTable
+> capacity: 64
+> size    : 10
+> log     : 
+[1]: A -> 
+[2]: AB -> CD -> EF -> 
+[3]: ABC -> DEF -> 
+[4]: ABCD -> 
+[5]: ABCDE -> 
+[6]: ABCDEF -> 
+[7]: ABCDEFG -> 

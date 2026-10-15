@@ -1,0 +1,67 @@
+HashTable
+> capacity: 64
+> size    : 0
+> log     : (empty)
+Inserted value A in the hash map
+HashTable
+> capacity: 64
+> size    : 1
+> log     : 
+[1]: A -> 
+Inserted value AB in the hash map
+HashTable
+> capacity: 64
+> size    : 2
+> log     : 
+[1]: A -> 
+[2]: AB -> 
+Inserted value ABC in the hash map
+HashTable
+> capacity: 64
+> size    : 3
+> log     : 
+[1]: A -> 
+[2]: AB -> 
+[3]: ABC -> 
+Inserted value ABCD in the hash map
+HashTable
+> capacity: 64
+> size    : 4
+> log     : 
+[1]: A -> 
+[2]: AB -> 
+[3]: ABC -> 
+[4]: ABCD -> 
+Inserted value ABCDE in the hash map
+HashTable
+> capacity: 64
+> size    : 5
+> log     : 
+[1]: A -> 
+[2]: AB -> 
+[3]: ABC -> 
+[4]: ABCD -> 
+[5]: ABCDE -> 
+Inserted value ABCDEF in the hash map
+HashTable
+> capacity: 64
+> size    : 6
+> log     : 
+[1]: A -> 
+[2]: AB -> 
+[3]: ABC -> 
+[4]: ABCD -> 
+[5]: ABCDE -> 
+[6]: ABCDEF -> 
+Inserted value ABCDEFG in the hash map
+HashTable
+> capacity: 64
+> size    : 7
+> log     : 
+[1]: A -> 
+[2]: AB -> 
+[3]: ABC -> 
+[4]: ABCD -> 
+[5]: ABCDE -> 
+[6]: ABCDEF -> 
+[7]: ABCDEFG -> 

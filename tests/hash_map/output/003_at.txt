@@ -1,0 +1,43 @@
+HashTable
+> capacity: 64
+> size    : 0
+> log     : (empty)
+Inserted value A in the hash map
+Inserted value AB in the hash map
+Inserted value CD in the hash map
+Inserted value ABC in the hash map
+Inserted value ABCD in the hash map
+Inserted value ABCDE in the hash map
+Inserted value ABCDEF in the hash map
+Inserted value DEF in the hash map
+Inserted value ABCDEFG in the hash map
+Inserted value EF in the hash map
+HashTable
+> capacity: 64
+> size    : 10
+> log     : 
+[1]: A -> 
+[2]: AB -> CD -> EF -> 
+[3]: ABC -> DEF -> 
+[4]: ABCD -> 
+[5]: ABCDE -> 
+[6]: ABCDEF -> 
+[7]: ABCDEFG -> 
+Got index 0 of the hash map
+Got index 1 of the hash map
+Got index 7 of the hash map
+Got index 4 of the hash map
+Got index 2 of the hash map
+Got index 3 of the hash map
+Index 65 not found in the hash map
+HashTable
+> capacity: 64
+> size    : 10
+> log     : 
+[1]: A -> 
+[2]: AB -> CD -> EF -> 
+[3]: ABC -> DEF -> 
+[4]: ABCD -> 
+[5]: ABCDE -> 
+[6]: ABCDEF -> 
+[7]: ABCDEFG -> 

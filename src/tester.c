@@ -7,6 +7,7 @@
 #include "libedd_sort.h"
 #include "libedd_heap.h"
 #include "libedd_bst.h"
+#include "libedd_hash_map.h"
 
 bool EDD_DEBUG = true;
 
@@ -156,6 +157,20 @@ void bst_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     bst_destroy(&err, bst);
 }
 
+void hash_map_tester(FILE *input_file, FILE *output_file, size_t n_events) {
+    EddError err = EDD_NOERR;
+    char cmd[32];
+
+    HashMap *hash_map = hash_map_create(NULL, 64);
+
+    for (size_t i = 0; i < n_events; i++) {
+        fscanf(input_file, "%s", cmd);
+        hash_map_cmd(&err, hash_map, input_file, output_file, cmd);
+    }
+
+    hash_map_destroy(&err, hash_map);
+}
+
 static bool check_arguments(int argc, char **argv) {
     if (argc != 4) {
         printf("Usage: %s EDD INPUT_FILE OUTPUT_FILE\n", argv[0]);
@@ -201,8 +216,8 @@ int main(int argc, char **argv) {
         bst_tester(input_file, output_file, N);
     }
 
-    if (!strcmp(edd_to_test, "avl")) {
-        //
+    if (!strcmp(edd_to_test, "hash_map")) {
+        hash_map_tester(input_file, output_file, N);
     }
 
     if (!strcmp(edd_to_test, "graph")) {

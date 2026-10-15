@@ -1,0 +1,255 @@
+HashTable
+> capacity: 64
+> size    : 0
+> log     : (empty)
+Inserted value A in the hash map
+Inserted value AB in the hash map
+Inserted value CD in the hash map
+Inserted value ABC in the hash map
+Inserted value DEF in the hash map
+Inserted value GHI in the hash map
+Inserted value ABCD in the hash map
+Inserted value EFGH in the hash map
+Inserted value IJKL in the hash map
+Inserted value MNOP in the hash map
+Inserted value AAAAA in the hash map
+Inserted value BBBBB in the hash map
+Inserted value CCCCC in the hash map
+Inserted value DDDDD in the hash map
+Inserted value EEEEE in the hash map
+Inserted value AAAAAA in the hash map
+Inserted value BBBBBB in the hash map
+Inserted value CCCCCC in the hash map
+Inserted value DDDDDD in the hash map
+Inserted value EEEEEE in the hash map
+Inserted value FFFFFF in the hash map
+Inserted value ------- in the hash map
+HashTable
+> capacity: 64
+> size    : 22
+> log     : 
+[1]: A -> 
+[2]: AB -> CD -> 
+[3]: ABC -> DEF -> GHI -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Failed to remove value Z (possibly not found)
+HashTable
+> capacity: 64
+> size    : 22
+> log     : 
+[1]: A -> 
+[2]: AB -> CD -> 
+[3]: ABC -> DEF -> GHI -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value A from the hash map
+HashTable
+> capacity: 64
+> size    : 21
+> log     : 
+[2]: AB -> CD -> 
+[3]: ABC -> DEF -> GHI -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Failed to remove value AC (possibly not found)
+HashTable
+> capacity: 64
+> size    : 21
+> log     : 
+[2]: AB -> CD -> 
+[3]: ABC -> DEF -> GHI -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value CD from the hash map
+HashTable
+> capacity: 64
+> size    : 20
+> log     : 
+[2]: AB -> 
+[3]: ABC -> DEF -> GHI -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value AB from the hash map
+HashTable
+> capacity: 64
+> size    : 19
+> log     : 
+[3]: ABC -> DEF -> GHI -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Failed to remove value ABD (possibly not found)
+HashTable
+> capacity: 64
+> size    : 19
+> log     : 
+[3]: ABC -> DEF -> GHI -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value DEF from the hash map
+HashTable
+> capacity: 64
+> size    : 18
+> log     : 
+[3]: ABC -> GHI -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value GHI from the hash map
+HashTable
+> capacity: 64
+> size    : 17
+> log     : 
+[3]: ABC -> 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value ABC from the hash map
+HashTable
+> capacity: 64
+> size    : 16
+> log     : 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Failed to remove value MNOQ (possibly not found)
+HashTable
+> capacity: 64
+> size    : 16
+> log     : 
+[4]: ABCD -> EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value ABCD from the hash map
+HashTable
+> capacity: 64
+> size    : 15
+> log     : 
+[4]: EFGH -> IJKL -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value IJKL from the hash map
+HashTable
+> capacity: 64
+> size    : 14
+> log     : 
+[4]: EFGH -> MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value EFGH from the hash map
+HashTable
+> capacity: 64
+> size    : 13
+> log     : 
+[4]: MNOP -> 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value MNOP from the hash map
+HashTable
+> capacity: 64
+> size    : 12
+> log     : 
+[5]: AAAAA -> BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value AAAAA from the hash map
+HashTable
+> capacity: 64
+> size    : 11
+> log     : 
+[5]: BBBBB -> CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value BBBBB from the hash map
+HashTable
+> capacity: 64
+> size    : 10
+> log     : 
+[5]: CCCCC -> DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value CCCCC from the hash map
+HashTable
+> capacity: 64
+> size    : 9
+> log     : 
+[5]: DDDDD -> EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value DDDDD from the hash map
+HashTable
+> capacity: 64
+> size    : 8
+> log     : 
+[5]: EEEEE -> 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value EEEEE from the hash map
+HashTable
+> capacity: 64
+> size    : 7
+> log     : 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> FFFFFF -> 
+[7]: ------- -> 
+Removed value FFFFFF from the hash map
+HashTable
+> capacity: 64
+> size    : 6
+> log     : 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> EEEEEE -> 
+[7]: ------- -> 
+Removed value EEEEEE from the hash map
+HashTable
+> capacity: 64
+> size    : 5
+> log     : 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> DDDDDD -> 
+[7]: ------- -> 
+Removed value DDDDDD from the hash map
+HashTable
+> capacity: 64
+> size    : 4
+> log     : 
+[6]: AAAAAA -> BBBBBB -> CCCCCC -> 
+[7]: ------- -> 
+Removed value CCCCCC from the hash map
+HashTable
+> capacity: 64
+> size    : 3
+> log     : 
+[6]: AAAAAA -> BBBBBB -> 
+[7]: ------- -> 
+Removed value BBBBBB from the hash map
+HashTable
+> capacity: 64
+> size    : 2
+> log     : 
+[6]: AAAAAA -> 
+[7]: ------- -> 
+Removed value AAAAAA from the hash map
+HashTable
+> capacity: 64
+> size    : 1
+> log     : 
+[7]: ------- -> 
