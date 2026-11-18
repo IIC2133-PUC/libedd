@@ -250,7 +250,7 @@
 #define LIBEDD_CMDMSG_GOOD_GRAPH_ID_ADJ_LIST_SIZE "The adjacency list of the vertex with ID %zu has size %zu\n"
 #define LIBEDD_CMDMSG_ERR_GRAPH_ID_ADJ_LIST_SIZE  "Failed to retrieve adjacency list size for vertex with ID %zu\n"
 
-#define LIBEDD_CMDMSG_GOOD_GRAPH_ID_GET_NTH_EDGE  "The edge at index %zu of the adj. list is connected to vertex with ID %zu\n"
+#define LIBEDD_CMDMSG_GOOD_GRAPH_ID_GET_NTH_EDGE  "The edge at index %zu of the adj. list for vertex with ID %zu is connected to vertex with ID %zu\n"
 #define LIBEDD_CMDMSG_ERR_GRAPH_ID_GET_NTH_EDGE   "Failed to get edge at index %zu for vertex with ID %zu\n"
 
 #define LIBEDD_CMDMSG_GOOD_GRAPH_ID_GET_EDGE      "The edge that connects the vertices with IDs %zu and %zu weights %d\n"

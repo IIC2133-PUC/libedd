@@ -1,0 +1,199 @@
+Graph
+> seq        : 0
+> is_directed: false
+> log        : (nil)
+Added a new vertex with key -2 to the graph
+Added a new vertex with key -1 to the graph
+Added a new vertex with key 0 to the graph
+Added a new vertex with key 1 to the graph
+Added a new vertex with key 2 to the graph
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (nil)
+[1 | -1]: (nil)
+[2 | 0]: (nil)
+[3 | 1]: (nil)
+[4 | 2]: (nil)
+The size of the vertices list of the graph is 5
+Failed to retrieve a vertex at index 5 of the vertices list
+Found vertex with ID 0 at index 0 of the vertices list
+Found vertex with ID 1 at index 1 of the vertices list
+Found vertex with ID 2 at index 2 of the vertices list
+Found vertex with ID 3 at index 3 of the vertices list
+Found vertex with ID 4 at index 4 of the vertices list
+Vertex with ID 5 not found in the vertices list
+Found vertex with ID 0 in the vertices list
+Found vertex with ID 1 in the vertices list
+Found vertex with ID 2 in the vertices list
+Found vertex with ID 3 in the vertices list
+Found vertex with ID 4 in the vertices list
+Failed to determine membership to the graph for vertex with ID 5
+Vertex with ID 0 belongs to the graph
+Vertex with ID 1 belongs to the graph
+Vertex with ID 2 belongs to the graph
+Vertex with ID 3 belongs to the graph
+Vertex with ID 4 belongs to the graph
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (nil)
+[1 | -1]: (nil)
+[2 | 0]: (nil)
+[3 | 1]: (nil)
+[4 | 2]: (nil)
+Failed to add new edge between vertices with IDs 5 and 0 (probably it already exists)
+Failed to add new edge between vertices with IDs 0 and 5 (probably it already exists)
+Added a new edge between vertices with IDs 0 and 1, with weight 5
+Added a new edge between vertices with IDs 0 and 2, with weight 6
+Added a new edge between vertices with IDs 0 and 3, with weight 7
+Added a new edge between vertices with IDs 0 and 4, with weight 8
+Added a new edge between vertices with IDs 1 and 2, with weight 9
+Added a new edge between vertices with IDs 1 and 3, with weight 10
+Added a new edge between vertices with IDs 1 and 4, with weight 11
+Added a new edge between vertices with IDs 2 and 3, with weight 12
+Added a new edge between vertices with IDs 2 and 4, with weight 13
+Added a new edge between vertices with IDs 3 and 4, with weight 14
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (5)[1 | -1] -> (6)[2 | 0] -> (7)[3 | 1] -> (8)[4 | 2] -> 
+[1 | -1]: (5)[0 | -2] -> (9)[2 | 0] -> (10)[3 | 1] -> (11)[4 | 2] -> 
+[2 | 0]: (6)[0 | -2] -> (9)[1 | -1] -> (12)[3 | 1] -> (13)[4 | 2] -> 
+[3 | 1]: (7)[0 | -2] -> (10)[1 | -1] -> (12)[2 | 0] -> (14)[4 | 2] -> 
+[4 | 2]: (8)[0 | -2] -> (11)[1 | -1] -> (13)[2 | 0] -> (14)[3 | 1] -> 
+Failed to determine if vertices 5 and 0 are adjacent
+Failed to determine if vertices 0 and 5 are adjacent
+Vertices with IDs 0 and 0 are not adjacent
+Vertices with IDs 0 and 1 are adjacent
+Vertices with IDs 0 and 2 are adjacent
+Vertices with IDs 0 and 3 are adjacent
+Vertices with IDs 0 and 4 are adjacent
+Vertices with IDs 1 and 0 are adjacent
+Vertices with IDs 1 and 1 are not adjacent
+Vertices with IDs 1 and 2 are adjacent
+Vertices with IDs 1 and 3 are adjacent
+Vertices with IDs 1 and 4 are adjacent
+Vertices with IDs 2 and 0 are adjacent
+Vertices with IDs 2 and 1 are adjacent
+Vertices with IDs 2 and 2 are not adjacent
+Vertices with IDs 2 and 3 are adjacent
+Vertices with IDs 2 and 4 are adjacent
+Vertices with IDs 3 and 0 are adjacent
+Vertices with IDs 3 and 1 are adjacent
+Vertices with IDs 3 and 2 are adjacent
+Vertices with IDs 3 and 3 are not adjacent
+Vertices with IDs 3 and 4 are adjacent
+Vertices with IDs 4 and 0 are adjacent
+Vertices with IDs 4 and 1 are adjacent
+Vertices with IDs 4 and 2 are adjacent
+Vertices with IDs 4 and 3 are adjacent
+Vertices with IDs 4 and 4 are not adjacent
+Failed to retrieve adjacency list size for vertex with ID 5
+The adjacency list of the vertex with ID 0 has size 4
+The adjacency list of the vertex with ID 1 has size 4
+The adjacency list of the vertex with ID 2 has size 4
+The adjacency list of the vertex with ID 3 has size 4
+The adjacency list of the vertex with ID 4 has size 4
+Failed to get edge at index 0 for vertex with ID 5
+Failed to get edge at index 5 for vertex with ID 0
+The edge at index 0 of the adj. list for vertex with ID 0 is connected to vertex with ID 1
+The edge at index 1 of the adj. list for vertex with ID 0 is connected to vertex with ID 2
+The edge at index 2 of the adj. list for vertex with ID 0 is connected to vertex with ID 3
+The edge at index 3 of the adj. list for vertex with ID 0 is connected to vertex with ID 4
+Failed to retrieve the edge between vertices with IDs 5 and 0 (probably doesn't exist)
+Failed to retrieve the edge between vertices with IDs 0 and 5 (probably doesn't exist)
+The edge that connects the vertices with IDs 0 and 1 weights 5
+The edge that connects the vertices with IDs 0 and 2 weights 6
+The edge that connects the vertices with IDs 0 and 3 weights 7
+The edge that connects the vertices with IDs 0 and 4 weights 8
+The edge that connects the vertices with IDs 1 and 2 weights 9
+The edge that connects the vertices with IDs 1 and 3 weights 10
+The edge that connects the vertices with IDs 1 and 4 weights 11
+The edge that connects the vertices with IDs 2 and 3 weights 12
+The edge that connects the vertices with IDs 2 and 4 weights 13
+The edge that connects the vertices with IDs 3 and 4 weights 14
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (5)[1 | -1] -> (6)[2 | 0] -> (7)[3 | 1] -> (8)[4 | 2] -> 
+[1 | -1]: (5)[0 | -2] -> (9)[2 | 0] -> (10)[3 | 1] -> (11)[4 | 2] -> 
+[2 | 0]: (6)[0 | -2] -> (9)[1 | -1] -> (12)[3 | 1] -> (13)[4 | 2] -> 
+[3 | 1]: (7)[0 | -2] -> (10)[1 | -1] -> (12)[2 | 0] -> (14)[4 | 2] -> 
+[4 | 2]: (8)[0 | -2] -> (11)[1 | -1] -> (13)[2 | 0] -> (14)[3 | 1] -> 
+Failed to remove edge between vertices with IDs 5 and 0
+Failed to remove edge between vertices with IDs 0 and 5
+Failed to remove vertex with ID 5 from the graph
+Removed edge between vertices with IDs 3 and 4, with weight 14
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (5)[1 | -1] -> (6)[2 | 0] -> (7)[3 | 1] -> (8)[4 | 2] -> 
+[1 | -1]: (5)[0 | -2] -> (9)[2 | 0] -> (10)[3 | 1] -> (11)[4 | 2] -> 
+[2 | 0]: (6)[0 | -2] -> (9)[1 | -1] -> (12)[3 | 1] -> (13)[4 | 2] -> 
+[3 | 1]: (7)[0 | -2] -> (10)[1 | -1] -> (12)[2 | 0] -> 
+[4 | 2]: (8)[0 | -2] -> (11)[1 | -1] -> (13)[2 | 0] -> 
+Removed edge between vertices with IDs 0 and 2, with weight 6
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (5)[1 | -1] -> (7)[3 | 1] -> (8)[4 | 2] -> 
+[1 | -1]: (5)[0 | -2] -> (9)[2 | 0] -> (10)[3 | 1] -> (11)[4 | 2] -> 
+[2 | 0]: (9)[1 | -1] -> (12)[3 | 1] -> (13)[4 | 2] -> 
+[3 | 1]: (7)[0 | -2] -> (10)[1 | -1] -> (12)[2 | 0] -> 
+[4 | 2]: (8)[0 | -2] -> (11)[1 | -1] -> (13)[2 | 0] -> 
+Removed edge between vertices with IDs 0 and 3, with weight 7
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (5)[1 | -1] -> (8)[4 | 2] -> 
+[1 | -1]: (5)[0 | -2] -> (9)[2 | 0] -> (10)[3 | 1] -> (11)[4 | 2] -> 
+[2 | 0]: (9)[1 | -1] -> (12)[3 | 1] -> (13)[4 | 2] -> 
+[3 | 1]: (10)[1 | -1] -> (12)[2 | 0] -> 
+[4 | 2]: (8)[0 | -2] -> (11)[1 | -1] -> (13)[2 | 0] -> 
+Removed edge between vertices with IDs 0 and 1, with weight 5
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (8)[4 | 2] -> 
+[1 | -1]: (9)[2 | 0] -> (10)[3 | 1] -> (11)[4 | 2] -> 
+[2 | 0]: (9)[1 | -1] -> (12)[3 | 1] -> (13)[4 | 2] -> 
+[3 | 1]: (10)[1 | -1] -> (12)[2 | 0] -> 
+[4 | 2]: (8)[0 | -2] -> (11)[1 | -1] -> (13)[2 | 0] -> 
+Removed edge between vertices with IDs 0 and 4, with weight 8
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 5 (format: (weight)[id | key]) ~~~
+[0 | -2]: (nil)
+[1 | -1]: (9)[2 | 0] -> (10)[3 | 1] -> (11)[4 | 2] -> 
+[2 | 0]: (9)[1 | -1] -> (12)[3 | 1] -> (13)[4 | 2] -> 
+[3 | 1]: (10)[1 | -1] -> (12)[2 | 0] -> 
+[4 | 2]: (11)[1 | -1] -> (13)[2 | 0] -> 
+Removed vertex with ID 4 from the graph
+Graph
+> seq        : 5
+> is_directed: false
+> log        : 
+~~~ size: 4 (format: (weight)[id | key]) ~~~
+[0 | -2]: (nil)
+[1 | -1]: (9)[2 | 0] -> (10)[3 | 1] -> 
+[2 | 0]: (9)[1 | -1] -> (12)[3 | 1] -> 
+[3 | 1]: (10)[1 | -1] -> (12)[2 | 0] -> 

@@ -497,7 +497,7 @@ void graph_cmd(EddError *err, Graph *graph, FILE *input_file, FILE *output_file,
         if (has_error(err)) {
             fprintf(output_file, LIBEDD_CMDMSG_ERR_GRAPH_ID_GET_NTH_EDGE, index, vertex_id);
         } else {
-            fprintf(output_file, LIBEDD_CMDMSG_GOOD_GRAPH_ID_GET_NTH_EDGE, index, edge->vertex->id);
+            fprintf(output_file, LIBEDD_CMDMSG_GOOD_GRAPH_ID_GET_NTH_EDGE, index, vertex_id, edge->vertex->id);
         }
     }
 

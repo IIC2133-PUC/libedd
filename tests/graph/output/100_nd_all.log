@@ -1,0 +1,50 @@
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_nth_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mgraph_id_is_member[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_add_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mhas_error[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mgraph_id_add_edge[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_is_adjacent[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mhas_error[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mgraph_id_is_adjacent[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mgraph_id_adj_list_size[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mgraph_id_get_nth_edge[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_nth_edge[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_get_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mhas_error[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mgraph_id_get_edge[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_remove_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mhas_error[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mgraph_id_remove_edge[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mgraph_get_vertex[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_EOOB[0m) Error reported by [0;36mhas_error[0m: Search is out of bounds (for example: index is bigger or equal to size)
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mgraph_id_remove_vertex[0m: Member/Entity not found or doesn't exist
+[[0;33mDEBUG[0m] ([0;35mEDD_ENOENT[0m) Error reported by [0;36mhas_error[0m: Member/Entity not found or doesn't exist
