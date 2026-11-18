@@ -1,0 +1,44 @@
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Node at index 0 is: (nil)
+Node at index 1 is: (nil)
+Pushed value 0x1
+GSll
+> size          : 1
+> head          : 0x1
+> tail          : 0x1
+> free_on_remove: false
+> log           : [0x1]->
+Node at index 0 is: 0x1
+Node at index 1 is: (nil)
+Pushed value 0x2
+GSll
+> size          : 2
+> head          : 0x1
+> tail          : 0x2
+> free_on_remove: false
+> log           : [0x1]->[0x2]->
+Node at index 0 is: 0x1
+Node at index 1 is: 0x2
+Node at index 2 is: (nil)
+Pushed value 0x3
+GSll
+> size          : 3
+> head          : 0x1
+> tail          : 0x3
+> free_on_remove: false
+> log           : [0x1]->[0x2]->[0x3]->
+Node at index 0 is: 0x1
+Node at index 1 is: 0x2
+Node at index 2 is: 0x3
+Node at index 3 is: (nil)
+GSll
+> size          : 3
+> head          : 0x1
+> tail          : 0x3
+> free_on_remove: false
+> log           : [0x1]->[0x2]->[0x3]->

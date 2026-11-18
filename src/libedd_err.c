@@ -78,6 +78,12 @@ void edd_debug(EddError *err, const char *caller) {
             printf("Nodes are invalid for rotation operation in BST\n");
             break;
 
+        case EDD_GRAPH_EEDUP:
+            printf("(\033[0;35mEDD_GRAPH_EEDUP\033[0m) ");
+            printf("Error reported by \033[0;36m%s\033[0m: ", caller);
+            printf("Attempted to add edge between vertices that already had one\n");
+            break;
+
         default:
             printf("(\033[0;35mEDD_???\033[0m) ");
             printf("Error reported by \033[0;36m%s\033[0m: ", caller);

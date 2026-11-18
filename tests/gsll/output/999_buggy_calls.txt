@@ -1,0 +1,6 @@
+GSll
+> size          : 1
+> head          : 0xaa
+> tail          : 0xaa
+> free_on_remove: false
+> log           : [0xaa]->

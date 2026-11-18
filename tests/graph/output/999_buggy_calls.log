@@ -1,0 +1,54 @@
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_edge_create[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_edge_create[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_destroy[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_destroy[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_print[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_print[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_is_adjacent[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_is_adjacent[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_is_adjacent[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_adj_list_size[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_adj_list_size[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_get_nth_edge[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_get_nth_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_get_edge[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_get_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_get_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_add_edge[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_add_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_add_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_add_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_remove_edge[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_remove_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_remove_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_remove_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_is_member[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_is_member[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_is_member[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_size[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_size[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_get_nth_vertex[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_get_nth_vertex[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_get_vertex[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_get_vertex[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_add_vertex[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_add_vertex[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_remove_vertex[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_remove_vertex[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_remove_vertex[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_id_is_adjacent[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_id_is_adjacent[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_id_adj_list_size[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_id_adj_list_size[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_id_get_nth_edge[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_id_get_nth_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_id_get_edge[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_id_get_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_id_add_edge[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_id_add_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_id_remove_edge[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_id_remove_edge[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_id_is_member[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_id_is_member[0m: Unexpected NULL pointer passed as function argument
+[[0;33mDEBUG[0m] [0;31mCRITICAL[0m Error reported by [0;36mgraph_id_remove_vertex[0m: Function requires a non-NULL EddError instance, [0;31mNO CODE WAS EXECUTED INSIDE THE FUNCTION[0m
+[[0;33mDEBUG[0m] ([0;35mEDD_ENULLPTR[0m) Error reported by [0;36mgraph_id_remove_vertex[0m: Unexpected NULL pointer passed as function argument

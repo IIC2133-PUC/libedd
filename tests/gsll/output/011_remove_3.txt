@@ -1,0 +1,192 @@
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0x1
+Pushed value 0x2
+Pushed value 0x3
+Pushed value 0x4
+Pushed value 0x5
+Pushed value 0x6
+Pushed value 0x7
+GSll
+> size          : 7
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x2]->[0x3]->[0x4]->[0x5]->[0x6]->[0x7]->
+Removed node 0x2 at index 1
+GSll
+> size          : 6
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x3]->[0x4]->[0x5]->[0x6]->[0x7]->
+Removed node 0x3 at index 1
+GSll
+> size          : 5
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x4]->[0x5]->[0x6]->[0x7]->
+Removed node 0x4 at index 1
+GSll
+> size          : 4
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x5]->[0x6]->[0x7]->
+Removed node 0x5 at index 1
+GSll
+> size          : 3
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x6]->[0x7]->
+Removed node 0x6 at index 1
+GSll
+> size          : 2
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x7]->
+Removed node 0x7 at index 1
+GSll
+> size          : 1
+> head          : 0x1
+> tail          : 0x1
+> free_on_remove: false
+> log           : [0x1]->
+Removed node 0x1 at index 0
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0x8
+Pushed value 0x9
+Pushed value 0xa
+Pushed value 0xb
+Pushed value 0xc
+Pushed value 0xd
+Pushed value 0xe
+GSll
+> size          : 7
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xa]->[0xb]->[0xc]->[0xd]->[0xe]->
+Removed node 0xd at index 5
+GSll
+> size          : 6
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xa]->[0xb]->[0xc]->[0xe]->
+Removed node 0xc at index 4
+GSll
+> size          : 5
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xa]->[0xb]->[0xe]->
+Removed node 0xb at index 3
+GSll
+> size          : 4
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xa]->[0xe]->
+Removed node 0xa at index 2
+GSll
+> size          : 3
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xe]->
+Removed node 0x9 at index 1
+GSll
+> size          : 2
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0xe]->
+Removed node 0x8 at index 0
+GSll
+> size          : 1
+> head          : 0xe
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0xe]->
+Removed node 0xe at index 0
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0xf
+Pushed value 0x10
+Pushed value 0x11
+Pushed value 0x12
+Pushed value 0x13
+Pushed value 0x14
+Pushed value 0x15
+GSll
+> size          : 7
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x10]->[0x11]->[0x12]->[0x13]->[0x14]->[0x15]->
+Removed node 0x12 at index 3
+GSll
+> size          : 6
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x10]->[0x11]->[0x13]->[0x14]->[0x15]->
+Removed node 0x11 at index 2
+GSll
+> size          : 5
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x10]->[0x13]->[0x14]->[0x15]->
+Removed node 0x13 at index 2
+GSll
+> size          : 4
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x10]->[0x14]->[0x15]->
+Removed node 0x10 at index 1
+GSll
+> size          : 3
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x14]->[0x15]->
+Removed node 0x14 at index 1
+GSll
+> size          : 2
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x15]->
+Removed node 0xf at index 0
+GSll
+> size          : 1
+> head          : 0x15
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0x15]->
+Removed node 0x15 at index 0
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)

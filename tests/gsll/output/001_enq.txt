@@ -1,0 +1,27 @@
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Enqueued value 0x1
+GSll
+> size          : 1
+> head          : 0x1
+> tail          : 0x1
+> free_on_remove: false
+> log           : [0x1]->
+Enqueued value 0x2
+GSll
+> size          : 2
+> head          : 0x2
+> tail          : 0x1
+> free_on_remove: false
+> log           : [0x2]->[0x1]->
+Enqueued value 0x3
+GSll
+> size          : 3
+> head          : 0x3
+> tail          : 0x1
+> free_on_remove: false
+> log           : [0x3]->[0x2]->[0x1]->

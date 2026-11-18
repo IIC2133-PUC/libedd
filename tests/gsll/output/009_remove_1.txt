@@ -1,0 +1,109 @@
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Nothing to remove (empty gsll or index out of range)
+Nothing to remove (empty gsll or index out of range)
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0x1
+GSll
+> size          : 1
+> head          : 0x1
+> tail          : 0x1
+> free_on_remove: false
+> log           : [0x1]->
+Removed node 0x1 at index 0
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0x2
+Pushed value 0x3
+GSll
+> size          : 2
+> head          : 0x2
+> tail          : 0x3
+> free_on_remove: false
+> log           : [0x2]->[0x3]->
+Removed node 0x2 at index 0
+GSll
+> size          : 1
+> head          : 0x3
+> tail          : 0x3
+> free_on_remove: false
+> log           : [0x3]->
+Removed node 0x3 at index 0
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0x4
+Pushed value 0x5
+GSll
+> size          : 2
+> head          : 0x4
+> tail          : 0x5
+> free_on_remove: false
+> log           : [0x4]->[0x5]->
+Removed node 0x5 at index 1
+GSll
+> size          : 1
+> head          : 0x4
+> tail          : 0x4
+> free_on_remove: false
+> log           : [0x4]->
+Pushed value 0x6
+Pushed value 0x7
+Pushed value 0x8
+GSll
+> size          : 4
+> head          : 0x4
+> tail          : 0x8
+> free_on_remove: false
+> log           : [0x4]->[0x6]->[0x7]->[0x8]->
+Removed node 0x4 at index 0
+GSll
+> size          : 3
+> head          : 0x6
+> tail          : 0x8
+> free_on_remove: false
+> log           : [0x6]->[0x7]->[0x8]->
+Removed node 0x6 at index 0
+GSll
+> size          : 2
+> head          : 0x7
+> tail          : 0x8
+> free_on_remove: false
+> log           : [0x7]->[0x8]->
+Removed node 0x7 at index 0
+GSll
+> size          : 1
+> head          : 0x8
+> tail          : 0x8
+> free_on_remove: false
+> log           : [0x8]->
+Removed node 0x8 at index 0
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Nothing to remove (empty gsll or index out of range)
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)

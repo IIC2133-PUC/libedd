@@ -20,15 +20,14 @@ Full documentation comming soon...
 - [x] Command messages module
 - [x] Singly Linked List
 - [x] Doubly Linked List
+- [x] Generic Singly Linked List
 - [x] Sorting Algorithms (Array, SLL, DLL)
 - [x] Heap (Min, Max)
 - [x] BST
 - [x] AVL Tree
-- [ ] 2-3 Tree
-- [ ] Red-Black Tree
-- [ ] B+ Tree
-- [ ] Hash Tables
-- [ ] Graph
+- [x] Red-Black Tree
+- [x] Hash Tables
+- [x] Graph
 
 ## Commands
 

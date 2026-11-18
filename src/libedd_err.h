@@ -26,6 +26,9 @@ typedef enum libedd_err {
     // BST specific errors
     EDD_BST_EMOVSTOP , // Movement function instructed to stop BST traversal
     EDD_BST_EILLROT  , // Nodes are invalid for rotation operation in BST
+
+    // Graph specific errors
+    EDD_GRAPH_EEDUP   , // Attempted to add edge between vertices that already had one
 } EddError;
 
 /* ============= */

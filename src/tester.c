@@ -4,10 +4,12 @@
 #include "libedd_err.h"
 #include "libedd_sll.h"
 #include "libedd_dll.h"
+#include "libedd_gsll.h"
 #include "libedd_sort.h"
 #include "libedd_heap.h"
 #include "libedd_bst.h"
 #include "libedd_hash_map.h"
+#include "libedd_graph.h"
 
 bool EDD_DEBUG = true;
 
@@ -42,6 +44,19 @@ void dll_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     }
 
     dll_destroy(&err, dll);
+}
+
+void gsll_tester(FILE *input_file, FILE *output_file, size_t n_events) {
+    EddError err = EDD_NOERR;
+    GSll *gsll = gsll_create(false, NULL);
+
+    char cmd[32];
+    for (size_t i = 0; i < n_events; i++) {
+        fscanf(input_file, "%s", cmd);
+        gsll_cmd(&err, gsll, input_file, output_file, cmd);
+    }
+
+    gsll_destroy(&err, gsll);
 }
 
 void sort_tester(FILE *input_file, FILE *output_file, size_t n_events) {
@@ -171,6 +186,26 @@ void hash_map_tester(FILE *input_file, FILE *output_file, size_t n_events) {
     hash_map_destroy(&err, hash_map);
 }
 
+void graph_tester(FILE *input_file, FILE *output_file, size_t n_events) {
+    EddError err = EDD_NOERR;
+    char cmd[32];
+
+    fscanf(input_file, "%s", cmd);
+    bool is_directed = false;
+    if (!strcmp(cmd, "true")) {
+        is_directed = true;
+    }
+
+    Graph *graph = graph_create(is_directed);
+
+    for (size_t i = 0; i < n_events; i++) {
+        fscanf(input_file, "%s", cmd);
+        graph_cmd(&err, graph, input_file, output_file, cmd);
+    }
+
+    graph_destroy(&err, graph);
+}
+
 static bool check_arguments(int argc, char **argv) {
     if (argc != 4) {
         printf("Usage: %s EDD INPUT_FILE OUTPUT_FILE\n", argv[0]);
@@ -204,6 +239,10 @@ int main(int argc, char **argv) {
         dll_tester(input_file, output_file, N);
     }
 
+    if (!strcmp(edd_to_test, "gsll")) {
+        gsll_tester(input_file, output_file, N);
+    }
+
     if (!strcmp(edd_to_test, "sort")) {
         sort_tester(input_file, output_file, N);
     }
@@ -221,7 +260,7 @@ int main(int argc, char **argv) {
     }
 
     if (!strcmp(edd_to_test, "graph")) {
-        //
+        graph_tester(input_file, output_file, N);
     }
 
     fclose(input_file);

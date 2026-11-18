@@ -1,0 +1,192 @@
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0x1
+Pushed value 0x2
+Pushed value 0x3
+Pushed value 0x4
+Pushed value 0x5
+Pushed value 0x6
+Pushed value 0x7
+GSll
+> size          : 7
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x2]->[0x3]->[0x4]->[0x5]->[0x6]->[0x7]->
+Removed (first) node 0x2 by val
+GSll
+> size          : 6
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x3]->[0x4]->[0x5]->[0x6]->[0x7]->
+Removed (first) node 0x3 by val
+GSll
+> size          : 5
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x4]->[0x5]->[0x6]->[0x7]->
+Removed (first) node 0x4 by val
+GSll
+> size          : 4
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x5]->[0x6]->[0x7]->
+Removed (first) node 0x5 by val
+GSll
+> size          : 3
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x6]->[0x7]->
+Removed (first) node 0x6 by val
+GSll
+> size          : 2
+> head          : 0x1
+> tail          : 0x7
+> free_on_remove: false
+> log           : [0x1]->[0x7]->
+Removed (first) node 0x7 by val
+GSll
+> size          : 1
+> head          : 0x1
+> tail          : 0x1
+> free_on_remove: false
+> log           : [0x1]->
+Removed (first) node 0x1 by val
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0x8
+Pushed value 0x9
+Pushed value 0xa
+Pushed value 0xb
+Pushed value 0xc
+Pushed value 0xd
+Pushed value 0xe
+GSll
+> size          : 7
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xa]->[0xb]->[0xc]->[0xd]->[0xe]->
+Removed (first) node 0xd by val
+GSll
+> size          : 6
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xa]->[0xb]->[0xc]->[0xe]->
+Removed (first) node 0xc by val
+GSll
+> size          : 5
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xa]->[0xb]->[0xe]->
+Removed (first) node 0xb by val
+GSll
+> size          : 4
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xa]->[0xe]->
+Removed (first) node 0xa by val
+GSll
+> size          : 3
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0x9]->[0xe]->
+Removed (first) node 0x9 by val
+GSll
+> size          : 2
+> head          : 0x8
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0x8]->[0xe]->
+Removed (first) node 0x8 by val
+GSll
+> size          : 1
+> head          : 0xe
+> tail          : 0xe
+> free_on_remove: false
+> log           : [0xe]->
+Removed (first) node 0xe by val
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Pushed value 0xf
+Pushed value 0x10
+Pushed value 0x11
+Pushed value 0x12
+Pushed value 0x13
+Pushed value 0x14
+Pushed value 0x15
+GSll
+> size          : 7
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x10]->[0x11]->[0x12]->[0x13]->[0x14]->[0x15]->
+Removed (first) node 0x12 by val
+GSll
+> size          : 6
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x10]->[0x11]->[0x13]->[0x14]->[0x15]->
+Removed (first) node 0x11 by val
+GSll
+> size          : 5
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x10]->[0x13]->[0x14]->[0x15]->
+Removed (first) node 0x13 by val
+GSll
+> size          : 4
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x10]->[0x14]->[0x15]->
+Removed (first) node 0x10 by val
+GSll
+> size          : 3
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x14]->[0x15]->
+Removed (first) node 0x14 by val
+GSll
+> size          : 2
+> head          : 0xf
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0xf]->[0x15]->
+Removed (first) node 0xf by val
+GSll
+> size          : 1
+> head          : 0x15
+> tail          : 0x15
+> free_on_remove: false
+> log           : [0x15]->
+Removed (first) node 0x15 by val
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)

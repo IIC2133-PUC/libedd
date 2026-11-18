@@ -1,0 +1,7 @@
+Graph
+> seq        : 2
+> is_directed: true
+> log        : 
+~~~ size: 2 (format: (weight)[id | key]) ~~~
+[0 | 0]: (nil)
+[1 | 1]: (nil)

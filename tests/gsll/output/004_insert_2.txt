@@ -1,0 +1,69 @@
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Failed to append value 0x1 at index 1
+GSll
+> size          : 0
+> head          : (nil)
+> tail          : (nil)
+> free_on_remove: false
+> log           : (nil)
+Appended value 0x1 at index 0
+GSll
+> size          : 1
+> head          : 0x1
+> tail          : 0x1
+> free_on_remove: false
+> log           : [0x1]->
+Appended value 0x2 at index 1
+GSll
+> size          : 2
+> head          : 0x1
+> tail          : 0x2
+> free_on_remove: false
+> log           : [0x1]->[0x2]->
+Appended value 0x3 at index 2
+GSll
+> size          : 3
+> head          : 0x1
+> tail          : 0x3
+> free_on_remove: false
+> log           : [0x1]->[0x2]->[0x3]->
+Appended value 0x4 at index 1
+GSll
+> size          : 4
+> head          : 0x1
+> tail          : 0x3
+> free_on_remove: false
+> log           : [0x1]->[0x4]->[0x2]->[0x3]->
+Failed to append value 0x5 at index 5
+GSll
+> size          : 4
+> head          : 0x1
+> tail          : 0x3
+> free_on_remove: false
+> log           : [0x1]->[0x4]->[0x2]->[0x3]->
+Appended value 0x5 at index 4
+GSll
+> size          : 5
+> head          : 0x1
+> tail          : 0x5
+> free_on_remove: false
+> log           : [0x1]->[0x4]->[0x2]->[0x3]->[0x5]->
+Appended value 0x6 at index 4
+GSll
+> size          : 6
+> head          : 0x1
+> tail          : 0x5
+> free_on_remove: false
+> log           : [0x1]->[0x4]->[0x2]->[0x3]->[0x6]->[0x5]->
+Appended value 0x7 at index 3
+GSll
+> size          : 7
+> head          : 0x1
+> tail          : 0x5
+> free_on_remove: false
+> log           : [0x1]->[0x4]->[0x2]->[0x7]->[0x3]->[0x6]->[0x5]->
